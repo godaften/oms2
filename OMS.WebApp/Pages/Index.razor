@@ -1,0 +1,28 @@
+﻿@page "/"
+
+@*Injecter en instans a interfacet - kalder objektet ViewLejereB...*@
+@inject IViewLejereByNameUseCase ViewLejereByNameUseCase
+
+<PageTitle>Test</PageTitle>
+<br/>
+
+<ul>
+    @foreach (var lejer in _lejere)
+    {
+        <li>@lejer.Navn</li>
+    }
+</ul>
+
+
+
+@code {
+
+    private List<Lejer> _lejere = new List<Lejer>();
+
+    protected override async Task OnInitializedAsync()
+    {
+        //Returnerer en IEnumerable fra usecasen. Derfor skal den ToList
+        _lejere = (await ViewLejereByNameUseCase.ExecuteAsync()).ToList();
+    }
+
+}

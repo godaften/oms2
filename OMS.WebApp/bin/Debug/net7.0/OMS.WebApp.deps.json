@@ -1,0 +1,62 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v7.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v7.0": {
+      "OMS.WebApp/1.0.0": {
+        "dependencies": {
+          "OMS.Plugins.InMemory": "1.0.0"
+        },
+        "runtime": {
+          "OMS.WebApp.dll": {}
+        }
+      },
+      "OMS.CoreBusiness/1.0.0": {
+        "runtime": {
+          "OMS.CoreBusiness.dll": {}
+        }
+      },
+      "OMS.Plugins.InMemory/1.0.0": {
+        "dependencies": {
+          "OMS.UseCases": "1.0.0"
+        },
+        "runtime": {
+          "OMS.Plugins.InMemory.dll": {}
+        }
+      },
+      "OMS.UseCases/1.0.0": {
+        "dependencies": {
+          "OMS.CoreBusiness": "1.0.0"
+        },
+        "runtime": {
+          "OMS.UseCases.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "OMS.WebApp/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "OMS.CoreBusiness/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "OMS.Plugins.InMemory/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "OMS.UseCases/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

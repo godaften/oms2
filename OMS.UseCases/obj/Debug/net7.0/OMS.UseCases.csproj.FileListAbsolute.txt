@@ -1,0 +1,15 @@
+C:\Users\kaffe\Dropbox\Datamatiker\AFGANGSPROJEKT\PractiseProjects\OMS\OMS.UseCases\bin\Debug\net7.0\OMS.UseCases.deps.json
+C:\Users\kaffe\Dropbox\Datamatiker\AFGANGSPROJEKT\PractiseProjects\OMS\OMS.UseCases\bin\Debug\net7.0\OMS.UseCases.dll
+C:\Users\kaffe\Dropbox\Datamatiker\AFGANGSPROJEKT\PractiseProjects\OMS\OMS.UseCases\bin\Debug\net7.0\OMS.UseCases.pdb
+C:\Users\kaffe\Dropbox\Datamatiker\AFGANGSPROJEKT\PractiseProjects\OMS\OMS.UseCases\bin\Debug\net7.0\OMS.CoreBusiness.dll
+C:\Users\kaffe\Dropbox\Datamatiker\AFGANGSPROJEKT\PractiseProjects\OMS\OMS.UseCases\bin\Debug\net7.0\OMS.CoreBusiness.pdb
+C:\Users\kaffe\Dropbox\Datamatiker\AFGANGSPROJEKT\PractiseProjects\OMS\OMS.UseCases\obj\Debug\net7.0\OMS.UseCases.csproj.AssemblyReference.cache
+C:\Users\kaffe\Dropbox\Datamatiker\AFGANGSPROJEKT\PractiseProjects\OMS\OMS.UseCases\obj\Debug\net7.0\OMS.UseCases.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\kaffe\Dropbox\Datamatiker\AFGANGSPROJEKT\PractiseProjects\OMS\OMS.UseCases\obj\Debug\net7.0\OMS.UseCases.AssemblyInfoInputs.cache
+C:\Users\kaffe\Dropbox\Datamatiker\AFGANGSPROJEKT\PractiseProjects\OMS\OMS.UseCases\obj\Debug\net7.0\OMS.UseCases.AssemblyInfo.cs
+C:\Users\kaffe\Dropbox\Datamatiker\AFGANGSPROJEKT\PractiseProjects\OMS\OMS.UseCases\obj\Debug\net7.0\OMS.UseCases.csproj.CoreCompileInputs.cache
+C:\Users\kaffe\Dropbox\Datamatiker\AFGANGSPROJEKT\PractiseProjects\OMS\OMS.UseCases\obj\Debug\net7.0\OMS.UseCases.csproj.CopyComplete
+C:\Users\kaffe\Dropbox\Datamatiker\AFGANGSPROJEKT\PractiseProjects\OMS\OMS.UseCases\obj\Debug\net7.0\OMS.UseCases.dll
+C:\Users\kaffe\Dropbox\Datamatiker\AFGANGSPROJEKT\PractiseProjects\OMS\OMS.UseCases\obj\Debug\net7.0\refint\OMS.UseCases.dll
+C:\Users\kaffe\Dropbox\Datamatiker\AFGANGSPROJEKT\PractiseProjects\OMS\OMS.UseCases\obj\Debug\net7.0\OMS.UseCases.pdb
+C:\Users\kaffe\Dropbox\Datamatiker\AFGANGSPROJEKT\PractiseProjects\OMS\OMS.UseCases\obj\Debug\net7.0\ref\OMS.UseCases.dll
