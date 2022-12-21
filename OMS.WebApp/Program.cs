@@ -13,10 +13,14 @@ builder.Services.AddRazorPages();
 builder.Services.AddServerSideBlazor();
 builder.Services.AddSingleton<WeatherForecastService>();
 
+// Dependency Injection laves her
 // ILejerRepository implementeres her med LejerRepository og vil instatiere et objekt af LejerRepository klassen
 // og give det til konstruktøren af use casen i 'this.lejerRepository' og give det videre til 'lejerRepository' feltet (private readonly)
 builder.Services.AddSingleton<ILejerRepository, LejerRepository>();
+// Transient ved use cases - ikke ved database
 builder.Services.AddTransient<IViewLejereByNameUseCase, ViewLejereByNameUseCase>();
+builder.Services.AddTransient<IAddLejerUseCase, AddLejerUseCase>();
+builder.Services.AddTransient<IEditLejerUseCase, EditLejerUseCase>();
 
 var app = builder.Build();
 

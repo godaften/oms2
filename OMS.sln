@@ -5,13 +5,13 @@ VisualStudioVersion = 17.4.33110.190
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OMS.WebApp", "OMS.WebApp\OMS.WebApp.csproj", "{493A1731-D20E-458F-9F13-AEB1C67A6716}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OMS.UseCases", "OMS.UseCases\OMS.UseCases.csproj", "{9141490E-FAA6-451F-992A-E90545C55155}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OMS.UseCases", "OMS.UseCases\OMS.UseCases.csproj", "{9141490E-FAA6-451F-992A-E90545C55155}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OMS.CoreBusiness", "OMS.CoreBusiness\OMS.CoreBusiness.csproj", "{643AE1C7-36A0-47DD-8165-95E727BD850B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OMS.CoreBusiness", "OMS.CoreBusiness\OMS.CoreBusiness.csproj", "{643AE1C7-36A0-47DD-8165-95E727BD850B}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "OMS.Plugins", "OMS.Plugins", "{83083770-0194-4355-A1FE-53E0AE368BAA}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OMS.Plugins.InMemory", "OMS.Plugins\OMS.Plugins.InMemory\OMS.Plugins.InMemory.csproj", "{B39E6A96-22F3-41C4-A1E4-6D32CF71AD58}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OMS.Plugins.InMemory", "OMS.Plugins\OMS.Plugins.InMemory\OMS.Plugins.InMemory.csproj", "{B39E6A96-22F3-41C4-A1E4-6D32CF71AD58}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

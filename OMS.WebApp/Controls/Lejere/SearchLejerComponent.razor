@@ -1,0 +1,29 @@
+﻿<div class="input-group">
+    <input type="text"
+           class="form-control"
+           placeholder="Søg lejer"
+           @bind-value="lejerNameToSearch" />
+    <button type="button"
+            class="btn-success input-group-text"
+            @onclick="OnSearch">
+        Søg
+    </button>
+</div>
+
+<br />
+
+@code {
+
+    // med databinding gemmes input fra html inputfeltet i denne variabel
+    // det er to-vejs databinding, så variablen har altid nyeste info fra html og omvendt
+    private string lejerNameToSearch = string.Empty;
+
+    [Parameter] // skal annoteres for at kunne blive fundet i andre componenter
+    public EventCallback<string> OnSearchLejer { get; set; }
+
+    private void OnSearch()
+    {
+        OnSearchLejer.InvokeAsync(lejerNameToSearch);
+
+    }
+}

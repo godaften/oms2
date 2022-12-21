@@ -2,6 +2,7 @@
 
 @*Injecter en instans a interfacet - kalder objektet ViewLejereB...*@
 @inject IViewLejereByNameUseCase ViewLejereByNameUseCase
+@inject IEditLejerUseCase EditLejerUseCase
 
 <PageTitle>Test</PageTitle>
 <br/>
@@ -17,12 +18,40 @@
 
 @code {
 
+
     private List<Lejer> _lejere = new List<Lejer>();
 
+
+
+    // INDLAGT LILLE TEST FOR AT SE, OM DEN OPDATERER
     protected override async Task OnInitializedAsync()
     {
         //Returnerer en IEnumerable fra usecasen. Derfor skal den ToList
         _lejere = (await ViewLejereByNameUseCase.ExecuteAsync()).ToList();
+
+        // Test 1 - ændre navn og telefon
+        // var lejer = new Lejer { LejerID = 1, Navn = "Askovs", Telefon = "92131415", Email = "minmail1@email.dk" };
+
+        // Test 2 - skifte navn til samme navn som anden lejerid, hvilket ikke er tilladt
+        // var lejer = new Lejer { LejerID = 1, Navn = "Tolkemanden", Telefon = "12131415", Email = "minmail1@email.dk" };
+
+        // await EditLejerUseCase.ExecuteAsync(lejer);
+
+        ////Returnerer en IEnumerable fra usecasen. Derfor skal den ToList
+        //_lejere = (await ViewLejereByNameUseCase.ExecuteAsync()).ToList();
     }
+
+
+    // UDEN TEST
+    
+    //protected override async Task OnInitializedAsync()
+    //{
+    //    //Returnerer en IEnumerable fra usecasen. Derfor skal den ToList
+    //    _lejere = (await ViewLejereByNameUseCase.ExecuteAsync()).ToList();
+    //}
+
+
+
+
 
 }

@@ -1,0 +1,35 @@
+﻿@inject IViewLejereByNameUseCase ViewLejereByNameUseCase
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Navn</th>
+            <th>Telefon</th>
+            <th>Email</th>
+            <th></th>
+
+        </tr>
+    </thead>
+    <tbody>
+      <LejerListItemComponent Lejere="listLejere"></LejerListItemComponent>
+    </tbody>
+</table>
+
+@code {
+    private List<Lejer> listLejere = new List<Lejer>();
+
+    [Parameter]
+    public string SearchTerm { get; set; } = string.Empty;
+
+
+    // onparametersetasync metoden er en lifecycle event for komponenten, der trigges hver gang parametret ændres, 
+    // eller når komponenten loades og sættes første gang
+    // når metoden kaldes ved vi, SearchTerm indeholder noget. Hvis den indeholder "tom", vises alle.
+    // når metoden kaldes, ændres relevant ui også
+    protected override async Task OnParametersSetAsync()
+    {
+        listLejere = (await ViewLejereByNameUseCase.ExecuteAsync(this.SearchTerm)).ToList();
+    }
+
+
+}

@@ -1,0 +1,33 @@
+﻿@page "/lejere"
+
+@inject NavigationManager NavigationManager
+
+<h3>LejerList</h3>
+
+<SearchLejerComponent OnSearchLejer="OnLejerSearch"></SearchLejerComponent>
+<br />
+<LejerListComponent SearchTerm="@searchTerm"></LejerListComponent>
+<br />
+<button 
+    type="button"
+    class="btn btn-primary"
+    @onclick="AddLejer">Opret ny lejer</button>
+
+
+
+@code {
+    // i komponent ovenover sættes @searchTerm for at specificere, det er denne variabel, der bruges.
+    // uden @ foran searchterm, tror den bare, det er en streng
+    private string searchTerm = string.Empty;
+
+    private void OnLejerSearch(string searchTerm)
+    {
+        this.searchTerm = searchTerm;
+
+    }
+
+    private void AddLejer()
+    {
+        NavigationManager.NavigateTo("/opretlejer");
+    }
+}

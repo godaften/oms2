@@ -1,0 +1,11 @@
+﻿@page "/editlejer/{LejId:int}"
+
+<h3>EditLejer</h3>
+<br />
+@LejId
+
+@code {
+
+    [Parameter]
+    public int LejId { get; set; }
+}

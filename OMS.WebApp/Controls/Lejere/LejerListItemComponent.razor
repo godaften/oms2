@@ -1,0 +1,37 @@
+﻿@inject NavigationManager NavigationManager
+
+@*
+Null check laves med 'if' selvom listen er initialiseret, da det kommer fra usecase interface,
+hvor vi ikke har givet den mulighed for at være null.
+Derfor er der en risiko for, at den kan være null og lave exception. Det undgås med null check.*@
+
+@if (Lejere != null && Lejere.Count > 0)
+{
+    foreach (var lejer in Lejere)
+    {
+        <tr>
+            <td>@lejer.Navn</td>
+            <td>@lejer.Telefon</td>
+            <td>@lejer.Email</td>
+            <td>
+            <button 
+                type="button"
+                class="btn btn-light"
+                @onclick="@(() => EditLejer(lejer.LejerID))">Rediger
+                </button></td>
+        </tr>
+    }
+}          
+
+@code {
+    // med 'new List' initialiseres listen, så den aldrig er nul
+    [Parameter]
+    public List<Lejer> Lejere { get; set; } = new List<Lejer>();
+
+    public void EditLejer(int lejerId)
+    {
+        NavigationManager.NavigateTo($"/editlejer/{lejerId}");
+
+    }
+
+}
