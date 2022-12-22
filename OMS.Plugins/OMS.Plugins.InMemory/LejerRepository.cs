@@ -14,7 +14,11 @@ namespace OMS.Plugins.InMemory
             {
                 new Lejer { LejerID = 1, Navn = "Askov", Telefon ="12131415", Email ="minmail1@email.dk" },
                 new Lejer { LejerID = 2, Navn = "Transportfirmaet", Telefon="23242526", Email ="minmail2@email.dk" },
-                new Lejer { LejerID = 3, Navn = "Tolkemanden", Telefon="34353637", Email ="minmail3@email.dk" }
+                new Lejer { LejerID = 3, Navn = "Tolkemanden", Telefon="34353637", Email ="minmail3@email.dk" },
+                new Lejer { LejerID = 4, Navn = "Larsen", Telefon ="4531415", Email ="minmail14@email.dk" },
+                new Lejer { LejerID = 5, Navn = "Petersen Business A/S", Telefon="53242526", Email ="minmail5@email.dk" },
+                new Lejer { LejerID = 6, Navn = "Jensens Super Service ApS", Telefon="64353637", Email ="minmail6@email.dk" }
+
             };
         }
 

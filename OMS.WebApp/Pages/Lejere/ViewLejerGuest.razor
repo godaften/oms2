@@ -1,0 +1,13 @@
+﻿@page "/lejer/{LejId:int}"
+@inject IViewLejereByNameUseCase ViewLejereByNameUseCase
+
+
+<h3>Lejers Navn: </h3>
+<br />
+@LejId
+
+@code {
+
+    [Parameter]
+    public int LejId { get; set; }
+}

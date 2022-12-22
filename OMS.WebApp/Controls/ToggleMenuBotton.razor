@@ -1,16 +1,18 @@
 ﻿@inject ViewOptionService ViewOption
 
+
 @if (ViewOption.IsNavigationVisible)
 {
-    <button @onclick="ViewOption.Toggle" class="btn btn-primary"><span class="oi oi-collapse-left" aria-hidden="true"></span> Hide Menu</button>
+    <div class="m-3">
+        <button @onclick="ViewOption.Toggle" class="btn btn-primary"><span class="oi oi-collapse-left" aria-hidden="true"></span> Hide Menu</button>
+    </div>
 }
 else
 {
-    <button @onclick="ViewOption.Toggle"  class="btn btn-primary"><span class="oi oi-collapse-right" aria-hidden="true"></span> Show Menu</button>
+    <div class="m-3">
+        <button @onclick="ViewOption.Toggle" class="btn btn-primary"><span class="oi oi-collapse-right" aria-hidden="true"></span> Show Menu</button>
+    </div>
 }
-
-
-
 
 
 @code {

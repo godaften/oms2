@@ -2,8 +2,22 @@
 @inject IViewLejereByNameUseCase ViewLejereByNameUseCase
 @inject NavigationManager NavigationManager
 
-<ToggleMenuBotton></ToggleMenuBotton>
 
+<div class="container">
+    @foreach (var lejer in Lejere)
+    {
+          
+            <button type="button"
+                class="btn btn-success m-3 w-25"
+                @onclick="@(() => SeLejer(lejer.LejerID))">
+                @lejer.Navn
+            </button>
+   
+    }
+
+
+
+@*
 <table class="table">
     <thead>
         <tr>
@@ -34,7 +48,11 @@
             }
         }
     </tbody>
-</table>
+</table>*@
+<br />
+
+<ToggleMenuBotton></ToggleMenuBotton>
+</div>
 
 @code {
     //private List<Lejer> listLejere = new List<Lejer>();
@@ -47,7 +65,7 @@
 
     public void SeLejer(int lejerId)
     {
-        NavigationManager.NavigateTo($"/editlejer/{lejerId}");
+        NavigationManager.NavigateTo($"/lejer/{lejerId}");
 
     }
 
