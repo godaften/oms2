@@ -32,6 +32,10 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Q29udHJvbHNcTGVqZXJlXFNlYXJjaExlamVyQ29tcG9uZW50LnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Users/kaffe/Dropbox/Datamatiker/AFGANGSPROJEKT/PractiseProjects/OMS/OMS.WebApp/Controls/ToggleMenuBotton.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29udHJvbHNcVG9nZ2xlTWVudUJvdHRvbi5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/kaffe/Dropbox/Datamatiker/AFGANGSPROJEKT/PractiseProjects/OMS/OMS.WebApp/Pages/Counter.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ291bnRlci5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
@@ -52,6 +56,10 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcTGVqZXJlXExlamVyTGlzdC5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Users/kaffe/Dropbox/Datamatiker/AFGANGSPROJEKT/PractiseProjects/OMS/OMS.WebApp/Pages/Lejere/LejerListGuest.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcTGVqZXJlXExlamVyTGlzdEd1ZXN0LnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/kaffe/Dropbox/Datamatiker/AFGANGSPROJEKT/PractiseProjects/OMS/OMS.WebApp/Pages/Lejere/OpretLejer.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcTGVqZXJlXE9wcmV0TGVqZXIucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
@@ -63,6 +71,10 @@ build_metadata.AdditionalFiles.CssScope =
 [C:/Users/kaffe/Dropbox/Datamatiker/AFGANGSPROJEKT/PractiseProjects/OMS/OMS.WebApp/_Imports.razor]
 build_metadata.AdditionalFiles.TargetPath = X0ltcG9ydHMucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/kaffe/Dropbox/Datamatiker/AFGANGSPROJEKT/PractiseProjects/OMS/OMS.WebApp/Shared/MainLayout - Copy.razor]
+build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXE1haW5MYXlvdXQgLSBDb3B5LnJhem9y
+build_metadata.AdditionalFiles.CssScope = b-5gw13fstsj
 
 [C:/Users/kaffe/Dropbox/Datamatiker/AFGANGSPROJEKT/PractiseProjects/OMS/OMS.WebApp/Shared/MainLayout.razor]
 build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXE1haW5MYXlvdXQucmF6b3I=

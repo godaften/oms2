@@ -1,0 +1,67 @@
+﻿@page "/receptionist"
+@inject IViewLejereByNameUseCase ViewLejereByNameUseCase
+@inject NavigationManager NavigationManager
+
+<ToggleMenuBotton></ToggleMenuBotton>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Navn</th>
+            <th>Telefon</th>
+            <th>Email</th>
+            <th></th>
+
+        </tr>
+    </thead>
+    <tbody>
+        @if (Lejere != null && Lejere.Count > 0)
+        {
+            foreach (var lejer in Lejere)
+            {
+                <tr>
+                    <td>@lejer.Navn</td>
+                    <td>@lejer.Telefon</td>
+                    <td>@lejer.Email</td>
+                    <td>
+                        <button type="button"
+                        class="btn btn-light"
+                        @onclick="@(() => SeLejer(lejer.LejerID))">
+                            BESØG
+                        </button>
+                    </td>
+                </tr>
+            }
+        }
+    </tbody>
+</table>
+
+@code {
+    //private List<Lejer> listLejere = new List<Lejer>();
+
+    //[Parameter]
+    //public string SearchTerm { get; set; } = string.Empty;
+
+    [Parameter]
+    public List<Lejer> Lejere { get; set; } = new List<Lejer>();
+
+    public void SeLejer(int lejerId)
+    {
+        NavigationManager.NavigateTo($"/editlejer/{lejerId}");
+
+    }
+
+    [Parameter]
+    public string SearchTerm { get; set; } = string.Empty;
+
+    // onparametersetasync metoden er en lifecycle event for komponenten, der trigges hver gang parametret ændres,
+    // eller når komponenten loades og sættes første gang
+    // når metoden kaldes ved vi, SearchTerm indeholder noget. Hvis den indeholder "tom", vises alle.
+    // når metoden kaldes, ændres relevant ui også
+    protected override async Task OnParametersSetAsync()
+    {
+        Lejere = (await ViewLejereByNameUseCase.ExecuteAsync(this.SearchTerm)).ToList();
+    }
+
+
+}

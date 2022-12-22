@@ -5,6 +5,7 @@ using OMS.UseCases.Lejere;
 using OMS.UseCases.Lejere.Interfaces;
 using OMS.UseCases.PluginInterfaces;
 using OMS.WebApp.Data;
+using OMS.WebApp.Services;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -21,6 +22,9 @@ builder.Services.AddSingleton<ILejerRepository, LejerRepository>();
 builder.Services.AddTransient<IViewLejereByNameUseCase, ViewLejereByNameUseCase>();
 builder.Services.AddTransient<IAddLejerUseCase, AddLejerUseCase>();
 builder.Services.AddTransient<IEditLejerUseCase, EditLejerUseCase>();
+
+//Add additional Service for Hide/Show Navbar
+builder.Services.AddSingleton<ViewOptionService>();
 
 var app = builder.Build();
 
