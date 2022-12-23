@@ -3,58 +3,75 @@
 @inject NavigationManager NavigationManager
 
 
-<div class="container">
+    <div class="p-5 text-center bg-image" style="
+      background-image: url('Images/image2.jpg');
+      height: 300px;
+    ">
+
+
+    <div class="d-flex justify-content-center align-items-center h-100">
+        <div class="text-white">
+            <h1 class="mb-3">Velkommen til Business House</h1>
+            <h4 class="mb-3">Klik på virksomheden du vil besøge</h4>
+@*            <a class="btn btn-outline-light btn-lg" href="#oversigt" role="button">Se virksomheder</a>*@
+        </div>
+    </div>
+</div>
+
+
+<div class="container mt-4">
     @foreach (var lejer in Lejere)
     {
-          
-            <button type="button"
-                class="btn btn-success m-3 w-25"
-                @onclick="@(() => SeLejer(lejer.LejerID))">
-                @lejer.Navn
-            </button>
-   
+
+        <button type="button"
+            class="btn btn-success m-3 w-25"
+            @onclick="@(() => SeLejer(lejer.LejerID))">
+            @lejer.Navn
+        </button>
+
     }
 
 
 
-@*
-<table class="table">
+    @*
+    <table class="table">
     <thead>
-        <tr>
-            <th>Navn</th>
-            <th>Telefon</th>
-            <th>Email</th>
-            <th></th>
+    <tr>
+    <th>Navn</th>
+    <th>Telefon</th>
+    <th>Email</th>
+    <th></th>
 
-        </tr>
+    </tr>
     </thead>
     <tbody>
-        @if (Lejere != null && Lejere.Count > 0)
-        {
-            foreach (var lejer in Lejere)
-            {
-                <tr>
-                    <td>@lejer.Navn</td>
-                    <td>@lejer.Telefon</td>
-                    <td>@lejer.Email</td>
-                    <td>
-                        <button type="button"
-                        class="btn btn-light"
-                        @onclick="@(() => SeLejer(lejer.LejerID))">
-                            BESØG
-                        </button>
-                    </td>
-                </tr>
-            }
-        }
+    @if (Lejere != null && Lejere.Count > 0)
+    {
+    foreach (var lejer in Lejere)
+    {
+    <tr>
+    <td>@lejer.Navn</td>
+    <td>@lejer.Telefon</td>
+    <td>@lejer.Email</td>
+    <td>
+    <button type="button"
+    class="btn btn-light"
+    @onclick="@(() => SeLejer(lejer.LejerID))">
+    BESØG
+    </button>
+    </td>
+    </tr>
+    }
+    }
     </tbody>
-</table>*@
-<br />
+    </table>*@
+    <br />
 
-<ToggleMenuBotton></ToggleMenuBotton>
+    <ToggleMenuBotton></ToggleMenuBotton>
 </div>
 
 @code {
+
     //private List<Lejer> listLejere = new List<Lejer>();
 
     //[Parameter]
@@ -78,7 +95,7 @@
     // når metoden kaldes, ændres relevant ui også
     protected override async Task OnParametersSetAsync()
     {
-        Lejere = (await ViewLejereByNameUseCase.ExecuteAsync(this.SearchTerm)).ToList();
+        Lejere = (await ViewLejereByNameUseCase.ExecuteAsync(this.SearchTerm)).OrderBy((item) => item.Navn).ToList();
     }
 
 

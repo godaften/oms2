@@ -1,5 +1,6 @@
 ﻿using OMS.CoreBusiness;
 using OMS.UseCases.PluginInterfaces;
+using System.Collections.Generic;
 
 namespace OMS.Plugins.InMemory
 {
@@ -18,8 +19,9 @@ namespace OMS.Plugins.InMemory
                 new Lejer { LejerID = 4, Navn = "Larsen", Telefon ="4531415", Email ="minmail14@email.dk" },
                 new Lejer { LejerID = 5, Navn = "Petersen Business A/S", Telefon="53242526", Email ="minmail5@email.dk" },
                 new Lejer { LejerID = 6, Navn = "Jensens Super Service ApS", Telefon="64353637", Email ="minmail6@email.dk" }
-
             };
+
+            //_lejere.OrderBy((item) => item.Navn);
         }
 
         public Task AddLejerAsync(Lejer lejer)

@@ -28,7 +28,7 @@
     // når metoden kaldes, ændres relevant ui også
     protected override async Task OnParametersSetAsync()
     {
-        listLejere = (await ViewLejereByNameUseCase.ExecuteAsync(this.SearchTerm)).ToList();
+        listLejere = (await ViewLejereByNameUseCase.ExecuteAsync(this.SearchTerm)).OrderBy((item) => item.Navn).ToList();
     }
 
 

@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "apIU4EG3vAard8+mjDelQInZcGLz/tkokZrmHAq0N98=",
+  "Hash": "bbvZ/Z5yYPdBRilV6oyqGAH49rv5FClH0A6tyrdB8Us=",
   "Source": "OMS.WebApp",
   "BasePath": "_content/OMS.WebApp",
   "Mode": "Default",
@@ -270,6 +270,40 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\favicon.png"
+    },
+    {
+      "Identity": "C:\\Users\\kaffe\\Dropbox\\Datamatiker\\AFGANGSPROJEKT\\PractiseProjects\\OMS\\OMS.WebApp\\wwwroot\\Images\\image1.jpg",
+      "SourceId": "OMS.WebApp",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\kaffe\\Dropbox\\Datamatiker\\AFGANGSPROJEKT\\PractiseProjects\\OMS\\OMS.WebApp\\wwwroot\\",
+      "BasePath": "_content/OMS.WebApp",
+      "RelativePath": "Images/image1.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Images\\image1.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\kaffe\\Dropbox\\Datamatiker\\AFGANGSPROJEKT\\PractiseProjects\\OMS\\OMS.WebApp\\wwwroot\\Images\\image2.jpg",
+      "SourceId": "OMS.WebApp",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\kaffe\\Dropbox\\Datamatiker\\AFGANGSPROJEKT\\PractiseProjects\\OMS\\OMS.WebApp\\wwwroot\\",
+      "BasePath": "_content/OMS.WebApp",
+      "RelativePath": "Images/image2.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Images\\image2.jpg"
     }
   ]
 }

@@ -5,6 +5,14 @@
       "PackagePath": "staticwebassets\\OMS.WebApp.bundle.scp.css"
     },
     {
+      "Id": "C:\\Users\\kaffe\\Dropbox\\Datamatiker\\AFGANGSPROJEKT\\PractiseProjects\\OMS\\OMS.WebApp\\wwwroot\\Images\\image1.jpg",
+      "PackagePath": "staticwebassets\\Images\\image1.jpg"
+    },
+    {
+      "Id": "C:\\Users\\kaffe\\Dropbox\\Datamatiker\\AFGANGSPROJEKT\\PractiseProjects\\OMS\\OMS.WebApp\\wwwroot\\Images\\image2.jpg",
+      "PackagePath": "staticwebassets\\Images\\image2.jpg"
+    },
+    {
       "Id": "C:\\Users\\kaffe\\Dropbox\\Datamatiker\\AFGANGSPROJEKT\\PractiseProjects\\OMS\\OMS.WebApp\\wwwroot\\css\\bootstrap\\bootstrap.min.css",
       "PackagePath": "staticwebassets\\css\\bootstrap\\bootstrap.min.css"
     },
