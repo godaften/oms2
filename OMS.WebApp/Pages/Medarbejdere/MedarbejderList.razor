@@ -1,0 +1,22 @@
+﻿@page "/medarbejdere"
+
+<h3>MedarbejderList</h3>
+<br />
+<SearchMedarbejderComponent OnSearchMedarbejder="OnSearchMedarbejder"></SearchMedarbejderComponent>
+<br />
+<MedarbejderListComponent SearchTerm="@searchTerm"></MedarbejderListComponent>
+@code {
+
+    private string searchTerm = string.Empty;
+
+    // searchTerm er det, som brugeren indtaster i søgekomponenten
+    // Når søgeknappen bliver klikket, bliver eventcallbackmetoden trigget
+    // og denne metode får søgetermen.
+
+    private void OnSearchMedarbejder(string searchTerm)
+    {
+        this.searchTerm = searchTerm;
+    }
+
+
+}

@@ -1,11 +1,64 @@
 ﻿@page "/editlejer/{LejId:int}"
 
+@inject NavigationManager NavigationManager;
+@inject IViewLejerByIdUseCase ViewLejerByIdUseCase;
+@inject IEditLejerUseCase EditLejerUseCase;
+
 <h3>EditLejer</h3>
 <br />
-@LejId
+
+<EditForm Model="lejer" OnValidSubmit="SaveLejer">
+    <DataAnnotationsValidator></DataAnnotationsValidator>
+    <ValidationSummary></ValidationSummary>
+
+    <div class="form-group">
+        <label for="name">Navn</label>
+        <InputText id="name"
+                   @bind-Value="lejer.Navn"
+                   class="form-control"></InputText>
+    </div>
+    <div class="form-group">
+        <label for="phone">Telefon</label>
+        <InputText id="phone"
+                   @bind-Value="lejer.Telefon"
+                   class="form-control"></InputText>
+    </div>
+    <div class="form-group">
+        <label for="email">Email</label>
+        <InputText id="email"
+                   @bind-Value="lejer.Email"
+                   class="form-control"></InputText>
+    </div>
+    <br />
+    <button type="submit" class="btn btn-primary">Gem</button>
+    <button type="button" class="btn btn-primary" @onclick="Cancel">Annuller</button>
+
+</EditForm>
+
 
 @code {
 
     [Parameter]
     public int LejId { get; set; }
+
+    private Lejer lejer = new Lejer();
+
+    // Sikre at vi modtager id
+    protected override async Task OnParametersSetAsync()
+    {
+        
+        this.lejer = await ViewLejerByIdUseCase.ExecuteAsync(this.LejId);
+    }
+
+    private async Task SaveLejer()
+    {
+        await EditLejerUseCase.ExecuteAsync(this.lejer);
+        NavigationManager.NavigateTo("/lejere");
+
+    }
+
+    private void Cancel()
+    {
+        NavigationManager.NavigateTo("/lejere");
+    }
 }

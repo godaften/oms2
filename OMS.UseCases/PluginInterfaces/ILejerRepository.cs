@@ -17,6 +17,8 @@ namespace OMS.UseCases.PluginInterfaces
         Task AddLejerAsync(Lejer lejer);
         Task UpdateLejerAsync(Lejer lejer);
 
+        Task<Lejer> GetLejerByIdAsync(int lejerId);
+
 
     }
 }

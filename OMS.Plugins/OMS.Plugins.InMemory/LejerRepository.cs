@@ -37,6 +37,28 @@ namespace OMS.Plugins.InMemory
             return Task.CompletedTask;
         }
 
+        public async Task<Lejer> GetLejerByIdAsync(int lejerId)
+        {
+            // Her gemmes den i hukommelsen, således der bruges en reference andre steder.
+            // Metoden bruges ikke, da vi hellere vil have en kopi, altså en "frisk"
+            // GAMMEL: return await Task.FromResult(_lejere.First(x => x.LejerID == lejerId));
+
+            // NY: Her laves en ny i stedet, således der sendes et frisk objekt videre.
+            // Har betydning ved fx editform under editpage
+            var lej = _lejere.First(x => x.LejerID == lejerId);
+            var newLej = new Lejer
+            {
+                LejerID = lej.LejerID,
+                Navn = lej.Navn,
+                Telefon = lej.Telefon,
+                Email = lej.Email
+            };
+
+            return await Task.FromResult(newLej);
+
+
+        }
+
         public async Task<IEnumerable<Lejer>> GetLejereByNameUseCaseAsync(string name)
         {
             if (string.IsNullOrEmpty(name)) return await Task.FromResult(_lejere);

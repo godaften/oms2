@@ -1,0 +1,20 @@
+﻿@foreach (var medarb in Medarbejdere)
+{
+    <tr>
+        <td>@medarb.Navn</td>
+        <td>@medarb.Telefon</td>
+        <td>@medarb.Email</td>
+        <td>
+            <button type="button"
+                class="btn btn-light">
+                Rediger
+            </button>
+        </td>
+    </tr>
+}
+@code {
+
+    [Parameter]
+    public List<Medarbejder> Medarbejdere { get; set; } = new List<Medarbejder>();
+
+}
