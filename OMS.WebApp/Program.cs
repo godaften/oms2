@@ -1,6 +1,8 @@
 using Microsoft.AspNetCore.Components;
 using Microsoft.AspNetCore.Components.Web;
 using OMS.Plugins.InMemory;
+using OMS.UseCases.Kontorhuse;
+using OMS.UseCases.Kontorhuse.Interfaces;
 using OMS.UseCases.Lejere;
 using OMS.UseCases.Lejere.Interfaces;
 using OMS.UseCases.Medarbejdere;
@@ -26,13 +28,18 @@ builder.Services.AddSingleton<WeatherForecastService>();
 // Ellers får man dataintegritetsproblemer
 builder.Services.AddSingleton<ILejerRepository, LejerRepository>();
 builder.Services.AddSingleton<IMedarbejderRepository, MedarbejderRepository>();
+builder.Services.AddSingleton<IKontorhusRepository, KontorhusRepository>();
 
 // Transient ved use cases - ikke ved database
 builder.Services.AddTransient<IViewLejereByNameUseCase, ViewLejereByNameUseCase>();
 builder.Services.AddTransient<IAddLejerUseCase, AddLejerUseCase>();
 builder.Services.AddTransient<IEditLejerUseCase, EditLejerUseCase>();
+
 builder.Services.AddTransient<IViewLejerByIdUseCase, ViewLejerByIdUseCase>();
 builder.Services.AddTransient<IViewMedarbejderByNameUseCase, ViewMedarbejderByNameUseCase>();
+builder.Services.AddTransient<IAddMedarbejderUseCase, AddMedarbejderUseCase>();
+
+builder.Services.AddTransient<IViewKontorhusByNameUseCase, ViewKontorhusByNameUseCase>();
 
 //Add additional Service for Hide/Show Navbar
 builder.Services.AddSingleton<ViewOptionService>();

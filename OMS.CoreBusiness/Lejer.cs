@@ -7,10 +7,14 @@ namespace OMS.CoreBusiness
 
         // Lav flere valideringer
         public int LejerID { get; set; }
+
         [Required]
+        [StringLength(100)]
         public string Navn { get; set;} = string.Empty;
+
         [Required]
         public string Telefon { get; set; } = string.Empty;
+
         [Required]
         public string Email { get; set; } = string.Empty;
        

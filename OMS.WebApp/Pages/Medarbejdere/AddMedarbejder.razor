@@ -1,0 +1,54 @@
+﻿@page "/opretmedarbejder"
+@inject NavigationManager NavigationManager
+@inject IAddMedarbejderUseCase AddMedarbejderUseCase
+
+<h3>Ny medarbejder</h3>
+<br />
+<EditForm Model="medarbejder" OnValidSubmit="SaveMedarbejder">
+    <DataAnnotationsValidator></DataAnnotationsValidator>
+    <ValidationSummary></ValidationSummary>
+
+    <div class="form-group">
+        <label for="name">Navn</label>
+        <InputText id="name"
+                   @bind-Value="medarbejder.Navn"
+                   class="form-control"></InputText>
+    </div>
+    <div class="form-group">
+        <label for="phone">Telefon</label>
+        <InputText id="phone"
+                   @bind-Value="medarbejder.Telefon"
+                   class="form-control"></InputText>
+    </div>
+    <div class="form-group">
+        <label for="email">Email</label>
+        <InputText id="email"
+                   @bind-Value="medarbejder.Email"
+                   class="form-control"></InputText>
+    </div>
+    <br />
+    <button type="submit" class="btn btn-primary">Gem</button>
+    <button type="button" class="btn btn-primary" @onclick="Cancel">Annuller</button>
+
+</EditForm>
+
+@code {
+    private Medarbejder medarbejder = new Medarbejder();
+
+    private async Task SaveMedarbejder()
+    {
+        // editformen er bundet til modellen/objektet medarbejder
+        // når editformen er udfyldt og valideret, trigges metoden i usecasen og sender medarbejderobjektet
+        await AddMedarbejderUseCase.ExecuteAsync(medarbejder);
+
+        NavigationManager.NavigateTo("/medarbejdere");
+
+        
+    }
+
+
+    private void Cancel()
+    {
+        NavigationManager.NavigateTo("/medarbejdere");
+    }
+}

@@ -20,6 +20,6 @@ public class ViewLejereByNameUseCase : IViewLejereByNameUseCase
 
     public async Task<IEnumerable<Lejer>> ExecuteAsync(string name = "")
     {
-        return await lejerRepository.GetLejereByNameUseCaseAsync(name);
+        return await lejerRepository.GetLejereByNameAsync(name);
     }
 }

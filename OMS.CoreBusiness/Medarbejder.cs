@@ -9,6 +9,7 @@ namespace OMS.CoreBusiness
 {
     public class Medarbejder
     {
+        
         public int MedarbejderID { get; set; }
         [Required]
         public string Navn { get; set; } = string.Empty;
