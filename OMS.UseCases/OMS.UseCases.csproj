@@ -10,8 +10,4 @@
     <ProjectReference Include="..\OMS.CoreBusiness\OMS.CoreBusiness.csproj" />
   </ItemGroup>
 
-  <ItemGroup>
-    <Folder Include="Udlejere\" />
-  </ItemGroup>
-
 </Project>

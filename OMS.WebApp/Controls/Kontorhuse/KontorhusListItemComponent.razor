@@ -1,0 +1,20 @@
+﻿@foreach (var khus in Kontorhuse)
+{
+    <tr>
+        <td>@khus.KontorhusNavn</td>
+        <td>@khus.KontorhusTelefon</td>
+        <td>@khus.KontorhusEmail</td>
+        <td>
+            <button type="button"
+                class="btn btn-light">
+                Rediger
+            </button>
+        </td>
+    </tr>
+}
+@code {
+
+    [Parameter]
+    public List<Kontorhus> Kontorhuse { get; set; } = new List<Kontorhus>();
+
+}

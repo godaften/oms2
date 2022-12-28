@@ -34,8 +34,8 @@ builder.Services.AddSingleton<IKontorhusRepository, KontorhusRepository>();
 builder.Services.AddTransient<IViewLejereByNameUseCase, ViewLejereByNameUseCase>();
 builder.Services.AddTransient<IAddLejerUseCase, AddLejerUseCase>();
 builder.Services.AddTransient<IEditLejerUseCase, EditLejerUseCase>();
-
 builder.Services.AddTransient<IViewLejerByIdUseCase, ViewLejerByIdUseCase>();
+
 builder.Services.AddTransient<IViewMedarbejderByNameUseCase, ViewMedarbejderByNameUseCase>();
 builder.Services.AddTransient<IAddMedarbejderUseCase, AddMedarbejderUseCase>();
 

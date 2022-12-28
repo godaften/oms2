@@ -1,0 +1,29 @@
+﻿@inject IViewKontorhusByNameUseCase ViewKontorhusByNameUseCase
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Navn</th>
+            <th>Telefon</th>
+            <th>Email</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        <KontorhusListItemComponent Kontorhuse="listKontorhuse"></KontorhusListItemComponent>
+    </tbody>
+</table>
+
+@code {
+    private List<Kontorhus> listKontorhuse = new List<Kontorhus>();
+
+    [Parameter]
+    public string SearchTerm { get; set; } = string.Empty;
+
+    protected override async Task OnParametersSetAsync()
+    {
+        // returnerer en IEnumerable, derfor skal den være ToList
+        listKontorhuse = (await ViewKontorhusByNameUseCase.ExecuteAsync(this.SearchTerm)).ToList();
+    }
+
+}

@@ -1,0 +1,34 @@
+﻿<div class="input-group">
+    <input type="text"
+           class="form-control"
+           placeholder="Skriv søgeord her"
+           @bind-value="kontorhusNameToSearch" />
+    <button type="button"
+            class="btn-success input-group-text"
+            @onclick="OnSearch">
+        Søg
+    </button>
+</div>
+
+
+@code {
+
+    // Definere og initialisere strengen
+    private string kontorhusNameToSearch = string.Empty;
+
+    // Jeg skal sende searchterm til parentkomponent
+    // Jeg bruger EventCallback med typen string, da søgeterm er en streng
+    [Parameter]
+    public EventCallback<string> OnSearchKontorhus { get; set; }
+
+    // En EventCallback er en struct, som altid er null (hvis det var en klasse, skulle det null tjekkes)
+
+    public void OnSearch()
+    {
+        OnSearchKontorhus.InvokeAsync(kontorhusNameToSearch);
+
+    }
+
+}
+
+

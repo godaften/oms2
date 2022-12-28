@@ -7,7 +7,6 @@ using OMS.CoreBusiness;
 using OMS.UseCases.Kontorhuse.Interfaces;
 using OMS.UseCases.PluginInterfaces;
 
-
 namespace OMS.UseCases.Kontorhuse;
 
 public class ViewKontorhusByNameUseCase : IViewKontorhusByNameUseCase
@@ -24,8 +23,8 @@ public class ViewKontorhusByNameUseCase : IViewKontorhusByNameUseCase
 
     }
 
-    Task<IEnumerable<Kontorhus>> IViewKontorhusByNameUseCase.ExecuteAsync(string name)
-    {
-        throw new NotImplementedException();
-    }
+    //Task<IEnumerable<Kontorhus>> IViewKontorhusByNameUseCase.ExecuteAsync(string name)
+    //{
+    //    throw new NotImplementedException();
+    //}
 }
