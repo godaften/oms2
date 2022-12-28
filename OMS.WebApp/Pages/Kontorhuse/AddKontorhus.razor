@@ -1,0 +1,54 @@
+﻿@page "/opretkontorhus"
+@inject NavigationManager NavigationManager
+@inject IAddKontorhusUseCase AddKontorhusUseCase
+
+<h3>Nyt kontorhus</h3>
+<br />
+<EditForm Model="kontorhus" OnValidSubmit="SaveKontorhus">
+    <DataAnnotationsValidator></DataAnnotationsValidator>
+    <ValidationSummary></ValidationSummary>
+
+    <div class="form-group">
+        <label for="name">Navn</label>
+        <InputText id="name"
+                   @bind-Value="kontorhus.KontorhusNavn"
+                   class="form-control"></InputText>
+    </div>
+    <div class="form-group">
+        <label for="phone">Telefon</label>
+        <InputText id="phone"
+                   @bind-Value="kontorhus.KontorhusTelefon"
+                   class="form-control"></InputText>
+    </div>
+    <div class="form-group">
+        <label for="email">Email</label>
+        <InputText id="email"
+                   @bind-Value="kontorhus.KontorhusEmail"
+                   class="form-control"></InputText>
+    </div>
+    <br />
+    <button type="submit" class="btn btn-primary">Gem</button>
+    <button type="button" class="btn btn-primary" @onclick="Cancel">Annuller</button>
+
+</EditForm>
+
+@code {
+    private Kontorhus kontorhus = new Kontorhus();
+
+    private async Task SaveKontorhus()
+    {
+        // editformen er bundet til modellen/objektet kontorhus
+        // når editformen er udfyldt og valideret, trigges metoden i usecasen og sender kontorhus
+        await AddKontorhusUseCase.ExecuteAsync(kontorhus);
+
+        NavigationManager.NavigateTo("/kontorhuse");
+
+
+    }
+
+
+    private void Cancel()
+    {
+        NavigationManager.NavigateTo("/kontorhuse");
+    }
+}

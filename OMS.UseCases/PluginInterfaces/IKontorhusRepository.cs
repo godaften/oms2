@@ -8,5 +8,7 @@ namespace OMS.UseCases.PluginInterfaces
 
         //Task<IEnumerable<Kontorhus>> GetKontorhuseByNameUseCaseAsync(string name);
 
+        Task AddKontorhusAsync(Kontorhus kontorhus);
+
     }
 }

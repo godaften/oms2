@@ -40,6 +40,7 @@ builder.Services.AddTransient<IViewMedarbejderByNameUseCase, ViewMedarbejderByNa
 builder.Services.AddTransient<IAddMedarbejderUseCase, AddMedarbejderUseCase>();
 
 builder.Services.AddTransient<IViewKontorhusByNameUseCase, ViewKontorhusByNameUseCase>();
+builder.Services.AddTransient<IAddKontorhusUseCase, AddKontorhusUseCase>();
 
 //Add additional Service for Hide/Show Navbar
 builder.Services.AddSingleton<ViewOptionService>();

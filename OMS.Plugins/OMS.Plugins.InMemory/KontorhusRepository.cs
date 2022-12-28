@@ -35,6 +35,22 @@ public class KontorhusRepository : IKontorhusRepository
         };
 
     }
+
+    public Task AddKontorhusAsync(Kontorhus kontorhus)
+    {
+        // Hvis der er et kontorhus med samme navn allerede, returnerer vi uden at gøre mere
+        if (_kontorhuse.Any(x => x.KontorhusNavn.Equals(kontorhus.KontorhusNavn, StringComparison.OrdinalIgnoreCase)))
+            return Task.CompletedTask;
+
+        _kontorhuse.Add(kontorhus);
+
+        var maxId = _kontorhuse.Max(x => x.KontorhusID);
+        kontorhus.KontorhusID = maxId + 1;
+
+        return Task.CompletedTask;
+    }
+
+
     public async Task<IEnumerable<Kontorhus>> GetKontorhuseByNameAsync(string name)
     {
         return _kontorhuse.Where(x => x.KontorhusNavn.Contains(name, StringComparison.OrdinalIgnoreCase));

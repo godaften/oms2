@@ -7,12 +7,12 @@
 <br />
 <KontorhusListComponent SearchTerm="@searchTerm"></KontorhusListComponent>
 
-@*
+
 <button type="button"
         class="btn btn-primary"
-        @onclick="AddMedarbejder">
-    Ny medarbejder
-</button>*@
+        @onclick="AddKontorhus">
+    Nyt kontorhus
+</button>
 
 @code {
 
@@ -27,10 +27,10 @@
         this.searchTerm = searchTerm;
     }
 
-    //private void AddMedarbejder()
-    //{
-    //    NavigationManager.NavigateTo("/opretmedarbejder");
-    //}
+    private void AddKontorhus()
+    {
+        NavigationManager.NavigateTo("/opretkontorhus");
+    }
 
 
 }
