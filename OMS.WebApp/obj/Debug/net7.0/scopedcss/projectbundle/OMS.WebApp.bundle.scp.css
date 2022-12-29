@@ -1,3 +1,18 @@
+/* _content/OMS.WebApp/Controls/Lejere/SearchAndDisplayLejereComponent.razor.rz.scp.css */
+.search-result[b-nngtcfofii] {
+    overflow-y:auto;
+    height:300px;
+    border: 1px solid silver;
+    padding-top: 5px;
+}
+
+div ul[b-nngtcfofii] {
+    list-style-type:none;  
+}
+
+div ul li[b-nngtcfofii] {
+    cursor: pointer;
+}
 /* _content/OMS.WebApp/Shared/MainLayout - Copy.razor.rz.scp.css */
 .page[b-5gw13fstsj] {
     position: relative;

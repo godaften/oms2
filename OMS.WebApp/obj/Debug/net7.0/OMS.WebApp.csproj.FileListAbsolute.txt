@@ -38,3 +38,4 @@ C:\Users\kaffe\Dropbox\Datamatiker\AFGANGSPROJEKT\PractiseProjects\OMS\OMS.WebAp
 C:\Users\kaffe\Dropbox\Datamatiker\AFGANGSPROJEKT\PractiseProjects\OMS\OMS.WebApp\obj\Debug\net7.0\OMS.WebApp.genruntimeconfig.cache
 C:\Users\kaffe\Dropbox\Datamatiker\AFGANGSPROJEKT\PractiseProjects\OMS\OMS.WebApp\obj\Debug\net7.0\ref\OMS.WebApp.dll
 C:\Users\kaffe\Dropbox\Datamatiker\AFGANGSPROJEKT\PractiseProjects\OMS\OMS.WebApp\obj\Debug\net7.0\scopedcss\Shared\MainLayout - Copy.razor.rz.scp.css
+C:\Users\kaffe\Dropbox\Datamatiker\AFGANGSPROJEKT\PractiseProjects\OMS\OMS.WebApp\obj\Debug\net7.0\scopedcss\Controls\Lejere\SearchAndDisplayLejereComponent.razor.rz.scp.css
