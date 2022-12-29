@@ -1,0 +1,71 @@
+﻿@page "/redigerkontorhus/{id:int}"
+@inject IViewKontorhusByIdUseCase ViewKontorhusByIdUseCase
+@inject IEditKontorhusUseCase EditKontorhusUseCase
+@inject NavigationManager NavigationManager
+
+<h3>Rediger Kontorhus</h3>
+<br />
+
+@if (kontorhus != null)
+{
+    <EditForm Model="kontorhus" OnValidSubmit="SaveKontorhus">
+        <DataAnnotationsValidator></DataAnnotationsValidator>
+        <ValidationSummary></ValidationSummary>
+
+        <div class="form-group">
+            <label for="name">Navn</label>
+            <InputText id="name"
+                   @bind-Value="kontorhus.KontorhusNavn"
+                   class="form-control"></InputText>
+        </div>
+        <div class="form-group">
+            <label for="phone">Telefon</label>
+            <InputText id="phone"
+                   @bind-Value="kontorhus.KontorhusTelefon"
+                   class="form-control"></InputText>
+        </div>
+        <div class="form-group">
+            <label for="email">Email</label>
+            <InputText id="email"
+                   @bind-Value="kontorhus.KontorhusEmail"
+                   class="form-control"></InputText>
+        </div>
+
+        <div class="form-group">
+            <label for="lejere">Lejer</label>
+            <KontorhusLejereComponent Kontorhus="this.kontorhus"></KontorhusLejereComponent>
+
+        </div>
+        <br />
+        <button type="submit" class="btn btn-primary">Gem</button>
+        <button type="button" class="btn btn-primary" @onclick="Cancel">Annuller</button>
+
+    </EditForm>
+}
+
+@code {
+    private Kontorhus? kontorhus;
+
+    [Parameter]
+    public int Id { get; set; }
+
+    protected override async Task OnInitializedAsync()
+    {
+        this.kontorhus = await ViewKontorhusByIdUseCase.ExcecuteAsync(this.Id);
+    }
+
+    private async Task SaveKontorhus()
+    {
+        if(this.kontorhus !=null)
+        {
+            await EditKontorhusUseCase.ExecuteAsync(this.kontorhus);
+            NavigationManager.NavigateTo("/kontorhuse");
+        }
+    }
+
+    private void Cancel()
+    {
+        NavigationManager.NavigateTo("/kontorhuse");
+    }
+
+}

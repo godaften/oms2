@@ -1,4 +1,5 @@
 ﻿using OMS.CoreBusiness;
+using OMS.UseCases.Kontorhuse.Interfaces;
 using OMS.UseCases.PluginInterfaces;
 using System;
 using System.Collections.Generic;

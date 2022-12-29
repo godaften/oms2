@@ -1,4 +1,6 @@
-﻿@foreach (var khus in Kontorhuse)
+﻿@inject NavigationManager NavigationManager
+
+@foreach (var khus in Kontorhuse)
 {
     <tr>
         <td>@khus.KontorhusNavn</td>
@@ -6,15 +8,22 @@
         <td>@khus.KontorhusEmail</td>
         <td>
             <button type="button"
-                class="btn btn-light">
-                Rediger
+                class="btn btn-light"
+            @onclick="@(()=>EditKontorhus(khus))"
+            >Rediger
             </button>
         </td>
     </tr>
 }
+
 @code {
 
     [Parameter]
     public List<Kontorhus> Kontorhuse { get; set; } = new List<Kontorhus>();
+
+    private void EditKontorhus(Kontorhus kontorhus)
+    {
+        NavigationManager.NavigateTo($"/redigerkontorhus/{kontorhus.KontorhusID}");
+    }
 
 }
