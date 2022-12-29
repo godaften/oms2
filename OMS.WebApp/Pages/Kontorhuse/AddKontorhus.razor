@@ -26,6 +26,12 @@
                    @bind-Value="kontorhus.KontorhusEmail"
                    class="form-control"></InputText>
     </div>
+
+    <div class="form-group">
+        <label for="lejere">Lejer</label>
+        <SearchAndDisplayLejereComponent></SearchAndDisplayLejereComponent>
+
+    </div>
     <br />
     <button type="submit" class="btn btn-primary">Gem</button>
     <button type="button" class="btn btn-primary" @onclick="Cancel">Annuller</button>

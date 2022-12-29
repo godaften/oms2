@@ -1,0 +1,51 @@
+﻿@inject IViewLejereByNameUseCase ViewLejereByNameUseCase
+
+<SearchLejerComponent
+    OnSearchLejer="OnSearchLejer"></SearchLejerComponent>
+
+    @if(_lejere.Count > 0)
+{
+    <div style="overflow-y:auto;max-height:300px;border:1px solid silver;padding-top:5px;">
+    <ul style="list-style:none">
+        @foreach(var lej in _lejere)
+        {
+        @* @key hjælper Blazor med at se forskelle, så den ikke renderer hele listen hver gang *@        
+            <li @key="lej.LejerID" 
+            style="cursor:pointer"
+           
+            @onclick="@(async () => { await OnSelectLejer(lej);} )">
+            @lej.Navn
+        </li>
+        }
+    </ul>
+    </div>
+}
+
+@code {
+    private List<Lejer> _lejere = new List<Lejer>();
+
+    [Parameter]
+    public EventCallback<Lejer> OnLejerSelected { get; set; }
+
+    private async Task OnSearchLejer(string searchTerm)
+    {
+
+        _lejere = (await ViewLejereByNameUseCase.ExecuteAsync(searchTerm)).ToList();
+
+    }
+
+    
+    // HVIS IKKE ASYNC:
+    // @onclick="@(() => OnSelectLejer(lej))" - bruges i html koden>
+    // private void OnSelectLejer (Lejer lejer)
+    // {
+    // OnLejerSeleted.InvokeAsync(Lejer lejer);
+    // _lejere.Clear()};
+
+
+    private async Task OnSelectLejer (Lejer lejer)
+    {
+         await OnLejerSelected.InvokeAsync(lejer);
+        _lejere.Clear();
+    }
+}
