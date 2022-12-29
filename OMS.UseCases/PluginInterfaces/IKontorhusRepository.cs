@@ -10,5 +10,8 @@ namespace OMS.UseCases.PluginInterfaces
 
         Task AddKontorhusAsync(Kontorhus kontorhus);
 
+        // Hvis den får et id, der ikke findes, skal den have mulighed for at være null
+        Task<Kontorhus?> GetKontorhusById(int kontorhusId);
+        Task UpdateKontorhusAsync(Kontorhus kontorhus);
     }
 }

@@ -50,15 +50,82 @@ public class KontorhusRepository : IKontorhusRepository
         return Task.CompletedTask;
     }
 
-
-    public async Task<IEnumerable<Kontorhus>> GetKontorhuseByNameAsync(string name)
+    public async Task<Kontorhus?> GetKontorhusById(int kontorhusId)
     {
-        return _kontorhuse.Where(x => x.KontorhusNavn.Contains(name, StringComparison.OrdinalIgnoreCase));
+        // Gammel - pga. InMemory laves anden
+        // return await Task.FromResult(_kontorhuse.FirstOrDefault(x => x.KontorhusID == kontorhusId));
+        // Se video 35 ved ca. 5 minutter for forklaring på nedenstående
+
+        var khus = _kontorhuse.FirstOrDefault(x => x.KontorhusID == kontorhusId);
+
+        var newKhus = new Kontorhus();
+        if (khus != null)
+        {
+            newKhus.KontorhusID = khus.KontorhusID;
+            newKhus.KontorhusNavn = khus.KontorhusNavn;
+            newKhus.KontorhusEmail = khus.KontorhusEmail;
+            newKhus.KontorhusLejere = new List<KontorhusLejer>();
+
+            if (khus.KontorhusLejere != null && khus.KontorhusLejere.Count > 0)
+            {
+                foreach (var khusLejer in khus.KontorhusLejere)
+                {
+                    var newKhusLejer = new KontorhusLejer
+                    {
+                        LejerID = khusLejer.LejerID,
+                        KontorhusID = khus.KontorhusID,
+                        Kontorhus = khus,
+                        Lejer = new Lejer()
+
+                    };
+                    if (khusLejer.Lejer != null)
+                    {
+                        newKhusLejer.Lejer.LejerID = khusLejer.Lejer.LejerID;
+                        newKhusLejer.Lejer.Navn = khusLejer.Lejer.Navn;
+                        newKhusLejer.Lejer.Telefon = khusLejer.Lejer.Telefon;
+                        newKhusLejer.Lejer.Email = khusLejer.Lejer.Email;
+
+
+                    }
+                    newKhus.KontorhusLejere.Add(newKhusLejer);
+
+                }
+
+            }
+        }
+
+
+        return await Task.FromResult(newKhus);
     }
 
 
-    //Task<IEnumerable<Kontorhus>> IKontorhusRepository.GetKontorhuseByNameUseCaseAsync(string name)
-    //{
-    //    throw new NotImplementedException();
-    //}
+
+    public async Task<IEnumerable<Kontorhus>> GetKontorhuseByNameAsync(string name)
+    {
+        // Hvorfor ikke await her? Fix den
+        // return _kontorhuse.Where(x => x.KontorhusNavn.Contains(name, StringComparison.OrdinalIgnoreCase));
+
+        return await Task.FromResult(_kontorhuse.Where(x => x.KontorhusNavn.Contains(name, StringComparison.OrdinalIgnoreCase)));
+
+    }
+
+    public Task UpdateKontorhusAsync(Kontorhus kontorhus)
+    {
+        // Undgå forskellige kontorhuse med samme navn
+        // Er nok ikke nødvendig for vores vedkommende... slet (gem kopi af hele projekt først)
+        if (_kontorhuse.Any(x => x.KontorhusID != kontorhus.KontorhusID &&
+        x.KontorhusNavn.ToLower() == kontorhus.KontorhusNavn.ToLower()))
+            return Task.CompletedTask;
+
+        var khus = _kontorhuse.FirstOrDefault(x => x.KontorhusID == kontorhus.KontorhusID);
+        if(khus !=null)
+        {
+            khus.KontorhusNavn = kontorhus.KontorhusNavn;
+            khus.KontorhusTelefon = kontorhus.KontorhusTelefon;
+            khus.KontorhusEmail = kontorhus.KontorhusEmail;
+            khus.KontorhusLejere = kontorhus.KontorhusLejere;
+        }
+
+        return Task.CompletedTask;
+    }
 }

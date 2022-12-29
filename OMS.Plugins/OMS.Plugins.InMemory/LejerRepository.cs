@@ -45,6 +45,10 @@ public class LejerRepository : ILejerRepository
 
         // NY: Her laves en ny i stedet, således der sendes et frisk objekt videre.
         // Har betydning ved fx editform under editpage
+
+        // Årsagen er, at vi her bruger InMemory, og vi først ønsker, at det ændrede objekt gemmes, 
+        // når brugeren klikker på Gem knappen. Hvis vi ikke gemmer ændringer i et nyt objekt, vil ændringerne
+        // ske samtidigt med, brugeren laver ændringer i formularen. Det ønskes ikke.
         var lej = _lejere.First(x => x.LejerID == lejerId);
         var newLej = new Lejer
         {

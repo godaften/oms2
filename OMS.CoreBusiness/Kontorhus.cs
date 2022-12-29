@@ -16,4 +16,22 @@ public class Kontorhus
 
     public string KontorhusEmail { get; set; } = string.Empty;
 
+    public List<KontorhusLejer> KontorhusLejere { get; set; } = new List<KontorhusLejer>();
+
+    public void AddLejer(Lejer lejer)
+    {
+        if (!this.KontorhusLejere.Any(x => x.Lejer != null && x.Lejer.Navn.Equals(lejer.Navn)))
+        {
+            this.KontorhusLejere.Add(new KontorhusLejer
+
+            {
+                LejerID = lejer.LejerID,
+                Lejer = lejer,
+                KontorhusID = this.KontorhusID,
+                Kontorhus = this //this refererer til det nuværende kontorhus af denne klasse
+            });
+
+        }
+    }
+
 }

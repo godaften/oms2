@@ -23,8 +23,4 @@ public class ViewKontorhusByNameUseCase : IViewKontorhusByNameUseCase
 
     }
 
-    //Task<IEnumerable<Kontorhus>> IViewKontorhusByNameUseCase.ExecuteAsync(string name)
-    //{
-    //    throw new NotImplementedException();
-    //}
 }

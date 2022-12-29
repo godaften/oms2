@@ -1,0 +1,46 @@
+﻿<SearchAndDisplayLejereComponent OnLejerSelected="OnLejerSelected"></SearchAndDisplayLejereComponent>
+@if (this.Kontorhus.KontorhusLejere != null && this.Kontorhus.KontorhusLejere.Count > 0)
+{
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Navn</th>
+                <th></th>
+            </tr>
+    
+        </thead>
+        <tbody>
+            @foreach(var khusLejer in this.Kontorhus.KontorhusLejere)
+            {
+                <tr>
+                    <td>
+                        @khusLejer.Lejer?.Navn
+                    </td>
+                    <td>
+                        <button
+                            class="btn btn-link"
+                            type="button"
+                            @onclick="@(() => RemoveLejer(khusLejer))">
+                            Slet</button>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}
+
+@code {
+    [Parameter] // is passed from outside
+    public Kontorhus Kontorhus { get; set; } = new Kontorhus();
+
+    private void RemoveLejer(KontorhusLejer kontorhusLejer)
+    {
+        this.Kontorhus.KontorhusLejere.Remove(kontorhusLejer);
+    }
+
+    private void OnLejerSelected(Lejer lejer)
+    {
+
+        this.Kontorhus.AddLejer(lejer);
+    }
+}
