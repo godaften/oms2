@@ -63,6 +63,7 @@ public class KontorhusRepository : IKontorhusRepository
         {
             newKhus.KontorhusID = khus.KontorhusID;
             newKhus.KontorhusNavn = khus.KontorhusNavn;
+            newKhus.KontorhusTelefon = khus.KontorhusTelefon;
             newKhus.KontorhusEmail = khus.KontorhusEmail;
             newKhus.KontorhusLejere = new List<KontorhusLejer>();
 

@@ -18,4 +18,8 @@
     <ProjectReference Include="..\OMS.Plugins\OMS.Plugins.InMemory\OMS.Plugins.InMemory.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Controls\Common\" />
+  </ItemGroup>
+
 </Project>
