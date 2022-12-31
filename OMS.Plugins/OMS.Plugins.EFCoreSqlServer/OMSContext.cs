@@ -5,7 +5,10 @@ namespace OMS.Plugins.EFCoreSqlServer;
 
 public class OMSContext : DbContext
 {
-
+    public OMSContext(DbContextOptions options):base(options)
+    {
+            
+    }
     public DbSet<Lejer>? Lejere { get; set; }
     public DbSet<Kontorhus>? Kontorhuse { get; set; }
     public DbSet<Medarbejder>? Medarbejdere { get; set; }

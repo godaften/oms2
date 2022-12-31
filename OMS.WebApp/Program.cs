@@ -1,5 +1,7 @@
 using Microsoft.AspNetCore.Components;
 using Microsoft.AspNetCore.Components.Web;
+using Microsoft.EntityFrameworkCore;
+using OMS.Plugins.EFCoreSqlServer;
 using OMS.Plugins.InMemory;
 using OMS.UseCases.Kontorhuse;
 using OMS.UseCases.Kontorhuse.Interfaces;
@@ -12,6 +14,13 @@ using OMS.WebApp.Data;
 using OMS.WebApp.Services;
 
 var builder = WebApplication.CreateBuilder(args);
+
+
+builder.Services.AddDbContext<OMSContext>(options =>
+{
+    options.UseSqlServer(builder.Configuration.GetConnectionString("OfficeManagement"));
+});
+    
 
 // Add services to the container.
 builder.Services.AddRazorPages();

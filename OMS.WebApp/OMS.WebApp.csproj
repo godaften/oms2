@@ -15,11 +15,24 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\OMS.Plugins\OMS.Plugins.EFCoreSqlServer\OMS.Plugins.EFCoreSqlServer.csproj" />
     <ProjectReference Include="..\OMS.Plugins\OMS.Plugins.InMemory\OMS.Plugins.InMemory.csproj" />
   </ItemGroup>
 
   <ItemGroup>
     <Folder Include="Controls\Common\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="7.0.1">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="7.0.1" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="7.0.1">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
   </ItemGroup>
 
 </Project>

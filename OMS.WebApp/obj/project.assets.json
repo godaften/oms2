@@ -1143,6 +1143,20 @@
           "bin/placeholder/OMS.CoreBusiness.dll": {}
         }
       },
+      "OMS.Plugins.EFCoreSqlServer/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v7.0",
+        "dependencies": {
+          "Microsoft.EntityFrameworkCore.SqlServer": "7.0.1",
+          "OMS.CoreBusiness": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/OMS.Plugins.EFCoreSqlServer.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/OMS.Plugins.EFCoreSqlServer.dll": {}
+        }
+      },
       "OMS.Plugins.InMemory/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v7.0",
@@ -3494,6 +3508,11 @@
       "path": "../OMS.CoreBusiness/OMS.CoreBusiness.csproj",
       "msbuildProject": "../OMS.CoreBusiness/OMS.CoreBusiness.csproj"
     },
+    "OMS.Plugins.EFCoreSqlServer/1.0.0": {
+      "type": "project",
+      "path": "../OMS.Plugins/OMS.Plugins.EFCoreSqlServer/OMS.Plugins.EFCoreSqlServer.csproj",
+      "msbuildProject": "../OMS.Plugins/OMS.Plugins.EFCoreSqlServer/OMS.Plugins.EFCoreSqlServer.csproj"
+    },
     "OMS.Plugins.InMemory/1.0.0": {
       "type": "project",
       "path": "../OMS.Plugins/OMS.Plugins.InMemory/OMS.Plugins.InMemory.csproj",
@@ -3510,6 +3529,7 @@
       "Microsoft.EntityFrameworkCore.Design >= 7.0.1",
       "Microsoft.EntityFrameworkCore.SqlServer >= 7.0.1",
       "Microsoft.EntityFrameworkCore.Tools >= 7.0.1",
+      "OMS.Plugins.EFCoreSqlServer >= 1.0.0",
       "OMS.Plugins.InMemory >= 1.0.0"
     ]
   },
@@ -3546,6 +3566,9 @@
         "net7.0": {
           "targetAlias": "net7.0",
           "projectReferences": {
+            "C:\\Users\\kaffe\\Dropbox\\Datamatiker\\AFGANGSPROJEKT\\PractiseProjects\\OMS\\OMS.Plugins\\OMS.Plugins.EFCoreSqlServer\\OMS.Plugins.EFCoreSqlServer.csproj": {
+              "projectPath": "C:\\Users\\kaffe\\Dropbox\\Datamatiker\\AFGANGSPROJEKT\\PractiseProjects\\OMS\\OMS.Plugins\\OMS.Plugins.EFCoreSqlServer\\OMS.Plugins.EFCoreSqlServer.csproj"
+            },
             "C:\\Users\\kaffe\\Dropbox\\Datamatiker\\AFGANGSPROJEKT\\PractiseProjects\\OMS\\OMS.Plugins\\OMS.Plugins.InMemory\\OMS.Plugins.InMemory.csproj": {
               "projectPath": "C:\\Users\\kaffe\\Dropbox\\Datamatiker\\AFGANGSPROJEKT\\PractiseProjects\\OMS\\OMS.Plugins\\OMS.Plugins.InMemory\\OMS.Plugins.InMemory.csproj"
             }
