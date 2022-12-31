@@ -623,7 +623,8 @@
       "OMS.Plugins.EFCoreSqlServer/1.0.0": {
         "dependencies": {
           "Microsoft.EntityFrameworkCore.SqlServer": "7.0.1",
-          "OMS.CoreBusiness": "1.0.0"
+          "OMS.CoreBusiness": "1.0.0",
+          "OMS.UseCases": "1.0.0"
         },
         "runtime": {
           "OMS.Plugins.EFCoreSqlServer.dll": {}

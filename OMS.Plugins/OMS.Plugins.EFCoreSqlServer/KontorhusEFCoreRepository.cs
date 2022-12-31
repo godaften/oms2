@@ -25,9 +25,9 @@ public class KontorhusEFCoreRepository : IKontorhusRepository
         //await this.db.SaveChangesAsync();
         using var db = this.contextFactory.CreateDbContext();
         db.Kontorhuse.Add(kontorhus);
-        FlagLejereUnchanged(kontorhus, this.db);
+        FlagLejereUnchanged(kontorhus, db);
 
-        await this.db.SaveChangesAsync();
+        await db.SaveChangesAsync();
     }
 
  
@@ -64,9 +64,9 @@ public class KontorhusEFCoreRepository : IKontorhusRepository
             khus.KontorhusTelefon = kontorhus.KontorhusTelefon;
             khus.KontorhusEmail = kontorhus.KontorhusEmail;
             khus.KontorhusLejere = kontorhus.KontorhusLejere;
-            FlagLejereUnchanged(kontorhus, this.db);
+            FlagLejereUnchanged(kontorhus, db);
 
-            await this.db.SaveChangesAsync();
+            await db.SaveChangesAsync();
         }
     }
 

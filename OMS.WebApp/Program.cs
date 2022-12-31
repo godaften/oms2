@@ -1,5 +1,6 @@
 using Microsoft.AspNetCore.Components;
 using Microsoft.AspNetCore.Components.Web;
+using Microsoft.AspNetCore.Hosting.StaticWebAssets;
 using Microsoft.EntityFrameworkCore;
 using OMS.Plugins.EFCoreSqlServer;
 using OMS.Plugins.InMemory;
@@ -39,13 +40,24 @@ builder.Services.AddSingleton<WeatherForecastService>();
 // og give det videre til 'lejerRepository' feltet (private readonly)
 // Mapping mellem interface og implementering af servicen
 
-// Datastore og database (LejerRepository fx) kan der kun være en af, derfor singleton
-// Ellers får man dataintegritetsproblemer
-builder.Services.AddSingleton<ILejerRepository, LejerRepository>();
-builder.Services.AddSingleton<IMedarbejderRepository, MedarbejderRepository>();
-builder.Services.AddSingleton<IKontorhusRepository, KontorhusRepository>();
+// Datastore og database (LejerRepository fx) kan der kun være en af, derfor singleton når inmemory bruges.
+// Ellers får man dataintegritetsproblemer.
+// I database er det allerede singleton, og derfor kan der her være transient.
 
-// Transient ved use cases - ikke ved database
+if (builder.Environment.IsEnvironment("TESTING"))
+{
+    // For at css isolation virker, skal denne linje køres. Måske unødvendig i .net 7
+    StaticWebAssetsLoader.UseStaticWebAssets(builder.Environment, builder.Configuration);
+
+    builder.Services.AddSingleton<ILejerRepository, LejerRepository>();
+    builder.Services.AddSingleton<IMedarbejderRepository, MedarbejderRepository>();
+    builder.Services.AddSingleton<IKontorhusRepository, KontorhusRepository>();
+}
+
+builder.Services.AddTransient<ILejerRepository, LejerEFCoreRepository>();
+builder.Services.AddTransient<IMedarbejderRepository, MedarbejderEFCoreRepository>();
+builder.Services.AddTransient<IKontorhusRepository, KontorhusEFCoreRepository>();
+
 builder.Services.AddTransient<IViewLejereByNameUseCase, ViewLejereByNameUseCase>();
 builder.Services.AddTransient<IAddLejerUseCase, AddLejerUseCase>();
 builder.Services.AddTransient<IEditLejerUseCase, EditLejerUseCase>();
