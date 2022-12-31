@@ -17,7 +17,9 @@ namespace OMS.CoreBusiness
 
         [Required]
         public string Email { get; set; } = string.Empty;
-       
+
+        public List<KontorhusLejer> KontorhusLejere { get; set; } = new List<KontorhusLejer>();
+
 
 
         // FK
