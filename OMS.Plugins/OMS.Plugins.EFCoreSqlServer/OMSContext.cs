@@ -5,7 +5,10 @@ namespace OMS.Plugins.EFCoreSqlServer;
 
 public class OMSContext : DbContext
 {
-    public OMSContext(DbContextOptions options) : base(options)
+    //public OMSContext(DbContextOptions options) : base(options)
+
+    // Pga. Factory sættes contextoptions til at være til sin egen klasse i constructor
+    public OMSContext(DbContextOptions<OMSContext> options) : base(options)
     {
 
     }

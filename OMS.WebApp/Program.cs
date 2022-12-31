@@ -16,11 +16,17 @@ using OMS.WebApp.Services;
 var builder = WebApplication.CreateBuilder(args);
 
 
-builder.Services.AddDbContext<OMSContext>(options =>
+// Bemærk Factory pga. Blazor Server
+builder.Services.AddDbContextFactory<OMSContext>(options =>
 {
     options.UseSqlServer(builder.Configuration.GetConnectionString("OfficeManagement"));
 });
-    
+
+//builder.Services.AddDbContext<OMSContext>(options =>
+//{
+//    options.UseSqlServer(builder.Configuration.GetConnectionString("OfficeManagement"));
+//});
+
 
 // Add services to the container.
 builder.Services.AddRazorPages();

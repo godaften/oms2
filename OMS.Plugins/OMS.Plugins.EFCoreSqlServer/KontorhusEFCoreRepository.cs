@@ -12,19 +12,19 @@ namespace OMS.Plugins.EFCoreSqlServer;
 
 public class KontorhusEFCoreRepository : IKontorhusRepository
 {
-    private readonly OMSContext db;
+    private readonly IDbContextFactory<OMSContext> contextFactory;
 
-    public KontorhusEFCoreRepository(OMSContext db)
+    public KontorhusEFCoreRepository(IDbContextFactory<OMSContext> contextFactory)
     {
-        this.db = db;
+        this.contextFactory = contextFactory;
     }
 
     public async Task AddKontorhusAsync(Kontorhus kontorhus)
     {
         //this.db.Kontorhuse.Add(kontorhus);
         //await this.db.SaveChangesAsync();
-
-        this.db.Kontorhuse.Add(kontorhus);
+        using var db = this.contextFactory.CreateDbContext();
+        db.Kontorhuse.Add(kontorhus);
         FlagLejereUnchanged(kontorhus, this.db);
 
         await this.db.SaveChangesAsync();
@@ -34,9 +34,10 @@ public class KontorhusEFCoreRepository : IKontorhusRepository
 
     public async Task<Kontorhus?> GetKontorhusById(int kontorhusId)
     {
+        using var db = this.contextFactory.CreateDbContext();
         // include og theninclude... tjek op på
         // Når vi finder det søgte kontorhus, vil vi også gerne se de relevante lejere
-        return await this.db.Kontorhuse.Include(x => x.KontorhusLejere)
+        return await db.Kontorhuse.Include(x => x.KontorhusLejere)
             .ThenInclude(x => x.Lejer)
             .FirstOrDefaultAsync(x => x.KontorhusID== kontorhusId);
     }
@@ -45,13 +46,15 @@ public class KontorhusEFCoreRepository : IKontorhusRepository
 
     public async Task<IEnumerable<Kontorhus>> GetKontorhuseByNameAsync(string name)
     {
-       return await this.db.Kontorhuse.Where (x => x.KontorhusNavn.ToLower().IndexOf(name) >= 0).ToListAsync();
+        using var db = this.contextFactory.CreateDbContext();
+        return await db.Kontorhuse.Where (x => x.KontorhusNavn.ToLower().IndexOf(name) >= 0).ToListAsync();
     }
 
     public async Task UpdateKontorhusAsync(Kontorhus kontorhus)
     {
+        using var db = this.contextFactory.CreateDbContext();
         // Undgå forskellige kontorhuse med samme navn
-        var khus = await this.db.Kontorhuse
+        var khus = await db.Kontorhuse
             .Include(x => x.KontorhusLejere)
             .FirstOrDefaultAsync(x => x.KontorhusID == kontorhus.KontorhusID);
 
