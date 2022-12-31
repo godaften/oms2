@@ -1148,7 +1148,8 @@
         "framework": ".NETCoreApp,Version=v7.0",
         "dependencies": {
           "Microsoft.EntityFrameworkCore.SqlServer": "7.0.1",
-          "OMS.CoreBusiness": "1.0.0"
+          "OMS.CoreBusiness": "1.0.0",
+          "OMS.UseCases": "1.0.0"
         },
         "compile": {
           "bin/placeholder/OMS.Plugins.EFCoreSqlServer.dll": {}

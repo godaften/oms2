@@ -20,6 +20,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\..\OMS.CoreBusiness\OMS.CoreBusiness.csproj" />
+    <ProjectReference Include="..\..\OMS.UseCases\OMS.UseCases.csproj" />
   </ItemGroup>
 
 </Project>

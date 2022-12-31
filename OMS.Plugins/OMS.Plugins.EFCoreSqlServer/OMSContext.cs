@@ -9,10 +9,10 @@ public class OMSContext : DbContext
     {
 
     }
-    public DbSet<Lejer>? Lejere { get; set; }
-    public DbSet<Kontorhus>? Kontorhuse { get; set; }
+    public DbSet<Lejer> Lejere { get; set; }
+    public DbSet<Kontorhus> Kontorhuse { get; set; }
     public DbSet<KontorhusLejer> KontorhusLejere { get; set; }
-    public DbSet<Medarbejder>? Medarbejdere { get; set; }
+    public DbSet<Medarbejder> Medarbejdere { get; set; }
 
     // Seed data
     protected override void OnModelCreating(ModelBuilder modelBuilder)

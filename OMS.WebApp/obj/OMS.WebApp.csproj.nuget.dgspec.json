@@ -95,6 +95,9 @@
             "projectReferences": {
               "C:\\Users\\kaffe\\Dropbox\\Datamatiker\\AFGANGSPROJEKT\\PractiseProjects\\OMS\\OMS.CoreBusiness\\OMS.CoreBusiness.csproj": {
                 "projectPath": "C:\\Users\\kaffe\\Dropbox\\Datamatiker\\AFGANGSPROJEKT\\PractiseProjects\\OMS\\OMS.CoreBusiness\\OMS.CoreBusiness.csproj"
+              },
+              "C:\\Users\\kaffe\\Dropbox\\Datamatiker\\AFGANGSPROJEKT\\PractiseProjects\\OMS\\OMS.UseCases\\OMS.UseCases.csproj": {
+                "projectPath": "C:\\Users\\kaffe\\Dropbox\\Datamatiker\\AFGANGSPROJEKT\\PractiseProjects\\OMS\\OMS.UseCases\\OMS.UseCases.csproj"
               }
             }
           }
