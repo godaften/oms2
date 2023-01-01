@@ -1,6 +1,7 @@
 using Microsoft.AspNetCore.Components;
 using Microsoft.AspNetCore.Components.Web;
 using Microsoft.AspNetCore.Hosting.StaticWebAssets;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using OMS.Plugins.EFCoreSqlServer;
 using OMS.Plugins.InMemory;
@@ -16,11 +17,27 @@ using OMS.WebApp.Services;
 
 var builder = WebApplication.CreateBuilder(args);
 
+var connstr = builder.Configuration.GetConnectionString("OfficeManagement");
+
+// Configure EF Core for Identity
+builder.Services.AddDbContext<AccountDbContext>(options =>
+{
+    options.UseSqlServer(connstr);
+});
+
+// Configure Identity
+builder.Services.AddDefaultIdentity<IdentityUser>(options =>
+{
+    // Sættes til false for ikke at skulle bekræfte email - skal ændres ved deployment
+    options.SignIn.RequireConfirmedEmail = false;
+
+}).AddEntityFrameworkStores<AccountDbContext>();
+
 
 // Bemærk Factory pga. Blazor Server
 builder.Services.AddDbContextFactory<OMSContext>(options =>
 {
-    options.UseSqlServer(builder.Configuration.GetConnectionString("OfficeManagement"));
+    options.UseSqlServer(connstr);
 });
 
 //builder.Services.AddDbContext<OMSContext>(options =>
@@ -84,11 +101,16 @@ if (!app.Environment.IsDevelopment())
     app.UseHsts();
 }
 
+// Middleware
+
 app.UseHttpsRedirection();
 
 app.UseStaticFiles();
 
 app.UseRouting();
+
+app.UseAuthentication();
+app.UseAuthorization();
 
 app.MapBlazorHub();
 app.MapFallbackToPage("/_Host");
