@@ -17,6 +17,15 @@ using OMS.WebApp.Services;
 
 var builder = WebApplication.CreateBuilder(args);
 
+// Configure auth
+builder.Services.AddAuthorization(options =>
+{
+    options.AddPolicy("Admin", policy => policy.RequireClaim("Department", "Administration"));
+
+    // Cleaningpeople er policy. Claim er key/value - Department er key og Cleaning er value.
+    options.AddPolicy("Cleaning", policy => policy.RequireClaim("Department", "Cleaning"));
+});
+
 var connstr = builder.Configuration.GetConnectionString("OfficeManagement");
 
 // Configure EF Core for Identity

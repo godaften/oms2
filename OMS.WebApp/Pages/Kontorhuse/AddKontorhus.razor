@@ -2,6 +2,8 @@
 @inject NavigationManager NavigationManager
 @inject IAddKontorhusUseCase AddKontorhusUseCase
 
+@attribute [Authorize(Policy = "Admin")]
+
 <h3>Nyt kontorhus</h3>
 <br />
 <EditForm Model="kontorhus" OnValidSubmit="SaveKontorhus">
