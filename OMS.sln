@@ -13,7 +13,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "OMS.Plugins", "OMS.Plugins"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OMS.Plugins.InMemory", "OMS.Plugins\OMS.Plugins.InMemory\OMS.Plugins.InMemory.csproj", "{B39E6A96-22F3-41C4-A1E4-6D32CF71AD58}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OMS.Plugins.EFCoreSqlServer", "OMS.Plugins\OMS.Plugins.EFCoreSqlServer\OMS.Plugins.EFCoreSqlServer.csproj", "{904C54B2-BB23-4E38-A4F4-647731585A6F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OMS.Plugins.EFCoreSqlServer", "OMS.Plugins\OMS.Plugins.EFCoreSqlServer\OMS.Plugins.EFCoreSqlServer.csproj", "{904C54B2-BB23-4E38-A4F4-647731585A6F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

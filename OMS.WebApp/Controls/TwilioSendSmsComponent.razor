@@ -1,0 +1,28 @@
+﻿@using Twilio;
+@using Twilio.Rest.Api.V2010.Account;
+
+<button class="btn btn-success" @onclick="@(() => SendSms())">Send sms</button>
+
+
+@code {
+
+    private void SendSms()
+    {
+        // Your Account SID and Auth Token from twilio.com/console
+        const string accountSid = "AC13527a899da72d3267b8d0ebf4706390";
+        const string authToken = "9066534796c6d6c472c07188eb484db1";
+
+        // Initialize the Twilio client
+        TwilioClient.Init(accountSid, authToken);
+
+        // Send the text message
+        var message = MessageResource.Create(
+            body: "Du har gæster, der venter i cafeen.",
+            from: new Twilio.Types.PhoneNumber("+19852978015"),
+            to: new Twilio.Types.PhoneNumber("+4542436200")
+        );
+
+        Console.WriteLine(message.Sid);
+    }
+}
+

@@ -64,6 +64,10 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Q29udHJvbHNcVG9nZ2xlTWVudUJvdHRvbi5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Users/kaffe/Dropbox/Datamatiker/AFGANGSPROJEKT/PractiseProjects/OMS/OMS.WebApp/Controls/TwilioSendSmsComponent.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29udHJvbHNcVHdpbGlvU2VuZFNtc0NvbXBvbmVudC5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/kaffe/Dropbox/Datamatiker/AFGANGSPROJEKT/PractiseProjects/OMS/OMS.WebApp/Pages/Counter.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ291bnRlci5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 

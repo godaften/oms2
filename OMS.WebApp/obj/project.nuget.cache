@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "TqTEtnHU9OntgrmHHL54jdXBMCdlJBhQarfsd0dPfsgzItb6peId41aaFkE1/uKmM/V5QUpThjtH70EkX0xPyQ==",
+  "dgSpecHash": "V6n7fK9LsHAQC6p3Eaqs13Qz288sdiD9hp3x0ZkYFaOpCgbjqZhYcfIDKXVexe17YnOXKSZoOD+MUOAwPIxNBg==",
   "success": true,
   "projectFilePath": "C:\\Users\\kaffe\\Dropbox\\Datamatiker\\AFGANGSPROJEKT\\PractiseProjects\\OMS\\OMS.WebApp\\OMS.WebApp.csproj",
   "expectedPackageFiles": [
@@ -113,6 +113,8 @@
     "C:\\Users\\kaffe\\.nuget\\packages\\system.collections\\4.3.0\\system.collections.4.3.0.nupkg.sha512",
     "C:\\Users\\kaffe\\.nuget\\packages\\system.collections.concurrent\\4.3.0\\system.collections.concurrent.4.3.0.nupkg.sha512",
     "C:\\Users\\kaffe\\.nuget\\packages\\system.collections.immutable\\6.0.0\\system.collections.immutable.6.0.0.nupkg.sha512",
+    "C:\\Users\\kaffe\\.nuget\\packages\\system.collections.nongeneric\\4.3.0\\system.collections.nongeneric.4.3.0.nupkg.sha512",
+    "C:\\Users\\kaffe\\.nuget\\packages\\system.collections.specialized\\4.3.0\\system.collections.specialized.4.3.0.nupkg.sha512",
     "C:\\Users\\kaffe\\.nuget\\packages\\system.composition\\6.0.0\\system.composition.6.0.0.nupkg.sha512",
     "C:\\Users\\kaffe\\.nuget\\packages\\system.composition.attributedmodel\\6.0.0\\system.composition.attributedmodel.6.0.0.nupkg.sha512",
     "C:\\Users\\kaffe\\.nuget\\packages\\system.composition.convention\\6.0.0\\system.composition.convention.6.0.0.nupkg.sha512",
@@ -191,7 +193,8 @@
     "C:\\Users\\kaffe\\.nuget\\packages\\system.threading.timer\\4.3.0\\system.threading.timer.4.3.0.nupkg.sha512",
     "C:\\Users\\kaffe\\.nuget\\packages\\system.windows.extensions\\6.0.0\\system.windows.extensions.6.0.0.nupkg.sha512",
     "C:\\Users\\kaffe\\.nuget\\packages\\system.xml.readerwriter\\4.3.0\\system.xml.readerwriter.4.3.0.nupkg.sha512",
-    "C:\\Users\\kaffe\\.nuget\\packages\\system.xml.xdocument\\4.3.0\\system.xml.xdocument.4.3.0.nupkg.sha512"
+    "C:\\Users\\kaffe\\.nuget\\packages\\system.xml.xdocument\\4.3.0\\system.xml.xdocument.4.3.0.nupkg.sha512",
+    "C:\\Users\\kaffe\\.nuget\\packages\\twilio\\6.2.0\\twilio.6.2.0.nupkg.sha512"
   ],
   "logs": []
 }
