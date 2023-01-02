@@ -7,14 +7,6 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Compile Remove="Program - Copy.cs" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <None Include="Program - Copy.cs" />
-  </ItemGroup>
-
-  <ItemGroup>
     <ProjectReference Include="..\OMS.Plugins\OMS.Plugins.EFCoreSqlServer\OMS.Plugins.EFCoreSqlServer.csproj" />
     <ProjectReference Include="..\OMS.Plugins\OMS.Plugins.InMemory\OMS.Plugins.InMemory.csproj" />
   </ItemGroup>

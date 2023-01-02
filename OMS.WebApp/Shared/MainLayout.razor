@@ -1,26 +1,33 @@
 ﻿@inherits LayoutComponentBase
 @inject ViewOptionService ViewOption
 
-<PageTitle>OMS.WebApp</PageTitle>
+<PageTitle>BusinessHouse</PageTitle>
 
-<div class="page">
+@*<div class="page">
 <div class="sidebar @ViewOption.NavBarClass">
     <NavMenu />
 </div>
+*@
 
-@*<div class="page">
-    <div class="sidebar">
-        <NavMenu />
-    </div>*@
+<div class="page">
+    <AuthorizeView>
+        <div class="sidebar">
+            <NavMenu />
+        </div>
+    </AuthorizeView>
 
     <main>
-        <div class="top-row px-4">
-           <LoginComponent></LoginComponent>
-        </div>
+        @*        <div class="top-row px-4">
+        <LoginComponent></LoginComponent>
+        </div>*@
 
         <article class="content px-4">
             @Body
+
         </article>
+        <div class="d-flex justify-content-center mt-5"> 
+        <LoginComponent></LoginComponent>
+        </div>
     </main>
 </div>
 
@@ -30,7 +37,7 @@
     {
         ViewOption.OnChanged = () =>
         {
-           StateHasChanged();//Refresh
+            StateHasChanged();//Refresh
         };
     }
 }
