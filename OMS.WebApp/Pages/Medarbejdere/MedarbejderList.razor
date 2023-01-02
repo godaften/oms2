@@ -1,6 +1,7 @@
 ﻿@page "/medarbejdere"
 @inject NavigationManager NavigationManager
 
+<div class="p-5">
 <h3>MedarbejderList</h3>
 <br />
 <SearchMedarbejderComponent OnSearchMedarbejder="OnSearchMedarbejder"></SearchMedarbejderComponent>
@@ -12,6 +13,7 @@
     class="btn btn-primary"
     @onclick="AddMedarbejder">Ny medarbejder</button>
 
+    </div>
 @code {
 
     private string searchTerm = string.Empty;

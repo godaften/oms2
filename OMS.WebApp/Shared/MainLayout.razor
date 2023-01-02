@@ -21,10 +21,10 @@
         <LoginComponent></LoginComponent>
         </div>*@
 
-        <article class="content px-4">
+        <div class="">
             @Body
+        </div>
 
-        </article>
         <div class="d-flex justify-content-center mt-5"> 
         <LoginComponent></LoginComponent>
         </div>
@@ -33,11 +33,11 @@
 
 @code {
 
-    protected override async Task OnInitializedAsync()
-    {
-        ViewOption.OnChanged = () =>
-        {
-            StateHasChanged();//Refresh
-        };
-    }
+    //protected override async Task OnInitializedAsync()
+    //{
+    //    ViewOption.OnChanged = () =>
+    //    {
+    //        StateHasChanged();//Refresh
+    //    };
+    //}
 }

@@ -1,6 +1,7 @@
 ﻿@page "/kontorhuse"
 @inject NavigationManager NavigationManager
 
+<div class="p-5">
 <h3>Kontorhuse</h3>
 <br />
 <SearchKontorhusComponent OnSearchKontorhus="OnSearchKontorhus"></SearchKontorhusComponent>
@@ -13,6 +14,7 @@
         @onclick="AddKontorhus">
     Nyt kontorhus
 </button>
+</div>
 
 @code {
 

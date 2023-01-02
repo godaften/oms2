@@ -1,0 +1,88 @@
+﻿@page "/lejer/{LejId:int}"
+
+@using Twilio;
+@using Twilio.Rest.Api.V2010.Account;
+@using Microsoft.Extensions.Configuration;
+
+@inject NavigationManager NavigationManager;
+@inject IViewLejerByIdUseCase ViewLejerByIdUseCase;
+@inject IEditLejerUseCase EditLejerUseCase;
+
+<div class="p-5">
+<div class="d-flex justify-content-center align-items-center m-5">
+<h2>@lejer.Navn</h2>
+</div>
+<br /><div class="row-cols-1 justify-content-end">
+    <div>
+        <p>
+            Hvis du skal besøge @lejer.Navn, skal du blot klikke for at melde din ankomst.
+         </p>
+    </div>
+
+
+<div>
+<button class="btn btn-success w-75" @onclick="@(() => SendSms())">Klik for at melde din ankomst</button>
+</div>
+<div class="mt-3">
+<button type="button" class="btn btn-primary w-75" @onclick="Cancel">Annuller</button>
+    </div>
+</div>
+<div class="mt-5">
+    <p>@lejer.Navn</p>
+    <p>@lejer.Telefon</p>
+    <p>@lejer.Adresse</p>
+</div>
+</div>
+
+@code {
+
+    [Parameter]
+    public int LejId { get; set; }
+
+    private Lejer lejer = new Lejer();
+
+    // Sikre at vi modtager id
+    protected override async Task OnParametersSetAsync()
+    {
+
+        this.lejer = await ViewLejerByIdUseCase.ExecuteAsync(this.LejId);
+    }
+
+    private void Cancel()
+    {
+        NavigationManager.NavigateTo("/takogvent");
+    }
+
+    private void AfterSmsSend() {
+
+        NavigationManager.NavigateTo("/takogvent");
+    }
+
+    private void SendSms()
+    {
+
+        //var configuration = new ConfigurationBuilder()
+        //        .AddJsonFile("twilio.json")
+        //        .Build();
+
+        //// Get the values from the configuration file
+        //string accountSid = configuration["Twilio:AccountSid"];
+        //string authToken = configuration["Twilio:AuthToken"];
+
+        //// Initialize the Twilio client
+        //TwilioClient.Init(accountSid, authToken);
+
+        //// Send the text message
+        //var message = MessageResource.Create(
+        //    body: "Du har gæster, der venter i cafeen.",
+        //    from: new Twilio.Types.PhoneNumber("+19852978015"),
+       
+        //    to: new Twilio.Types.PhoneNumber($"{lejer.Telefon}")
+        //);
+
+        //Console.WriteLine(message.Sid);
+
+        AfterSmsSend();
+
+    }
+}

@@ -2,6 +2,7 @@
 @inject NavigationManager NavigationManager
 @inject IAddMedarbejderUseCase AddMedarbejderUseCase
 
+<div class="p-5">
 <h3>Ny medarbejder</h3>
 <br />
 <EditForm Model="medarbejder" OnValidSubmit="SaveMedarbejder">
@@ -32,6 +33,7 @@
 
 </EditForm>
 
+</div>
 @code {
     private Medarbejder medarbejder = new Medarbejder();
 

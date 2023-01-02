@@ -3,7 +3,7 @@
 @inject IAddKontorhusUseCase AddKontorhusUseCase
 
 @attribute [Authorize(Policy = "Admin")]
-
+<div class="p-5">
 <h3>Nyt kontorhus</h3>
 <br />
 <EditForm Model="kontorhus" OnValidSubmit="SaveKontorhus">
@@ -39,6 +39,7 @@
     <button type="button" class="btn btn-primary" @onclick="Cancel">Annuller</button>
 
 </EditForm>
+</div>
 
 @code {
     private Kontorhus kontorhus = new Kontorhus();

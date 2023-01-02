@@ -2,6 +2,8 @@
 
 @inject IAddLejerUseCase AddLejerUseCase
 @inject NavigationManager NavigationManager
+
+<div class="p-5">
 <h3>Opret Lejer</h3>
 
 <EditForm Model="lejer" OnValidSubmit="SaveLejer">
@@ -32,6 +34,7 @@
 
 </EditForm>
 
+</div>
 @code {
 
     private Lejer lejer = new Lejer();

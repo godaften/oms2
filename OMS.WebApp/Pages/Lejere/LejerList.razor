@@ -2,6 +2,7 @@
 
 @inject NavigationManager NavigationManager
 
+<div class="p-5">
 <h3>LejerList</h3>
 
 <SearchLejerComponent OnSearchLejer="OnLejerSearch"></SearchLejerComponent>
@@ -13,7 +14,7 @@
     class="btn btn-primary"
     @onclick="AddLejer">Opret ny lejer</button>
 
-
+    </div>
 
 @code {
     // i komponent ovenover sættes @searchTerm for at specificere, det er denne variabel, der bruges.
