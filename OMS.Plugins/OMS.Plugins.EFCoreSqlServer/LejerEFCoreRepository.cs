@@ -63,6 +63,7 @@ public class LejerEFCoreRepository : ILejerRepository
         {
             lej.Navn = lejer.Navn;
             lej.Telefon= lejer.Telefon;
+            lej.Adresse= lejer.Adresse;
             lej.Email= lejer.Email;
 
             await db.SaveChangesAsync();

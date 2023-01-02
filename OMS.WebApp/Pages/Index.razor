@@ -1,10 +1,84 @@
 ﻿@page "/"
+@page "/reception"
+@inject IViewLejereByNameUseCase ViewLejereByNameUseCase
+@inject NavigationManager NavigationManager
 
-<PageTitle>Velkommen</PageTitle>
-<br/>
-<h1>Velkommen til BusinessHouse</h1>
+
+<div class="p-5 text-center bg-image" style="
+      background-image: url('Images/image2.jpg');
+      height: 300px;
+    ">
+
+    <div class="d-flex justify-content-center align-items-center h-100">
+        <div class="text-white">
+            <h1 class="mb-3">Velkommen til Business House</h1>
+            <h4 class="mb-3">Klik på virksomheden du vil besøge</h4>
+        </div>
+    </div>
+</div>
+
+<div class="d-flex justify-content-center align-items-center mt-5">
+   
+        <h2 class="mb-3">Klik på virksomheden du vil besøge</h2>
+
+</div>
+
+@*
+<div class="container mt-4">
+    @foreach (var lejer in Lejere)
+    {
+        <button type="button"
+            class="btn btn-success m-3 w-25"
+            @onclick="@(() => SeLejer(lejer.LejerID))">
+            @lejer.Navn
+        </button>
+
+    }
+    <br />
+</div>*@
+
+<div class="d-flex justify-content-center mt-1">
+    <div class="row row-cols-3">
+    @foreach (var lejer in Lejere)
+    {
+            <div class="col mt-2 mb-2">
+            <button type="button"
+            class="btn btn-success mt-4 mb-4 h-75 w-75"
+            @onclick="@(() => SeLejer(lejer.LejerID))">
+            @lejer.Navn
+            </button>
+    </div>
+
+    }
+</div>
+</div>
+
+    <br />
 
 
 @code {
+
+
+    [Parameter]
+    public List<Lejer> Lejere { get; set; } = new List<Lejer>();
+
+    public void SeLejer(int lejerId)
+    {
+        NavigationManager.NavigateTo($"/lejer/{lejerId}");
+
+    }
+
+    [Parameter]
+    public string SearchTerm { get; set; } = string.Empty;
+
+    // onparametersetasync metoden er en lifecycle event for komponenten, der trigges hver gang parametret ændres,
+    // eller når komponenten loades og sættes første gang
+    // når metoden kaldes ved vi, SearchTerm indeholder noget. Hvis den indeholder "tom", vises alle.
+    // når metoden kaldes, ændres relevant ui også
+    protected override async Task OnParametersSetAsync()
+    {
+        Lejere = (await ViewLejereByNameUseCase.ExecuteAsync(this.SearchTerm)).OrderBy((item) => item.Navn).ToList();
+    }
+
 
 }

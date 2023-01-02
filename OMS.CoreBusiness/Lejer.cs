@@ -1,4 +1,5 @@
 ﻿using System.ComponentModel.DataAnnotations;
+using System.Diagnostics;
 
 namespace OMS.CoreBusiness
 {
@@ -14,6 +15,8 @@ namespace OMS.CoreBusiness
 
         [Required]
         public string Telefon { get; set; } = string.Empty;
+
+        public string? Adresse { get; set; }
 
         [Required]
         public string Email { get; set; } = string.Empty;

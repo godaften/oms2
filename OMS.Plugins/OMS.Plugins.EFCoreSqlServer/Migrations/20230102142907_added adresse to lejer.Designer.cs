@@ -2,6 +2,7 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using OMS.Plugins.EFCoreSqlServer;
 
@@ -10,9 +11,11 @@ using OMS.Plugins.EFCoreSqlServer;
 namespace OMS.Plugins.EFCoreSqlServer.Migrations
 {
     [DbContext(typeof(OMSContext))]
-    partial class OMSContextModelSnapshot : ModelSnapshot
+    [Migration("20230102142907_added adresse to lejer")]
+    partial class addedadressetolejer
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
