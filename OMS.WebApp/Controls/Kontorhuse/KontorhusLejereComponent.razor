@@ -1,4 +1,7 @@
 ﻿<SearchAndDisplayLejereComponent OnLejerSelected="OnLejerSelected"></SearchAndDisplayLejereComponent>
+
+@inject IJSRuntime JsRuntime
+
 @if (this.Kontorhus.KontorhusLejere != null && this.Kontorhus.KontorhusLejere.Count > 0)
 {
     <table class="table">
@@ -20,22 +23,36 @@
                         <button
                             class="btn btn-link"
                             type="button"
-                            @onclick="@(() => RemoveLejer(khusLejer))">
+                        @onclick="@(() => RemoveLejer(khusLejer))">
                             Slet</button>
                     </td>
                 </tr>
             }
         </tbody>
     </table>
+   
 }
 
 @code {
+
     [Parameter] // is passed from outside
     public Kontorhus Kontorhus { get; set; } = new Kontorhus();
 
-    private void RemoveLejer(KontorhusLejer kontorhusLejer)
+
+    //private void RemoveLejer(KontorhusLejer kontorhusLejer)
+    //{
+    //    this.Kontorhus.KontorhusLejere.Remove(kontorhusLejer);
+    //}
+
+
+    private async void RemoveLejer(KontorhusLejer kontorhusLejer)
     {
-        this.Kontorhus.KontorhusLejere.Remove(kontorhusLejer);
+        bool confirmed = await JsRuntime.InvokeAsync<bool>("confirm", "Vil du fjerne lejeren?");
+        if (confirmed)
+        {
+            this.Kontorhus.KontorhusLejere.Remove(kontorhusLejer);
+            StateHasChanged();
+        }
     }
 
     private void OnLejerSelected(Lejer lejer)
