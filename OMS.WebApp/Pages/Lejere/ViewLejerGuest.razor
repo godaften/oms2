@@ -1,14 +1,19 @@
 ﻿@page "/lejer/{LejId:int}"
-@inject IViewLejereByNameUseCase ViewLejereByNameUseCase
 
+@using Twilio;
+@using Twilio.Rest.Api.V2010.Account;
 
-<h3>Lejers Navn: </h3>
+@inject NavigationManager NavigationManager;
+@inject IViewLejerByIdUseCase ViewLejerByIdUseCase;
+@inject IEditLejerUseCase EditLejerUseCase;
+
+<h3>Lejers navn: @lejer.Navn</h3>
 <br />
 
-
-<div>
-<TwilioSendSmsComponent></TwilioSendSmsComponent>
-</div>
+<p>@lejer.Navn</p>
+<p>@lejer.Telefon</p>
+<button class="btn btn-success" @onclick="@(() => SendSms())">Send sms</button>
+<button type="button" class="btn btn-primary" @onclick="Cancel">Annuller</button>
 
 
 @code {
@@ -16,4 +21,39 @@
     [Parameter]
     public int LejId { get; set; }
 
+    private Lejer lejer = new Lejer();
+
+    // Sikre at vi modtager id
+    protected override async Task OnParametersSetAsync()
+    {
+
+        this.lejer = await ViewLejerByIdUseCase.ExecuteAsync(this.LejId);
+    }
+
+
+    private void Cancel()
+    {
+        NavigationManager.NavigateTo("/lejere");
+    }
+
+    private void SendSms()
+    {
+        // Your Account SID and Auth Token from twilio.com/console
+        const string accountSid = "AC13527a899da72d3267b8d0ebf4706390";
+        const string authToken = "9066534796c6d6c472c07188eb484db1";
+
+        // Initialize the Twilio client
+        TwilioClient.Init(accountSid, authToken);
+
+        // Send the text message
+        var message = MessageResource.Create(
+            body: "Du har gæster, der venter i cafeen.",
+            from: new Twilio.Types.PhoneNumber("+19852978015"),
+            //to: new Twilio.Types.PhoneNumber("+4542436200")
+
+             to: new Twilio.Types.PhoneNumber($"{lejer.Telefon}")
+        );
+
+        Console.WriteLine(message.Sid);
+    }
 }
