@@ -2,25 +2,23 @@
 @inject NavigationManager NavigationManager
 
 <div class="p-5">
-<h3>MedarbejderList</h3>
-<br />
-<SearchMedarbejderComponent OnSearchMedarbejder="OnSearchMedarbejder"></SearchMedarbejderComponent>
-<br />
-<MedarbejderListComponent SearchTerm="@searchTerm"></MedarbejderListComponent>
+    <h1>Personer</h1>
+    <br />
+    <SearchMedarbejderComponent OnSearchMedarbejder="OnSearchMedarbejder"></SearchMedarbejderComponent>
+    <br />
+    <MedarbejderListComponent SearchTerm="@searchTerm"></MedarbejderListComponent>
 
-<button
-    type="button"
-    class="btn btn-primary"
-    @onclick="AddMedarbejder">Ny medarbejder</button>
+    <button type="button"
+            class="btn btn-primary"
+            @onclick="AddMedarbejder">
+        Ny medarbejder
+    </button>
 
-    </div>
+</div>
+
 @code {
 
     private string searchTerm = string.Empty;
-
-    // searchTerm er det, som brugeren indtaster i søgekomponenten
-    // Når søgeknappen bliver klikket, bliver eventcallbackmetoden trigget
-    // og denne metode får søgetermen.
 
     private void OnSearchMedarbejder(string searchTerm)
     {

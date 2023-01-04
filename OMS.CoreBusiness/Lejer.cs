@@ -1,32 +1,30 @@
 ﻿using System.ComponentModel.DataAnnotations;
 using System.Diagnostics;
 
-namespace OMS.CoreBusiness
+namespace OMS.CoreBusiness;
+
+public class Lejer
 {
-    public class Lejer
-    {
+    public int LejerID { get; set; }
 
-        // Lav flere valideringer
-        public int LejerID { get; set; }
+    [Required]
+    [StringLength(100)]
+    public string Navn { get; set; } = string.Empty;
 
-        [Required]
-        [StringLength(100)]
-        public string Navn { get; set;} = string.Empty;
+    [StringLength(15)]
+    public string Telefon { get; set; } = string.Empty;
 
-        [Required]
-        public string Telefon { get; set; } = string.Empty;
+    [Required]
+    [StringLength(15)]
+    public string SMSTelefon { get; set; } = string.Empty;
 
-        public string? Adresse { get; set; }
+    public string Adresse { get; set; } = string.Empty;
 
-        [Required]
-        public string Email { get; set; } = string.Empty;
+    public string Lokale { get; set; } = string.Empty;
 
-        public List<KontorhusLejer> KontorhusLejere { get; set; } = new List<KontorhusLejer>();
+    [EmailAddress]
+    public string Email { get; set; } = string.Empty;
 
+    public List<KontorhusLejer> KontorhusLejere { get; set; } = new List<KontorhusLejer>();
 
-
-        // FK
-        // kontorfællesskabID
-        // public int BygningID { get;}
-    }
 }

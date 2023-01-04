@@ -5,9 +5,6 @@ namespace OMS.Plugins.EFCoreSqlServer;
 
 public class OMSContext : DbContext
 {
-    //public OMSContext(DbContextOptions options) : base(options)
-
-    // Pga. Factory sættes contextoptions til at være til sin egen klasse i constructor
     public OMSContext(DbContextOptions<OMSContext> options) : base(options)
     {
 
@@ -17,11 +14,11 @@ public class OMSContext : DbContext
     public DbSet<KontorhusLejer> KontorhusLejere { get; set; }
     public DbSet<Medarbejder> Medarbejdere { get; set; }
 
-    // Seed data
+
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
         modelBuilder.Entity<KontorhusLejer>()
-    .HasKey(pi => new { pi.KontorhusID, pi.LejerID });
+            .HasKey(pi => new { pi.KontorhusID, pi.LejerID });
 
         modelBuilder.Entity<KontorhusLejer>()
             .HasOne(pi => pi.Kontorhus)
@@ -41,9 +38,7 @@ public class OMSContext : DbContext
         new Lejer { LejerID = 3, Navn = "Tolkemanden", Telefon = "34353637", Email = "minmail3@email.dk" },
         new Lejer { LejerID = 4, Navn = "Larsen", Telefon = "4531415", Email = "minmail14@email.dk" },
         new Lejer { LejerID = 5, Navn = "Petersen Business A/S", Telefon = "53242526", Email = "minmail5@email.dk" },
-        new Lejer { LejerID = 6, Navn = "Jensens Super Service ApS", Telefon = "64353637", Email = "minmail6@email.dk" }
-
-        );
+        new Lejer { LejerID = 6, Navn = "Jensens Super Service ApS", Telefon = "64353637", Email = "minmail6@email.dk" });
 
         modelBuilder.Entity<Kontorhus>().HasData(
         new Kontorhus()
@@ -60,44 +55,37 @@ public class OMSContext : DbContext
             KontorhusNavn = "HappyHouse",
             KontorhusTelefon = "33341516",
             KontorhusEmail = "johnny@mail.dk"
-        }
-    );
+        });
 
         modelBuilder.Entity<KontorhusLejer>().HasData(
 
-               new KontorhusLejer { KontorhusID = 1, LejerID = 1 },
-               new KontorhusLejer { KontorhusID = 1, LejerID = 2 }
-
-               );
+         new KontorhusLejer { KontorhusID = 1, LejerID = 1 },
+         new KontorhusLejer { KontorhusID = 1, LejerID = 2 });
 
         modelBuilder.Entity<Medarbejder>().HasData(
-              new Medarbejder()
-              {
-                  MedarbejderID = 1,
-                  Navn = "Lars",
-                  Telefon = "12131415",
-                  Email = "lars@test.dk"
-              },
+        new Medarbejder()
+        {
+            MedarbejderID = 1,
+            Navn = "Lars",
+            Telefon = "12131415",
+            Email = "lars@test.dk"
+        },
 
-             new Medarbejder()
-             {
-                 MedarbejderID = 2,
-                 Navn = "Kurt",
-                 Telefon = "13131415",
-                 Email = "kurt@test.dk"
-             },
+        new Medarbejder()
+        {
+            MedarbejderID = 2,
+            Navn = "Kurt",
+            Telefon = "13131415",
+            Email = "kurt@test.dk"
+        },
 
-             new Medarbejder()
-             {
-                 MedarbejderID = 3,
-                 Navn = "Hans",
-                 Telefon = "14131415",
-                 Email = "hans@test.dk"
-             }
-             );
+        new Medarbejder()
+        {
+            MedarbejderID = 3,
+            Navn = "Hans",
+            Telefon = "14131415",
+            Email = "hans@test.dk"
+        });
     }
-
-
-
 
 }

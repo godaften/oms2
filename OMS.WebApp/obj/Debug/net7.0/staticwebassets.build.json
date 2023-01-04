@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "s3yLineMgO2IPf3vQb+9PoICMdkSWPG1hiYGiuM6/BA=",
+  "Hash": "WpJ/JhmN5jcznmHDzGaq3pXmQ28Jp7MApbwGRcxc6/I=",
   "Source": "OMS.WebApp",
   "BasePath": "_content/OMS.WebApp",
   "Mode": "Default",
@@ -10,7 +10,7 @@
     {
       "Name": "OMS.WebApp\\wwwroot",
       "Source": "OMS.WebApp",
-      "ContentRoot": "C:\\Users\\kaffe\\Dropbox\\Datamatiker\\AFGANGSPROJEKT\\PractiseProjects\\OMS\\OMS.WebApp\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\kaffe\\Dropbox\\Datamatiker\\AFGANGSPROJEKT\\OMS\\OMS.WebApp\\wwwroot\\",
       "BasePath": "_content/OMS.WebApp",
       "Pattern": "**"
     }
@@ -1037,10 +1037,10 @@
       "OriginalItemSpec": "C:\\Users\\kaffe\\.nuget\\packages\\microsoft.aspnetcore.identity.ui\\7.0.1\\staticwebassets\\V5\\lib\\jquery-validation-unobtrusive\\LICENSE.txt"
     },
     {
-      "Identity": "C:\\Users\\kaffe\\Dropbox\\Datamatiker\\AFGANGSPROJEKT\\PractiseProjects\\OMS\\OMS.WebApp\\obj\\Debug\\net7.0\\scopedcss\\bundle\\OMS.WebApp.styles.css",
+      "Identity": "C:\\Users\\kaffe\\Dropbox\\Datamatiker\\AFGANGSPROJEKT\\OMS\\OMS.WebApp\\obj\\Debug\\net7.0\\scopedcss\\bundle\\OMS.WebApp.styles.css",
       "SourceId": "OMS.WebApp",
       "SourceType": "Computed",
-      "ContentRoot": "C:\\Users\\kaffe\\Dropbox\\Datamatiker\\AFGANGSPROJEKT\\PractiseProjects\\OMS\\OMS.WebApp\\obj\\Debug\\net7.0\\scopedcss\\bundle\\",
+      "ContentRoot": "C:\\Users\\kaffe\\Dropbox\\Datamatiker\\AFGANGSPROJEKT\\OMS\\OMS.WebApp\\obj\\Debug\\net7.0\\scopedcss\\bundle\\",
       "BasePath": "_content/OMS.WebApp",
       "RelativePath": "OMS.WebApp.styles.css",
       "AssetKind": "All",
@@ -1051,13 +1051,13 @@
       "AssetTraitValue": "ApplicationBundle",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "C:\\Users\\kaffe\\Dropbox\\Datamatiker\\AFGANGSPROJEKT\\PractiseProjects\\OMS\\OMS.WebApp\\obj\\Debug\\net7.0\\scopedcss\\bundle\\OMS.WebApp.styles.css"
+      "OriginalItemSpec": "C:\\Users\\kaffe\\Dropbox\\Datamatiker\\AFGANGSPROJEKT\\OMS\\OMS.WebApp\\obj\\Debug\\net7.0\\scopedcss\\bundle\\OMS.WebApp.styles.css"
     },
     {
-      "Identity": "C:\\Users\\kaffe\\Dropbox\\Datamatiker\\AFGANGSPROJEKT\\PractiseProjects\\OMS\\OMS.WebApp\\obj\\Debug\\net7.0\\scopedcss\\projectbundle\\OMS.WebApp.bundle.scp.css",
+      "Identity": "C:\\Users\\kaffe\\Dropbox\\Datamatiker\\AFGANGSPROJEKT\\OMS\\OMS.WebApp\\obj\\Debug\\net7.0\\scopedcss\\projectbundle\\OMS.WebApp.bundle.scp.css",
       "SourceId": "OMS.WebApp",
       "SourceType": "Computed",
-      "ContentRoot": "C:\\Users\\kaffe\\Dropbox\\Datamatiker\\AFGANGSPROJEKT\\PractiseProjects\\OMS\\OMS.WebApp\\obj\\Debug\\net7.0\\scopedcss\\projectbundle\\",
+      "ContentRoot": "C:\\Users\\kaffe\\Dropbox\\Datamatiker\\AFGANGSPROJEKT\\OMS\\OMS.WebApp\\obj\\Debug\\net7.0\\scopedcss\\projectbundle\\",
       "BasePath": "_content/OMS.WebApp",
       "RelativePath": "OMS.WebApp.bundle.scp.css",
       "AssetKind": "All",
@@ -1068,13 +1068,13 @@
       "AssetTraitValue": "ProjectBundle",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "C:\\Users\\kaffe\\Dropbox\\Datamatiker\\AFGANGSPROJEKT\\PractiseProjects\\OMS\\OMS.WebApp\\obj\\Debug\\net7.0\\scopedcss\\projectbundle\\OMS.WebApp.bundle.scp.css"
+      "OriginalItemSpec": "C:\\Users\\kaffe\\Dropbox\\Datamatiker\\AFGANGSPROJEKT\\OMS\\OMS.WebApp\\obj\\Debug\\net7.0\\scopedcss\\projectbundle\\OMS.WebApp.bundle.scp.css"
     },
     {
-      "Identity": "C:\\Users\\kaffe\\Dropbox\\Datamatiker\\AFGANGSPROJEKT\\PractiseProjects\\OMS\\OMS.WebApp\\wwwroot\\css\\bootstrap\\bootstrap.min.css",
+      "Identity": "C:\\Users\\kaffe\\Dropbox\\Datamatiker\\AFGANGSPROJEKT\\OMS\\OMS.WebApp\\wwwroot\\css\\bootstrap\\bootstrap.min.css",
       "SourceId": "OMS.WebApp",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\kaffe\\Dropbox\\Datamatiker\\AFGANGSPROJEKT\\PractiseProjects\\OMS\\OMS.WebApp\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\kaffe\\Dropbox\\Datamatiker\\AFGANGSPROJEKT\\OMS\\OMS.WebApp\\wwwroot\\",
       "BasePath": "_content/OMS.WebApp",
       "RelativePath": "css/bootstrap/bootstrap.min.css",
       "AssetKind": "All",
@@ -1088,10 +1088,10 @@
       "OriginalItemSpec": "wwwroot\\css\\bootstrap\\bootstrap.min.css"
     },
     {
-      "Identity": "C:\\Users\\kaffe\\Dropbox\\Datamatiker\\AFGANGSPROJEKT\\PractiseProjects\\OMS\\OMS.WebApp\\wwwroot\\css\\bootstrap\\bootstrap.min.css.map",
+      "Identity": "C:\\Users\\kaffe\\Dropbox\\Datamatiker\\AFGANGSPROJEKT\\OMS\\OMS.WebApp\\wwwroot\\css\\bootstrap\\bootstrap.min.css.map",
       "SourceId": "OMS.WebApp",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\kaffe\\Dropbox\\Datamatiker\\AFGANGSPROJEKT\\PractiseProjects\\OMS\\OMS.WebApp\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\kaffe\\Dropbox\\Datamatiker\\AFGANGSPROJEKT\\OMS\\OMS.WebApp\\wwwroot\\",
       "BasePath": "_content/OMS.WebApp",
       "RelativePath": "css/bootstrap/bootstrap.min.css.map",
       "AssetKind": "All",
@@ -1105,10 +1105,10 @@
       "OriginalItemSpec": "wwwroot\\css\\bootstrap\\bootstrap.min.css.map"
     },
     {
-      "Identity": "C:\\Users\\kaffe\\Dropbox\\Datamatiker\\AFGANGSPROJEKT\\PractiseProjects\\OMS\\OMS.WebApp\\wwwroot\\css\\open-iconic\\font\\css\\open-iconic-bootstrap.min.css",
+      "Identity": "C:\\Users\\kaffe\\Dropbox\\Datamatiker\\AFGANGSPROJEKT\\OMS\\OMS.WebApp\\wwwroot\\css\\open-iconic\\font\\css\\open-iconic-bootstrap.min.css",
       "SourceId": "OMS.WebApp",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\kaffe\\Dropbox\\Datamatiker\\AFGANGSPROJEKT\\PractiseProjects\\OMS\\OMS.WebApp\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\kaffe\\Dropbox\\Datamatiker\\AFGANGSPROJEKT\\OMS\\OMS.WebApp\\wwwroot\\",
       "BasePath": "_content/OMS.WebApp",
       "RelativePath": "css/open-iconic/font/css/open-iconic-bootstrap.min.css",
       "AssetKind": "All",
@@ -1122,10 +1122,10 @@
       "OriginalItemSpec": "wwwroot\\css\\open-iconic\\font\\css\\open-iconic-bootstrap.min.css"
     },
     {
-      "Identity": "C:\\Users\\kaffe\\Dropbox\\Datamatiker\\AFGANGSPROJEKT\\PractiseProjects\\OMS\\OMS.WebApp\\wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.eot",
+      "Identity": "C:\\Users\\kaffe\\Dropbox\\Datamatiker\\AFGANGSPROJEKT\\OMS\\OMS.WebApp\\wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.eot",
       "SourceId": "OMS.WebApp",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\kaffe\\Dropbox\\Datamatiker\\AFGANGSPROJEKT\\PractiseProjects\\OMS\\OMS.WebApp\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\kaffe\\Dropbox\\Datamatiker\\AFGANGSPROJEKT\\OMS\\OMS.WebApp\\wwwroot\\",
       "BasePath": "_content/OMS.WebApp",
       "RelativePath": "css/open-iconic/font/fonts/open-iconic.eot",
       "AssetKind": "All",
@@ -1139,10 +1139,10 @@
       "OriginalItemSpec": "wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.eot"
     },
     {
-      "Identity": "C:\\Users\\kaffe\\Dropbox\\Datamatiker\\AFGANGSPROJEKT\\PractiseProjects\\OMS\\OMS.WebApp\\wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.otf",
+      "Identity": "C:\\Users\\kaffe\\Dropbox\\Datamatiker\\AFGANGSPROJEKT\\OMS\\OMS.WebApp\\wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.otf",
       "SourceId": "OMS.WebApp",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\kaffe\\Dropbox\\Datamatiker\\AFGANGSPROJEKT\\PractiseProjects\\OMS\\OMS.WebApp\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\kaffe\\Dropbox\\Datamatiker\\AFGANGSPROJEKT\\OMS\\OMS.WebApp\\wwwroot\\",
       "BasePath": "_content/OMS.WebApp",
       "RelativePath": "css/open-iconic/font/fonts/open-iconic.otf",
       "AssetKind": "All",
@@ -1156,10 +1156,10 @@
       "OriginalItemSpec": "wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.otf"
     },
     {
-      "Identity": "C:\\Users\\kaffe\\Dropbox\\Datamatiker\\AFGANGSPROJEKT\\PractiseProjects\\OMS\\OMS.WebApp\\wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.svg",
+      "Identity": "C:\\Users\\kaffe\\Dropbox\\Datamatiker\\AFGANGSPROJEKT\\OMS\\OMS.WebApp\\wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.svg",
       "SourceId": "OMS.WebApp",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\kaffe\\Dropbox\\Datamatiker\\AFGANGSPROJEKT\\PractiseProjects\\OMS\\OMS.WebApp\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\kaffe\\Dropbox\\Datamatiker\\AFGANGSPROJEKT\\OMS\\OMS.WebApp\\wwwroot\\",
       "BasePath": "_content/OMS.WebApp",
       "RelativePath": "css/open-iconic/font/fonts/open-iconic.svg",
       "AssetKind": "All",
@@ -1173,10 +1173,10 @@
       "OriginalItemSpec": "wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.svg"
     },
     {
-      "Identity": "C:\\Users\\kaffe\\Dropbox\\Datamatiker\\AFGANGSPROJEKT\\PractiseProjects\\OMS\\OMS.WebApp\\wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.ttf",
+      "Identity": "C:\\Users\\kaffe\\Dropbox\\Datamatiker\\AFGANGSPROJEKT\\OMS\\OMS.WebApp\\wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.ttf",
       "SourceId": "OMS.WebApp",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\kaffe\\Dropbox\\Datamatiker\\AFGANGSPROJEKT\\PractiseProjects\\OMS\\OMS.WebApp\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\kaffe\\Dropbox\\Datamatiker\\AFGANGSPROJEKT\\OMS\\OMS.WebApp\\wwwroot\\",
       "BasePath": "_content/OMS.WebApp",
       "RelativePath": "css/open-iconic/font/fonts/open-iconic.ttf",
       "AssetKind": "All",
@@ -1190,10 +1190,10 @@
       "OriginalItemSpec": "wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.ttf"
     },
     {
-      "Identity": "C:\\Users\\kaffe\\Dropbox\\Datamatiker\\AFGANGSPROJEKT\\PractiseProjects\\OMS\\OMS.WebApp\\wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.woff",
+      "Identity": "C:\\Users\\kaffe\\Dropbox\\Datamatiker\\AFGANGSPROJEKT\\OMS\\OMS.WebApp\\wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.woff",
       "SourceId": "OMS.WebApp",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\kaffe\\Dropbox\\Datamatiker\\AFGANGSPROJEKT\\PractiseProjects\\OMS\\OMS.WebApp\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\kaffe\\Dropbox\\Datamatiker\\AFGANGSPROJEKT\\OMS\\OMS.WebApp\\wwwroot\\",
       "BasePath": "_content/OMS.WebApp",
       "RelativePath": "css/open-iconic/font/fonts/open-iconic.woff",
       "AssetKind": "All",
@@ -1207,10 +1207,10 @@
       "OriginalItemSpec": "wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.woff"
     },
     {
-      "Identity": "C:\\Users\\kaffe\\Dropbox\\Datamatiker\\AFGANGSPROJEKT\\PractiseProjects\\OMS\\OMS.WebApp\\wwwroot\\css\\open-iconic\\FONT-LICENSE",
+      "Identity": "C:\\Users\\kaffe\\Dropbox\\Datamatiker\\AFGANGSPROJEKT\\OMS\\OMS.WebApp\\wwwroot\\css\\open-iconic\\FONT-LICENSE",
       "SourceId": "OMS.WebApp",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\kaffe\\Dropbox\\Datamatiker\\AFGANGSPROJEKT\\PractiseProjects\\OMS\\OMS.WebApp\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\kaffe\\Dropbox\\Datamatiker\\AFGANGSPROJEKT\\OMS\\OMS.WebApp\\wwwroot\\",
       "BasePath": "_content/OMS.WebApp",
       "RelativePath": "css/open-iconic/FONT-LICENSE",
       "AssetKind": "All",
@@ -1224,10 +1224,10 @@
       "OriginalItemSpec": "wwwroot\\css\\open-iconic\\FONT-LICENSE"
     },
     {
-      "Identity": "C:\\Users\\kaffe\\Dropbox\\Datamatiker\\AFGANGSPROJEKT\\PractiseProjects\\OMS\\OMS.WebApp\\wwwroot\\css\\open-iconic\\ICON-LICENSE",
+      "Identity": "C:\\Users\\kaffe\\Dropbox\\Datamatiker\\AFGANGSPROJEKT\\OMS\\OMS.WebApp\\wwwroot\\css\\open-iconic\\ICON-LICENSE",
       "SourceId": "OMS.WebApp",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\kaffe\\Dropbox\\Datamatiker\\AFGANGSPROJEKT\\PractiseProjects\\OMS\\OMS.WebApp\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\kaffe\\Dropbox\\Datamatiker\\AFGANGSPROJEKT\\OMS\\OMS.WebApp\\wwwroot\\",
       "BasePath": "_content/OMS.WebApp",
       "RelativePath": "css/open-iconic/ICON-LICENSE",
       "AssetKind": "All",
@@ -1241,10 +1241,10 @@
       "OriginalItemSpec": "wwwroot\\css\\open-iconic\\ICON-LICENSE"
     },
     {
-      "Identity": "C:\\Users\\kaffe\\Dropbox\\Datamatiker\\AFGANGSPROJEKT\\PractiseProjects\\OMS\\OMS.WebApp\\wwwroot\\css\\open-iconic\\README.md",
+      "Identity": "C:\\Users\\kaffe\\Dropbox\\Datamatiker\\AFGANGSPROJEKT\\OMS\\OMS.WebApp\\wwwroot\\css\\open-iconic\\README.md",
       "SourceId": "OMS.WebApp",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\kaffe\\Dropbox\\Datamatiker\\AFGANGSPROJEKT\\PractiseProjects\\OMS\\OMS.WebApp\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\kaffe\\Dropbox\\Datamatiker\\AFGANGSPROJEKT\\OMS\\OMS.WebApp\\wwwroot\\",
       "BasePath": "_content/OMS.WebApp",
       "RelativePath": "css/open-iconic/README.md",
       "AssetKind": "All",
@@ -1258,10 +1258,10 @@
       "OriginalItemSpec": "wwwroot\\css\\open-iconic\\README.md"
     },
     {
-      "Identity": "C:\\Users\\kaffe\\Dropbox\\Datamatiker\\AFGANGSPROJEKT\\PractiseProjects\\OMS\\OMS.WebApp\\wwwroot\\css\\site.css",
+      "Identity": "C:\\Users\\kaffe\\Dropbox\\Datamatiker\\AFGANGSPROJEKT\\OMS\\OMS.WebApp\\wwwroot\\css\\site.css",
       "SourceId": "OMS.WebApp",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\kaffe\\Dropbox\\Datamatiker\\AFGANGSPROJEKT\\PractiseProjects\\OMS\\OMS.WebApp\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\kaffe\\Dropbox\\Datamatiker\\AFGANGSPROJEKT\\OMS\\OMS.WebApp\\wwwroot\\",
       "BasePath": "_content/OMS.WebApp",
       "RelativePath": "css/site.css",
       "AssetKind": "All",
@@ -1275,10 +1275,10 @@
       "OriginalItemSpec": "wwwroot\\css\\site.css"
     },
     {
-      "Identity": "C:\\Users\\kaffe\\Dropbox\\Datamatiker\\AFGANGSPROJEKT\\PractiseProjects\\OMS\\OMS.WebApp\\wwwroot\\favicon.png",
+      "Identity": "C:\\Users\\kaffe\\Dropbox\\Datamatiker\\AFGANGSPROJEKT\\OMS\\OMS.WebApp\\wwwroot\\favicon.png",
       "SourceId": "OMS.WebApp",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\kaffe\\Dropbox\\Datamatiker\\AFGANGSPROJEKT\\PractiseProjects\\OMS\\OMS.WebApp\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\kaffe\\Dropbox\\Datamatiker\\AFGANGSPROJEKT\\OMS\\OMS.WebApp\\wwwroot\\",
       "BasePath": "_content/OMS.WebApp",
       "RelativePath": "favicon.png",
       "AssetKind": "All",
@@ -1292,10 +1292,10 @@
       "OriginalItemSpec": "wwwroot\\favicon.png"
     },
     {
-      "Identity": "C:\\Users\\kaffe\\Dropbox\\Datamatiker\\AFGANGSPROJEKT\\PractiseProjects\\OMS\\OMS.WebApp\\wwwroot\\Images\\image1.jpg",
+      "Identity": "C:\\Users\\kaffe\\Dropbox\\Datamatiker\\AFGANGSPROJEKT\\OMS\\OMS.WebApp\\wwwroot\\Images\\image1.jpg",
       "SourceId": "OMS.WebApp",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\kaffe\\Dropbox\\Datamatiker\\AFGANGSPROJEKT\\PractiseProjects\\OMS\\OMS.WebApp\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\kaffe\\Dropbox\\Datamatiker\\AFGANGSPROJEKT\\OMS\\OMS.WebApp\\wwwroot\\",
       "BasePath": "_content/OMS.WebApp",
       "RelativePath": "Images/image1.jpg",
       "AssetKind": "All",
@@ -1309,10 +1309,10 @@
       "OriginalItemSpec": "wwwroot\\Images\\image1.jpg"
     },
     {
-      "Identity": "C:\\Users\\kaffe\\Dropbox\\Datamatiker\\AFGANGSPROJEKT\\PractiseProjects\\OMS\\OMS.WebApp\\wwwroot\\Images\\image2.jpg",
+      "Identity": "C:\\Users\\kaffe\\Dropbox\\Datamatiker\\AFGANGSPROJEKT\\OMS\\OMS.WebApp\\wwwroot\\Images\\image2.jpg",
       "SourceId": "OMS.WebApp",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\kaffe\\Dropbox\\Datamatiker\\AFGANGSPROJEKT\\PractiseProjects\\OMS\\OMS.WebApp\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\kaffe\\Dropbox\\Datamatiker\\AFGANGSPROJEKT\\OMS\\OMS.WebApp\\wwwroot\\",
       "BasePath": "_content/OMS.WebApp",
       "RelativePath": "Images/image2.jpg",
       "AssetKind": "All",

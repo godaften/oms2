@@ -4,7 +4,7 @@ using System.Collections.Generic;
 
 namespace OMS.Plugins.InMemory;
 
-// Plugin er afhængig af Use Case -> clean architecture
+
 public class LejerRepository : ILejerRepository
 {
     private List<Lejer> _lejere;
@@ -21,7 +21,6 @@ public class LejerRepository : ILejerRepository
             new Lejer { LejerID = 6, Navn = "Jensens Super Service ApS", Telefon="64353637", Email ="minmail6@email.dk" }
         };
 
-        //_lejere.OrderBy((item) => item.Navn);
     }
 
     public Task AddLejerAsync(Lejer lejer)
@@ -39,17 +38,10 @@ public class LejerRepository : ILejerRepository
 
     public async Task<Lejer> GetLejerByIdAsync(int lejerId)
     {
-        // Her gemmes den i hukommelsen, således der bruges en reference andre steder.
-        // Metoden bruges ikke, da vi hellere vil have en kopi, altså en "frisk"
-        // GAMMEL: return await Task.FromResult(_lejere.First(x => x.LejerID == lejerId));
 
-        // NY: Her laves en ny i stedet, således der sendes et frisk objekt videre.
-        // Har betydning ved fx editform under editpage
-
-        // Årsagen er, at vi her bruger InMemory, og vi først ønsker, at det ændrede objekt gemmes, 
-        // når brugeren klikker på Gem knappen. Hvis vi ikke gemmer ændringer i et nyt objekt, vil ændringerne
-        // ske samtidigt med, brugeren laver ændringer i formularen. Det ønskes ikke.
+        // Because of InMemory a new object of Lejer is made to prevent changes to the object before hitting "Gem" button
         var lej = _lejere.First(x => x.LejerID == lejerId);
+
         var newLej = new Lejer
         {
             LejerID = lej.LejerID,
@@ -60,24 +52,19 @@ public class LejerRepository : ILejerRepository
 
         return await Task.FromResult(newLej);
 
-
     }
 
-    // public async Task<IEnumerable<Lejer>> GetLejereByNameUseCaseAsync(string name)
     public async Task<IEnumerable<Lejer>> GetLejereByNameAsync(string name)
 
     {
         if (string.IsNullOrEmpty(name)) return await Task.FromResult(_lejere);
 
-        // 'Where' returnerer IEnumerable
         return _lejere.Where(x => x.Navn.Contains(name, StringComparison.OrdinalIgnoreCase));
     }
 
     public Task UpdateLejerAsync(Lejer lejer)
     {
-        // Skal tjekke at den ikke opdaterer et navn som allerede findes på andet Id
-        // Virker ikke umiddelbart...
-        // Kap. 4, vid 23, 7 minutter (Lav xunit projekt til at teste den slags)
+
         if (_lejere.Any(x => x.LejerID == lejer.LejerID &&
         x.Navn.Equals(lejer.Navn, StringComparison.OrdinalIgnoreCase)))
             return Task.CompletedTask;

@@ -13,17 +13,14 @@ using OMS.UseCases.Medarbejdere;
 using OMS.UseCases.Medarbejdere.Interfaces;
 using OMS.UseCases.PluginInterfaces;
 using OMS.WebApp.Data;
-using OMS.WebApp.Services;
 
 var builder = WebApplication.CreateBuilder(args);
 
-// Configure auth
+// Configure Auth
 builder.Services.AddAuthorization(options =>
 {
+    // Admin is the policy, Department is key, Administration is value
     options.AddPolicy("Admin", policy => policy.RequireClaim("Department", "Administration"));
-
-    // Cleaningpeople er policy. Claim er key/value - Department er key og Cleaning er value.
-    options.AddPolicy("Cleaning", policy => policy.RequireClaim("Department", "Cleaning"));
 });
 
 var connstr = builder.Configuration.GetConnectionString("OfficeManagement");
@@ -37,48 +34,33 @@ builder.Services.AddDbContext<AccountDbContext>(options =>
 // Configure Identity
 builder.Services.AddDefaultIdentity<IdentityUser>(options =>
 {
-    // Sættes til false for ikke at skulle bekræfte email - skal ændres ved deployment
+    // Set to false for now
     options.SignIn.RequireConfirmedEmail = false;
 
 }).AddEntityFrameworkStores<AccountDbContext>();
 
 
-// Bemærk Factory pga. Blazor Server
 builder.Services.AddDbContextFactory<OMSContext>(options =>
 {
     options.UseSqlServer(connstr);
 });
 
-//builder.Services.AddDbContext<OMSContext>(options =>
-//{
-//    options.UseSqlServer(builder.Configuration.GetConnectionString("OfficeManagement"));
-//});
-
 
 // Add services to the container.
 builder.Services.AddRazorPages();
 builder.Services.AddServerSideBlazor();
-builder.Services.AddSingleton<WeatherForecastService>();
 
-// Dependency Injection laves her
-// ILejerRepository implementeres her med LejerRepository og vil instatiere et objekt af LejerRepository klassen
-// og give det til konstruktøren af use casen i 'this.lejerRepository'
-// og give det videre til 'lejerRepository' feltet (private readonly)
-// Mapping mellem interface og implementering af servicen
-
-// Datastore og database (LejerRepository fx) kan der kun være en af, derfor singleton når inmemory bruges.
-// Ellers får man dataintegritetsproblemer.
-// I database er det allerede singleton, og derfor kan der her være transient.
 
 if (builder.Environment.IsEnvironment("TESTING"))
 {
-    // For at css isolation virker, skal denne linje køres. Måske unødvendig i .net 7
+    // Making sure CSS Isolation works
     StaticWebAssetsLoader.UseStaticWebAssets(builder.Environment, builder.Configuration);
 
     builder.Services.AddSingleton<ILejerRepository, LejerRepository>();
     builder.Services.AddSingleton<IMedarbejderRepository, MedarbejderRepository>();
     builder.Services.AddSingleton<IKontorhusRepository, KontorhusRepository>();
 }
+
 
 builder.Services.AddTransient<ILejerRepository, LejerEFCoreRepository>();
 builder.Services.AddTransient<IMedarbejderRepository, MedarbejderEFCoreRepository>();
@@ -97,9 +79,6 @@ builder.Services.AddTransient<IAddKontorhusUseCase, AddKontorhusUseCase>();
 builder.Services.AddTransient<IViewKontorhusByIdUseCase, ViewKontorhusByIdUseCase>();
 builder.Services.AddTransient<IEditKontorhusUseCase, EditKontorhusUseCase>();
 
-//Add additional Service for Hide/Show Navbar
-builder.Services.AddSingleton<ViewOptionService>();
-
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
@@ -111,7 +90,6 @@ if (!app.Environment.IsDevelopment())
 }
 
 // Middleware
-
 app.UseHttpsRedirection();
 
 app.UseStaticFiles();

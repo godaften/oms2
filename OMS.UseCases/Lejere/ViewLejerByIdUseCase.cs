@@ -21,5 +21,16 @@ namespace OMS.UseCases.Lejere
         {
             return await this.lejerRepository.GetLejerByIdAsync(lejerId);
         }
+
+        //public async Task<Lejer> GetLejerAsync(int lejerId)
+        //{
+        //    return await this.lejerRepository.GetLejerById(lejerId);
+        //}
+
+        //public async Task<Lejer> RemoveLejerAsync(int lejerId)
+        //{
+        //    return await this.lejerRepository.RemoveLejer(lejerId);
+
+        //}
     }
 }

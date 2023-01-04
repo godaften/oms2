@@ -9,189 +9,177 @@ build_property.EnforceExtendedAnalyzerRules =
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = OMS.WebApp
 build_property.RootNamespace = OMS.WebApp
-build_property.ProjectDir = C:\Users\kaffe\Dropbox\Datamatiker\AFGANGSPROJEKT\PractiseProjects\OMS\OMS.WebApp\
+build_property.ProjectDir = C:\Users\kaffe\Dropbox\Datamatiker\AFGANGSPROJEKT\OMS\OMS.WebApp\
 build_property.RazorLangVersion = 7.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = C:\Users\kaffe\Dropbox\Datamatiker\AFGANGSPROJEKT\PractiseProjects\OMS\OMS.WebApp
+build_property.MSBuildProjectDirectory = C:\Users\kaffe\Dropbox\Datamatiker\AFGANGSPROJEKT\OMS\OMS.WebApp
 build_property._RazorSourceGeneratorDebug = 
 
-[C:/Users/kaffe/Dropbox/Datamatiker/AFGANGSPROJEKT/PractiseProjects/OMS/OMS.WebApp/App.razor]
+[C:/Users/kaffe/Dropbox/Datamatiker/AFGANGSPROJEKT/OMS/OMS.WebApp/App.razor]
 build_metadata.AdditionalFiles.TargetPath = QXBwLnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/kaffe/Dropbox/Datamatiker/AFGANGSPROJEKT/PractiseProjects/OMS/OMS.WebApp/Controls/Kontorhuse/KontorhusLejereComponent.razor]
+[C:/Users/kaffe/Dropbox/Datamatiker/AFGANGSPROJEKT/OMS/OMS.WebApp/Controls/Kontorhuse/KontorhusLejereComponent.razor]
 build_metadata.AdditionalFiles.TargetPath = Q29udHJvbHNcS29udG9yaHVzZVxLb250b3JodXNMZWplcmVDb21wb25lbnQucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/kaffe/Dropbox/Datamatiker/AFGANGSPROJEKT/PractiseProjects/OMS/OMS.WebApp/Controls/Kontorhuse/KontorhusListComponent.razor]
+[C:/Users/kaffe/Dropbox/Datamatiker/AFGANGSPROJEKT/OMS/OMS.WebApp/Controls/Kontorhuse/KontorhusListComponent.razor]
 build_metadata.AdditionalFiles.TargetPath = Q29udHJvbHNcS29udG9yaHVzZVxLb250b3JodXNMaXN0Q29tcG9uZW50LnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/kaffe/Dropbox/Datamatiker/AFGANGSPROJEKT/PractiseProjects/OMS/OMS.WebApp/Controls/Kontorhuse/KontorhusListItemComponent.razor]
+[C:/Users/kaffe/Dropbox/Datamatiker/AFGANGSPROJEKT/OMS/OMS.WebApp/Controls/Kontorhuse/KontorhusListItemComponent.razor]
 build_metadata.AdditionalFiles.TargetPath = Q29udHJvbHNcS29udG9yaHVzZVxLb250b3JodXNMaXN0SXRlbUNvbXBvbmVudC5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/kaffe/Dropbox/Datamatiker/AFGANGSPROJEKT/PractiseProjects/OMS/OMS.WebApp/Controls/Kontorhuse/SearchKontorhusComponent.razor]
+[C:/Users/kaffe/Dropbox/Datamatiker/AFGANGSPROJEKT/OMS/OMS.WebApp/Controls/Kontorhuse/SearchKontorhusComponent.razor]
 build_metadata.AdditionalFiles.TargetPath = Q29udHJvbHNcS29udG9yaHVzZVxTZWFyY2hLb250b3JodXNDb21wb25lbnQucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/kaffe/Dropbox/Datamatiker/AFGANGSPROJEKT/PractiseProjects/OMS/OMS.WebApp/Controls/Lejere/LejerListComponent.razor]
+[C:/Users/kaffe/Dropbox/Datamatiker/AFGANGSPROJEKT/OMS/OMS.WebApp/Controls/Lejere/LejerListComponent.razor]
 build_metadata.AdditionalFiles.TargetPath = Q29udHJvbHNcTGVqZXJlXExlamVyTGlzdENvbXBvbmVudC5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/kaffe/Dropbox/Datamatiker/AFGANGSPROJEKT/PractiseProjects/OMS/OMS.WebApp/Controls/Lejere/LejerListItemComponent.razor]
+[C:/Users/kaffe/Dropbox/Datamatiker/AFGANGSPROJEKT/OMS/OMS.WebApp/Controls/Lejere/LejerListItemComponent.razor]
 build_metadata.AdditionalFiles.TargetPath = Q29udHJvbHNcTGVqZXJlXExlamVyTGlzdEl0ZW1Db21wb25lbnQucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/kaffe/Dropbox/Datamatiker/AFGANGSPROJEKT/PractiseProjects/OMS/OMS.WebApp/Controls/Lejere/SearchLejerComponent.razor]
+[C:/Users/kaffe/Dropbox/Datamatiker/AFGANGSPROJEKT/OMS/OMS.WebApp/Controls/Lejere/SearchLejerComponent.razor]
 build_metadata.AdditionalFiles.TargetPath = Q29udHJvbHNcTGVqZXJlXFNlYXJjaExlamVyQ29tcG9uZW50LnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/kaffe/Dropbox/Datamatiker/AFGANGSPROJEKT/PractiseProjects/OMS/OMS.WebApp/Controls/Medarbejdere/MedarbejderListComponent.razor]
+[C:/Users/kaffe/Dropbox/Datamatiker/AFGANGSPROJEKT/OMS/OMS.WebApp/Controls/Medarbejdere/MedarbejderListComponent.razor]
 build_metadata.AdditionalFiles.TargetPath = Q29udHJvbHNcTWVkYXJiZWpkZXJlXE1lZGFyYmVqZGVyTGlzdENvbXBvbmVudC5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/kaffe/Dropbox/Datamatiker/AFGANGSPROJEKT/PractiseProjects/OMS/OMS.WebApp/Controls/Medarbejdere/MedarbejderListItemComponent.razor]
+[C:/Users/kaffe/Dropbox/Datamatiker/AFGANGSPROJEKT/OMS/OMS.WebApp/Controls/Medarbejdere/MedarbejderListItemComponent.razor]
 build_metadata.AdditionalFiles.TargetPath = Q29udHJvbHNcTWVkYXJiZWpkZXJlXE1lZGFyYmVqZGVyTGlzdEl0ZW1Db21wb25lbnQucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/kaffe/Dropbox/Datamatiker/AFGANGSPROJEKT/PractiseProjects/OMS/OMS.WebApp/Controls/Medarbejdere/SearchMedarbejderComponent.razor]
+[C:/Users/kaffe/Dropbox/Datamatiker/AFGANGSPROJEKT/OMS/OMS.WebApp/Controls/Medarbejdere/SearchMedarbejderComponent.razor]
 build_metadata.AdditionalFiles.TargetPath = Q29udHJvbHNcTWVkYXJiZWpkZXJlXFNlYXJjaE1lZGFyYmVqZGVyQ29tcG9uZW50LnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/kaffe/Dropbox/Datamatiker/AFGANGSPROJEKT/PractiseProjects/OMS/OMS.WebApp/Controls/ToggleMenuBotton.razor]
-build_metadata.AdditionalFiles.TargetPath = Q29udHJvbHNcVG9nZ2xlTWVudUJvdHRvbi5yYXpvcg==
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/Users/kaffe/Dropbox/Datamatiker/AFGANGSPROJEKT/PractiseProjects/OMS/OMS.WebApp/Controls/TwilioSendSmsComponent.razor]
+[C:/Users/kaffe/Dropbox/Datamatiker/AFGANGSPROJEKT/OMS/OMS.WebApp/Controls/TwilioSendSmsComponent.razor]
 build_metadata.AdditionalFiles.TargetPath = Q29udHJvbHNcVHdpbGlvU2VuZFNtc0NvbXBvbmVudC5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/kaffe/Dropbox/Datamatiker/AFGANGSPROJEKT/PractiseProjects/OMS/OMS.WebApp/Pages/Counter.razor]
-build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ291bnRlci5yYXpvcg==
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/Users/kaffe/Dropbox/Datamatiker/AFGANGSPROJEKT/PractiseProjects/OMS/OMS.WebApp/Pages/FetchData.razor]
-build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRmV0Y2hEYXRhLnJhem9y
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/Users/kaffe/Dropbox/Datamatiker/AFGANGSPROJEKT/PractiseProjects/OMS/OMS.WebApp/Pages/Index.razor]
+[C:/Users/kaffe/Dropbox/Datamatiker/AFGANGSPROJEKT/OMS/OMS.WebApp/Pages/Index.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcSW5kZXgucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/kaffe/Dropbox/Datamatiker/AFGANGSPROJEKT/PractiseProjects/OMS/OMS.WebApp/Pages/Kontorhuse/AddKontorhus.razor]
+[C:/Users/kaffe/Dropbox/Datamatiker/AFGANGSPROJEKT/OMS/OMS.WebApp/Pages/Kontorhuse/AddKontorhus.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcS29udG9yaHVzZVxBZGRLb250b3JodXMucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/kaffe/Dropbox/Datamatiker/AFGANGSPROJEKT/PractiseProjects/OMS/OMS.WebApp/Pages/Kontorhuse/EditKontorhus.razor]
+[C:/Users/kaffe/Dropbox/Datamatiker/AFGANGSPROJEKT/OMS/OMS.WebApp/Pages/Kontorhuse/EditKontorhus.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcS29udG9yaHVzZVxFZGl0S29udG9yaHVzLnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/kaffe/Dropbox/Datamatiker/AFGANGSPROJEKT/PractiseProjects/OMS/OMS.WebApp/Pages/Kontorhuse/KontorhusList.razor]
+[C:/Users/kaffe/Dropbox/Datamatiker/AFGANGSPROJEKT/OMS/OMS.WebApp/Pages/Kontorhuse/KontorhusList.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcS29udG9yaHVzZVxLb250b3JodXNMaXN0LnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/kaffe/Dropbox/Datamatiker/AFGANGSPROJEKT/PractiseProjects/OMS/OMS.WebApp/Pages/Lejere/EditLejer.razor]
+[C:/Users/kaffe/Dropbox/Datamatiker/AFGANGSPROJEKT/OMS/OMS.WebApp/Pages/Lejere/AddEditFormLejerComponent.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcTGVqZXJlXEFkZEVkaXRGb3JtTGVqZXJDb21wb25lbnQucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/kaffe/Dropbox/Datamatiker/AFGANGSPROJEKT/OMS/OMS.WebApp/Pages/Lejere/EditLejer.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcTGVqZXJlXEVkaXRMZWplci5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/kaffe/Dropbox/Datamatiker/AFGANGSPROJEKT/PractiseProjects/OMS/OMS.WebApp/Pages/Lejere/LejerList.razor]
+[C:/Users/kaffe/Dropbox/Datamatiker/AFGANGSPROJEKT/OMS/OMS.WebApp/Pages/Lejere/LejerList.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcTGVqZXJlXExlamVyTGlzdC5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/kaffe/Dropbox/Datamatiker/AFGANGSPROJEKT/PractiseProjects/OMS/OMS.WebApp/Pages/Lejere/OpretLejer.razor]
+[C:/Users/kaffe/Dropbox/Datamatiker/AFGANGSPROJEKT/OMS/OMS.WebApp/Pages/Lejere/OpretLejer.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcTGVqZXJlXE9wcmV0TGVqZXIucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/kaffe/Dropbox/Datamatiker/AFGANGSPROJEKT/PractiseProjects/OMS/OMS.WebApp/Pages/Medarbejdere/AddMedarbejder.razor]
+[C:/Users/kaffe/Dropbox/Datamatiker/AFGANGSPROJEKT/OMS/OMS.WebApp/Pages/Medarbejdere/AddMedarbejder.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcTWVkYXJiZWpkZXJlXEFkZE1lZGFyYmVqZGVyLnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/kaffe/Dropbox/Datamatiker/AFGANGSPROJEKT/PractiseProjects/OMS/OMS.WebApp/Pages/Medarbejdere/MedarbejderList.razor]
+[C:/Users/kaffe/Dropbox/Datamatiker/AFGANGSPROJEKT/OMS/OMS.WebApp/Pages/Medarbejdere/MedarbejderList.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcTWVkYXJiZWpkZXJlXE1lZGFyYmVqZGVyTGlzdC5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/kaffe/Dropbox/Datamatiker/AFGANGSPROJEKT/PractiseProjects/OMS/OMS.WebApp/Pages/Reception/LejerListGuest.razor]
+[C:/Users/kaffe/Dropbox/Datamatiker/AFGANGSPROJEKT/OMS/OMS.WebApp/Pages/Reception/LejerListGuest.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUmVjZXB0aW9uXExlamVyTGlzdEd1ZXN0LnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/kaffe/Dropbox/Datamatiker/AFGANGSPROJEKT/PractiseProjects/OMS/OMS.WebApp/Pages/Reception/ThankYouPleaseWait.razor]
+[C:/Users/kaffe/Dropbox/Datamatiker/AFGANGSPROJEKT/OMS/OMS.WebApp/Pages/Reception/ThankYouPleaseWait.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUmVjZXB0aW9uXFRoYW5rWW91UGxlYXNlV2FpdC5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/kaffe/Dropbox/Datamatiker/AFGANGSPROJEKT/PractiseProjects/OMS/OMS.WebApp/Pages/Reception/ViewLejerGuest.razor]
+[C:/Users/kaffe/Dropbox/Datamatiker/AFGANGSPROJEKT/OMS/OMS.WebApp/Pages/Reception/ViewLejerGuest.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUmVjZXB0aW9uXFZpZXdMZWplckd1ZXN0LnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/kaffe/Dropbox/Datamatiker/AFGANGSPROJEKT/PractiseProjects/OMS/OMS.WebApp/Shared/LoginComponent.razor]
+[C:/Users/kaffe/Dropbox/Datamatiker/AFGANGSPROJEKT/OMS/OMS.WebApp/Shared/LoginComponent.razor]
 build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXExvZ2luQ29tcG9uZW50LnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/kaffe/Dropbox/Datamatiker/AFGANGSPROJEKT/PractiseProjects/OMS/OMS.WebApp/Shared/SurveyPrompt.razor]
+[C:/Users/kaffe/Dropbox/Datamatiker/AFGANGSPROJEKT/OMS/OMS.WebApp/Shared/SurveyPrompt.razor]
 build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXFN1cnZleVByb21wdC5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/kaffe/Dropbox/Datamatiker/AFGANGSPROJEKT/PractiseProjects/OMS/OMS.WebApp/_Imports.razor]
+[C:/Users/kaffe/Dropbox/Datamatiker/AFGANGSPROJEKT/OMS/OMS.WebApp/_Imports.razor]
 build_metadata.AdditionalFiles.TargetPath = X0ltcG9ydHMucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/kaffe/Dropbox/Datamatiker/AFGANGSPROJEKT/PractiseProjects/OMS/OMS.WebApp/Controls/Lejere/SearchAndDisplayLejereComponent.razor]
+[C:/Users/kaffe/Dropbox/Datamatiker/AFGANGSPROJEKT/OMS/OMS.WebApp/Controls/Lejere/SearchAndDisplayLejereComponent.razor]
 build_metadata.AdditionalFiles.TargetPath = Q29udHJvbHNcTGVqZXJlXFNlYXJjaEFuZERpc3BsYXlMZWplcmVDb21wb25lbnQucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = b-nngtcfofii
 
-[C:/Users/kaffe/Dropbox/Datamatiker/AFGANGSPROJEKT/PractiseProjects/OMS/OMS.WebApp/Shared/MainLayout - Copy.razor]
-build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXE1haW5MYXlvdXQgLSBDb3B5LnJhem9y
-build_metadata.AdditionalFiles.CssScope = b-5gw13fstsj
-
-[C:/Users/kaffe/Dropbox/Datamatiker/AFGANGSPROJEKT/PractiseProjects/OMS/OMS.WebApp/Shared/MainLayout.razor]
+[C:/Users/kaffe/Dropbox/Datamatiker/AFGANGSPROJEKT/OMS/OMS.WebApp/Shared/MainLayout.razor]
 build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXE1haW5MYXlvdXQucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = b-rbp6zce66a
 
-[C:/Users/kaffe/Dropbox/Datamatiker/AFGANGSPROJEKT/PractiseProjects/OMS/OMS.WebApp/Shared/NavMenu.razor]
+[C:/Users/kaffe/Dropbox/Datamatiker/AFGANGSPROJEKT/OMS/OMS.WebApp/Shared/NavMenu.razor]
 build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXE5hdk1lbnUucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = b-tgpjfkc51h
 
-[C:/Users/kaffe/Dropbox/Datamatiker/AFGANGSPROJEKT/PractiseProjects/OMS/OMS.WebApp/Areas/Identity/Pages/Account/Login.cshtml]
+[C:/Users/kaffe/Dropbox/Datamatiker/AFGANGSPROJEKT/OMS/OMS.WebApp/Areas/Identity/Pages/Account/Login.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxMb2dpbi5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/kaffe/Dropbox/Datamatiker/AFGANGSPROJEKT/PractiseProjects/OMS/OMS.WebApp/Areas/Identity/Pages/Account/Register.cshtml]
+[C:/Users/kaffe/Dropbox/Datamatiker/AFGANGSPROJEKT/OMS/OMS.WebApp/Areas/Identity/Pages/Account/Register.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxSZWdpc3Rlci5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/kaffe/Dropbox/Datamatiker/AFGANGSPROJEKT/PractiseProjects/OMS/OMS.WebApp/Areas/Identity/Pages/Account/_ViewImports.cshtml]
+[C:/Users/kaffe/Dropbox/Datamatiker/AFGANGSPROJEKT/OMS/OMS.WebApp/Areas/Identity/Pages/Account/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxfVmlld0ltcG9ydHMuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/kaffe/Dropbox/Datamatiker/AFGANGSPROJEKT/PractiseProjects/OMS/OMS.WebApp/Areas/Identity/Pages/_ViewImports.cshtml]
+[C:/Users/kaffe/Dropbox/Datamatiker/AFGANGSPROJEKT/OMS/OMS.WebApp/Areas/Identity/Pages/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/kaffe/Dropbox/Datamatiker/AFGANGSPROJEKT/PractiseProjects/OMS/OMS.WebApp/Areas/Identity/Pages/_ViewStart.cshtml]
+[C:/Users/kaffe/Dropbox/Datamatiker/AFGANGSPROJEKT/OMS/OMS.WebApp/Areas/Identity/Pages/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/kaffe/Dropbox/Datamatiker/AFGANGSPROJEKT/PractiseProjects/OMS/OMS.WebApp/Pages/Error.cshtml]
+[C:/Users/kaffe/Dropbox/Datamatiker/AFGANGSPROJEKT/OMS/OMS.WebApp/Pages/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRXJyb3IuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/kaffe/Dropbox/Datamatiker/AFGANGSPROJEKT/PractiseProjects/OMS/OMS.WebApp/Pages/Shared/_Layout.cshtml]
+[C:/Users/kaffe/Dropbox/Datamatiker/AFGANGSPROJEKT/OMS/OMS.WebApp/Pages/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2hhcmVkXF9MYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/kaffe/Dropbox/Datamatiker/AFGANGSPROJEKT/PractiseProjects/OMS/OMS.WebApp/Pages/Shared/_LoginPartial.cshtml]
+[C:/Users/kaffe/Dropbox/Datamatiker/AFGANGSPROJEKT/OMS/OMS.WebApp/Pages/Shared/_LoginPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2hhcmVkXF9Mb2dpblBhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/kaffe/Dropbox/Datamatiker/AFGANGSPROJEKT/PractiseProjects/OMS/OMS.WebApp/Pages/Shared/_ValidationScriptsPartial.cshtml]
+[C:/Users/kaffe/Dropbox/Datamatiker/AFGANGSPROJEKT/OMS/OMS.WebApp/Pages/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/kaffe/Dropbox/Datamatiker/AFGANGSPROJEKT/PractiseProjects/OMS/OMS.WebApp/Pages/_Host.cshtml]
+[C:/Users/kaffe/Dropbox/Datamatiker/AFGANGSPROJEKT/OMS/OMS.WebApp/Pages/_Host.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcX0hvc3QuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/kaffe/Dropbox/Datamatiker/AFGANGSPROJEKT/PractiseProjects/OMS/OMS.WebApp/Pages/_ViewImports.cshtml]
+[C:/Users/kaffe/Dropbox/Datamatiker/AFGANGSPROJEKT/OMS/OMS.WebApp/Pages/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 

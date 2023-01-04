@@ -1,13 +1,6 @@
 ﻿@inherits LayoutComponentBase
-@inject ViewOptionService ViewOption
 
 <PageTitle>BusinessHouse</PageTitle>
-
-@*<div class="page">
-<div class="sidebar @ViewOption.NavBarClass">
-    <NavMenu />
-</div>
-*@
 
 <div class="page">
     <AuthorizeView>
@@ -17,27 +10,16 @@
     </AuthorizeView>
 
     <main>
-        @*<div class="top-row px-4">
-        <LoginComponent></LoginComponent>
-        </div>*@
-
         <div class="">
             @Body
         </div>
 
-        <div class="d-flex justify-content-center mt-5"> 
-        <LoginComponent></LoginComponent>
+        <div class="d-flex justify-content-center mt-5">
+            <LoginComponent></LoginComponent>
         </div>
     </main>
 </div>
 
 @code {
 
-    //protected override async Task OnInitializedAsync()
-    //{
-    //    ViewOption.OnChanged = () =>
-    //    {
-    //        StateHasChanged();//Refresh
-    //    };
-    //}
 }

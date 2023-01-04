@@ -45,9 +45,9 @@ public class MedarbejderRepository : IMedarbejderRepository
 
     public Task AddMedarbejderAsync(Medarbejder medarbejder)
     {
-        // Hvis der er en medarbejder med samme navn allerede, returnerer vi uden at gøre mere
+
         if (_medarbejdere.Any(x => x.Navn.Equals(medarbejder.Navn, StringComparison.OrdinalIgnoreCase)))
-        return Task.CompletedTask;
+            return Task.CompletedTask;
 
         _medarbejdere.Add(medarbejder);
 
@@ -55,18 +55,13 @@ public class MedarbejderRepository : IMedarbejderRepository
         medarbejder.MedarbejderID = maxId + 1;
 
         return Task.CompletedTask;
-        
+
     }
 
-    // Inmemoryrepository - simulerer async, så det ligner entity framework metoder
     public async Task<IEnumerable<Medarbejder>> GetMedarbejdereByNameAsync(string name)
     {
-        // returnerer alle hvis søgefeltet er tomt
         if (string.IsNullOrEmpty(name)) return await Task.FromResult(_medarbejdere);
 
-        // returnerer det der blev søgt 
         return _medarbejdere.Where(x => x.Navn.Contains(name, StringComparison.OrdinalIgnoreCase));
-
-
     }
 }

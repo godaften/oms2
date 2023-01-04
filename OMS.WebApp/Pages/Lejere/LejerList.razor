@@ -3,22 +3,23 @@
 @inject NavigationManager NavigationManager
 
 <div class="p-5">
-<h3>LejerList</h3>
+    <h1>Lejere</h1>
 
-<SearchLejerComponent OnSearchLejer="OnLejerSearch"></SearchLejerComponent>
-<br />
-<LejerListComponent SearchTerm="@searchTerm"></LejerListComponent>
-<br />
-<button 
-    type="button"
-    class="btn btn-primary"
-    @onclick="AddLejer">Opret ny lejer</button>
+    <SearchLejerComponent OnSearchLejer="OnLejerSearch"></SearchLejerComponent>
+    <br />
+    <LejerListComponent SearchTerm="@searchTerm"></LejerListComponent>
+    <br />
 
-    </div>
+    <button type="button"
+            class="btn btn-primary"
+            @onclick="AddLejer">
+        Opret ny lejer
+    </button>
+
+</div>
 
 @code {
-    // i komponent ovenover sættes @searchTerm for at specificere, det er denne variabel, der bruges.
-    // uden @ foran searchterm, tror den bare, det er en streng
+
     private string searchTerm = string.Empty;
 
     private void OnLejerSearch(string searchTerm)
@@ -31,4 +32,6 @@
     {
         NavigationManager.NavigateTo("/opretlejer");
     }
+
+
 }

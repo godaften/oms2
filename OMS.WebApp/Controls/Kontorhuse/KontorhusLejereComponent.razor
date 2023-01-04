@@ -1,6 +1,6 @@
 ﻿<SearchAndDisplayLejereComponent OnLejerSelected="OnLejerSelected"></SearchAndDisplayLejereComponent>
 
-@inject IJSRuntime JsRuntime
+@inject IJSRuntime JSRuntime
 
 @if (this.Kontorhus.KontorhusLejere != null && this.Kontorhus.KontorhusLejere.Count > 0)
 {
@@ -47,7 +47,7 @@
 
     private async void RemoveLejer(KontorhusLejer kontorhusLejer)
     {
-        bool confirmed = await JsRuntime.InvokeAsync<bool>("confirm", "Vil du fjerne lejeren?");
+        bool confirmed = await JSRuntime.InvokeAsync<bool>("confirm", "Vil du fjerne lejeren?");
         if (confirmed)
         {
             this.Kontorhus.KontorhusLejere.Remove(kontorhusLejer);

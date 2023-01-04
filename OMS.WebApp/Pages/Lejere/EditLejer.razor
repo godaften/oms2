@@ -9,6 +9,58 @@
 <br />
 
 <EditForm Model="lejer" OnValidSubmit="SaveLejer">
+        <DataAnnotationsValidator></DataAnnotationsValidator>
+        <ValidationSummary></ValidationSummary>
+
+        <div class="form-group">
+            <label for="name">Navn</label>
+            <InputText id="name"
+                       @bind-Value="lejer.Navn"
+                       class="form-control"></InputText>
+        </div>
+
+        <div class="form-group">
+            <label for="sms">SMSTelefon</label>
+            <InputText id="sms"
+                       @bind-Value="lejer.SMSTelefon"
+                       class="form-control"></InputText>
+        </div>
+
+        <div class="form-group">
+            <label for="phone">Telefon</label>
+            <InputText id="phone"
+                       @bind-Value="lejer.Telefon"
+                       class="form-control"></InputText>
+        </div>
+
+        <div class="form-group">
+            <label for="adress">Adresse</label>
+            <InputText id="adress"
+                       @bind-Value="lejer.Adresse"
+                       class="form-control"></InputText>
+        </div>
+
+        <div class="form-group">
+            <label for="lokale">Lokale</label>
+            <InputText id="lokale"
+                       @bind-Value="lejer.Lokale"
+                       class="form-control"></InputText>
+        </div>
+
+        <div class="form-group">
+            <label for="email">Email</label>
+            <InputText id="email"
+                       @bind-Value="lejer.Email"
+                       class="form-control"></InputText>
+        </div>
+        <br />
+        <button type="submit" class="btn btn-primary">Gem</button>
+        <button type="button" class="btn btn-primary" @onclick="Cancel">Annuller</button>
+
+    </EditForm>
+
+@*
+<EditForm Model="lejer" OnValidSubmit="SaveLejer">
     <DataAnnotationsValidator></DataAnnotationsValidator>
     <ValidationSummary></ValidationSummary>
 
@@ -40,7 +92,8 @@
     <button type="submit" class="btn btn-primary">Gem</button>
     <button type="button" class="btn btn-primary" @onclick="Cancel">Annuller</button>
 
-</EditForm>
+</EditForm>*@
+
 
 </div>
 @code {

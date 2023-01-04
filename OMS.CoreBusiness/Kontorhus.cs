@@ -28,7 +28,7 @@ public class Kontorhus
                 LejerID = lejer.LejerID,
                 Lejer = lejer,
                 KontorhusID = this.KontorhusID,
-                Kontorhus = this //this refererer til det nuværende kontorhus af denne klasse
+                Kontorhus = this
             });
 
         }

@@ -38,7 +38,7 @@ public class KontorhusRepository : IKontorhusRepository
 
     public Task AddKontorhusAsync(Kontorhus kontorhus)
     {
-        // Hvis der er et kontorhus med samme navn allerede, returnerer vi uden at gøre mere
+   
         if (_kontorhuse.Any(x => x.KontorhusNavn.Equals(kontorhus.KontorhusNavn, StringComparison.OrdinalIgnoreCase)))
             return Task.CompletedTask;
 
@@ -52,9 +52,6 @@ public class KontorhusRepository : IKontorhusRepository
 
     public async Task<Kontorhus?> GetKontorhusById(int kontorhusId)
     {
-        // Gammel - pga. InMemory laves anden
-        // return await Task.FromResult(_kontorhuse.FirstOrDefault(x => x.KontorhusID == kontorhusId));
-        // Se video 35 ved ca. 5 minutter for forklaring på nedenstående
 
         var khus = _kontorhuse.FirstOrDefault(x => x.KontorhusID == kontorhusId);
 
@@ -94,32 +91,24 @@ public class KontorhusRepository : IKontorhusRepository
 
             }
         }
-
-
         return await Task.FromResult(newKhus);
     }
 
 
-
     public async Task<IEnumerable<Kontorhus>> GetKontorhuseByNameAsync(string name)
     {
-        // Hvorfor ikke await her? Fix den
-        // return _kontorhuse.Where(x => x.KontorhusNavn.Contains(name, StringComparison.OrdinalIgnoreCase));
-
         return await Task.FromResult(_kontorhuse.Where(x => x.KontorhusNavn.Contains(name, StringComparison.OrdinalIgnoreCase)));
-
     }
 
     public Task UpdateKontorhusAsync(Kontorhus kontorhus)
     {
-        // Undgå forskellige kontorhuse med samme navn
-        // Er nok ikke nødvendig for vores vedkommende... slet (gem kopi af hele projekt først)
+
         if (_kontorhuse.Any(x => x.KontorhusID != kontorhus.KontorhusID &&
         x.KontorhusNavn.ToLower() == kontorhus.KontorhusNavn.ToLower()))
             return Task.CompletedTask;
 
         var khus = _kontorhuse.FirstOrDefault(x => x.KontorhusID == kontorhus.KontorhusID);
-        if(khus !=null)
+        if (khus != null)
         {
             khus.KontorhusNavn = kontorhus.KontorhusNavn;
             khus.KontorhusTelefon = kontorhus.KontorhusTelefon;

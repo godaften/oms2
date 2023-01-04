@@ -17,9 +17,10 @@ public class AddLejerUseCase : IAddLejerUseCase
     {
         this.lejerRepository = lejerRepository;
     }
+
     public async Task ExecuteAsync(Lejer lejer)
     {
         await this.lejerRepository.AddLejerAsync(lejer);
-
     }
+
 }
