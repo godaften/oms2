@@ -56,7 +56,6 @@ public class KontorhusEFCoreRepository : IKontorhusRepository
     }
 
 
-    // If lejer exists, set state unchanged
     private void FlagLejereUnchanged(Kontorhus kontorhus, OMSContext db)
     {
         if (kontorhus?.KontorhusLejere != null &&

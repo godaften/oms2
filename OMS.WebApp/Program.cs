@@ -63,6 +63,8 @@ if (builder.Environment.IsEnvironment("TESTING"))
 
 
 builder.Services.AddTransient<ILejerRepository, LejerEFCoreRepository>();
+
+
 builder.Services.AddTransient<IMedarbejderRepository, MedarbejderEFCoreRepository>();
 builder.Services.AddTransient<IKontorhusRepository, KontorhusEFCoreRepository>();
 

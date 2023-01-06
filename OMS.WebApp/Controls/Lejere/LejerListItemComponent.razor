@@ -1,10 +1,6 @@
 ﻿@inject NavigationManager NavigationManager
 @inject IJSRuntime IJSRuntime
 
-@*
-Null check laves med 'if' selvom listen er initialiseret, da det kommer fra usecase interface,
-hvor vi ikke har givet den mulighed for at være null.
-Derfor er der en risiko for, at den kan være null og lave exception. Det undgås med null check.*@
 
 @if (Lejere != null && Lejere.Count > 0)
 {
@@ -29,39 +25,13 @@ Derfor er der en risiko for, at den kan være null og lave exception. Det undgå
 }
 
 @code {
-    // med 'new List' initialiseres listen, så den aldrig er nul
+
     [Parameter]
     public List<Lejer> Lejere { get; set; } = new List<Lejer>();
-
 
     public void EditLejer(int lejerId)
     {
         NavigationManager.NavigateTo($"/editlejer/{lejerId}");
-
     }
-
-
-    //public async Task RemoveLejer(int lejerId)
-    //{
-
-    //    var lejer = await ViewLejerByIdUseCase.ExecuteAsync(lejerId);
-
-    //    if (lejer != null)
-    //    {
-    //        await ViewLejerByIdUseCase.RemoveLejerAsync(lejer);
-
-    //        Lejere.RemoveAll(x => x.LejerID == lejerId);
-    //    }
-    //}
-
-    //private async void RemoveLejer(Lejer lejer)
-    //{
-    //    bool confirmed = await JSRuntime.InvokeAsync<bool>("confirm", "Vil du fjerne lejeren?");
-    //    if (confirmed)
-    //    {
-    //        this.Lejere.Remove(lejer);
-    //        StateHasChanged();
-    //    }
-    //}
 
 }

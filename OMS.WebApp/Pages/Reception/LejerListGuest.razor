@@ -3,7 +3,7 @@
 @inject NavigationManager NavigationManager
 
 
-    <div class="p-5 text-center bg-image" style="
+<div class="p-5 text-center bg-image" style="
       background-image: url('Images/image2.jpg');
       height: 300px;
     ">
@@ -12,7 +12,7 @@
         <div class="text-white">
             <h1 class="mb-3">Velkommen til Business House</h1>
             <h4 class="mb-3">Klik på virksomheden du vil besøge</h4>
-@*            <a class="btn btn-outline-light btn-lg" href="#oversigt" role="button">Se virksomheder</a>*@
+
         </div>
     </div>
 </div>
@@ -30,50 +30,11 @@
 
     }
 
-
-
-    @*
-    <table class="table">
-    <thead>
-    <tr>
-    <th>Navn</th>
-    <th>Telefon</th>
-    <th>Email</th>
-    <th></th>
-
-    </tr>
-    </thead>
-    <tbody>
-    @if (Lejere != null && Lejere.Count > 0)
-    {
-    foreach (var lejer in Lejere)
-    {
-    <tr>
-    <td>@lejer.Navn</td>
-    <td>@lejer.Telefon</td>
-    <td>@lejer.Email</td>
-    <td>
-    <button type="button"
-    class="btn btn-light"
-    @onclick="@(() => SeLejer(lejer.LejerID))">
-    BESØG
-    </button>
-    </td>
-    </tr>
-    }
-    }
-    </tbody>
-    </table>*@
     <br />
 
 </div>
 
 @code {
-
-    //private List<Lejer> listLejere = new List<Lejer>();
-
-    //[Parameter]
-    //public string SearchTerm { get; set; } = string.Empty;
 
     [Parameter]
     public List<Lejer> Lejere { get; set; } = new List<Lejer>();
@@ -87,14 +48,9 @@
     [Parameter]
     public string SearchTerm { get; set; } = string.Empty;
 
-    // onparametersetasync metoden er en lifecycle event for komponenten, der trigges hver gang parametret ændres,
-    // eller når komponenten loades og sættes første gang
-    // når metoden kaldes ved vi, SearchTerm indeholder noget. Hvis den indeholder "tom", vises alle.
-    // når metoden kaldes, ændres relevant ui også
     protected override async Task OnParametersSetAsync()
     {
         Lejere = (await ViewLejereByNameUseCase.ExecuteAsync(this.SearchTerm)).OrderBy((item) => item.Navn).ToList();
     }
-
 
 }

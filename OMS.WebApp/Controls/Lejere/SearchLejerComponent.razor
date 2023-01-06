@@ -14,16 +14,14 @@
 
 @code {
 
-    // med databinding gemmes input fra html inputfeltet i denne variabel
-    // det er to-vejs databinding, så variablen har altid nyeste info fra html og omvendt
     private string lejerNameToSearch = string.Empty;
 
-    [Parameter] // skal annoteres for at kunne blive fundet i andre componenter
+    [Parameter]
     public EventCallback<string> OnSearchLejer { get; set; }
 
     private void OnSearch()
     {
         OnSearchLejer.InvokeAsync(lejerNameToSearch);
-
     }
+
 }
