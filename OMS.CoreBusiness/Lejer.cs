@@ -27,4 +27,23 @@ public class Lejer
 
     public List<KontorhusLejer> KontorhusLejere { get; set; } = new List<KontorhusLejer>();
 
+    public void AddKontorhus(Kontorhus kontorhus)
+    {
+        if (!this.KontorhusLejere.Any(x => x.Kontorhus != null && 
+        x.Kontorhus.KontorhusNavn.Equals(kontorhus.KontorhusNavn)))
+        {
+            this.KontorhusLejere.Add(new KontorhusLejer
+
+            {
+                KontorhusID = kontorhus.KontorhusID,
+                Kontorhus = kontorhus,
+                LejerID = LejerID,
+                Lejer = this
+            });
+
+        }
+    }
+
+ 
+
 }

@@ -81,6 +81,7 @@ public class KontorhusEFCoreRepository : IKontorhusRepository
         }
     }
 
+
     public async Task DeleteKontorhusAsync(Kontorhus kontorhus)
     {
         using var db = this.contextFactory.CreateDbContext();

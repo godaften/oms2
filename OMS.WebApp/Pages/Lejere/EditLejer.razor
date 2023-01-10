@@ -4,7 +4,6 @@
 @inject IViewLejerByIdUseCase ViewLejerByIdUseCase
 @inject IEditLejerUseCase EditLejerUseCase
 @inject IDeleteLejerUseCase DeleteLejerUseCase
-@*@inject IViewKontorhusByIdUseCase ViewKontorhusByIdUseCase*@
 
 <div class="p-5">
     <h3>EditLejer</h3>
@@ -73,36 +72,40 @@
 </div>
 @code {
 
-    private Lejer lejer = new Lejer();
+    private Lejer? lejer = new Lejer();
 
     //public List<Kontorhus> Kontorhuse = new List<Kontorhus>();
 
     [Parameter]
     public int LejId { get; set; }
 
+
     //[Parameter]
     //public int KhusId { get; set; }
-
-
-
-
     
     //protected override Task OnInitializedAsync()
     //{
     //    Kontorhus = (await ViewKontorhusByIdUseCase.ExcecuteAsync()).ToList();
     //}
 
-
-    protected override async Task OnParametersSetAsync()
+    protected override async Task OnInitializedAsync()
     {
         this.lejer = await ViewLejerByIdUseCase.ExecuteAsync(this.LejId);
-       // Kontorhuse = (await ViewKontorhusByIdUseCase.ExecuteAsync()).ToList();
     }
+
+
+    //protected override async Task OnParametersSetAsync()
+    //{
+    //    this.lejer = await ViewLejerByIdUseCase.ExecuteAsync(this.LejId);
+    //   // Kontorhuse = (await ViewKontorhusByIdUseCase.ExecuteAsync()).ToList();
+    //}
 
     private async Task SaveLejer()
     {
+
         await EditLejerUseCase.ExecuteAsync(this.lejer);
         NavigationManager.NavigateTo("/lejere");
+        
     }
 
     private async Task DeleteLejer()

@@ -10,6 +10,6 @@ public interface ILejerRepository
     
     Task UpdateLejerAsync(Lejer lejer);
     
-    Task<Lejer> GetLejerByIdAsync(int lejerId);
+    Task<Lejer?> GetLejerByIdAsync(int lejerId);
     Task DeleteLejerAsync(Lejer lejer);
 }

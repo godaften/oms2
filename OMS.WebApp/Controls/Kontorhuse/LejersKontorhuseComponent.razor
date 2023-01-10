@@ -19,13 +19,13 @@
                     <td>
                         @khusLejer.Kontorhus?.KontorhusNavn
                     </td>
-                   @* <td>
+                    <td>
                         <button
                             class="btn btn-link"
                             type="button"
-                        @onclick="@(() => RemoveLejer(khusLejer))">
+                        >
                             Slet</button>
-                    </td>*@
+                    </td>
                 </tr>
             }
         </tbody>
@@ -39,25 +39,9 @@
     public Lejer Lejer { get; set; } = new Lejer();
 
 
-    //private void RemoveLejer(KontorhusLejer kontorhusLejer)
-    //{
-    //    this.Kontorhus.KontorhusLejere.Remove(kontorhusLejer);
-    //}
-
-
-    //private async void RemoveLejer(KontorhusLejer kontorhusLejer)
-    //{
-    //    bool confirmed = await JSRuntime.InvokeAsync<bool>("confirm", "Vil du fjerne lejeren?");
-    //    if (confirmed)
-    //    {
-    //        this.Kontorhus.KontorhusLejere.Remove(kontorhusLejer);
-    //        StateHasChanged();
-    //    }
-    //}
-
     private void OnKontorhusSelected(Kontorhus kontorhus)
     {
 
-      //  this.Lejer.AddKontorhus(kontorhus);
+        this.Lejer.AddKontorhus(kontorhus);
     }
 }

@@ -1,4 +1,5 @@
 ﻿@page "/redigerkontorhus/{id:int}"
+
 @inject IViewKontorhusByIdUseCase ViewKontorhusByIdUseCase
 @inject IEditKontorhusUseCase EditKontorhusUseCase
 @inject IDeleteKontorhusUseCase DeleteKontorhusUseCase
@@ -34,7 +35,7 @@
         </div>
 
         <div class="form-group">
-            <label for="lejere">Lejer</label>
+            <label for="lejere">Lejere</label>
             <KontorhusLejereComponent Kontorhus="this.kontorhus"></KontorhusLejereComponent>
 
         </div>
@@ -53,6 +54,7 @@
 
     [Parameter]
     public int Id { get; set; }
+
 
     protected override async Task OnInitializedAsync()
     {

@@ -36,21 +36,47 @@ public class LejerEFCoreRepository : ILejerRepository
 
     }
 
-    public async Task<Lejer> GetLejerByIdAsync(int lejerId)
+    // INDEN TILFØJELSE AF KONTORHUSE PÅ EDIT
+    //public async Task<Lejer> GetLejerByIdAsync(int lejerId)
+    //{
+    //    using var db = this.contextFactory.CreateDbContext();
+    //    var lej = await db.Lejere.FindAsync(lejerId);
+    //    if (lej != null) return lej;
+
+    //    return new Lejer();
+
+    //}
+
+    public async Task<Lejer?> GetLejerByIdAsync(int lejerId)
     {
         using var db = this.contextFactory.CreateDbContext();
-        var lej = await db.Lejere.FindAsync(lejerId);
-        if (lej != null) return lej;
 
-        return new Lejer();
+        return await db.Lejere.Include(x => x.KontorhusLejere)
+            .ThenInclude(x => x.Kontorhus)
+            .FirstOrDefaultAsync(x => x.LejerID == lejerId);
 
     }
+
 
 
     public async Task UpdateLejerAsync(Lejer lejer)
     {
         using var db = this.contextFactory.CreateDbContext();
-        db.Lejere.Update(lejer);
+        var lej = await db.Lejere
+            .Include(x => x.KontorhusLejere)
+            .FirstOrDefaultAsync(x => x.LejerID == lejer.LejerID);
+
+        if (lej != null)
+        {
+            lej.Navn= lejer.Navn;
+            lej.Adresse= lejer.Adresse;
+            lej.Telefon= lejer.Telefon;
+            lej.SMSTelefon= lejer.SMSTelefon;
+            lej.Email= lejer.Email;
+            lej.Lokale= lejer.Lokale;
+            lej.KontorhusLejere = lejer.KontorhusLejere;
+
+        }
 
         await db.SaveChangesAsync();
     }
