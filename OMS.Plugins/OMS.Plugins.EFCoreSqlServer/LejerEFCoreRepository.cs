@@ -81,7 +81,6 @@ public class LejerEFCoreRepository : ILejerRepository
         await db.SaveChangesAsync();
     }
 
-
     public async Task DeleteLejerAsync(Lejer lejer)
     {
         using var db = this.contextFactory.CreateDbContext();

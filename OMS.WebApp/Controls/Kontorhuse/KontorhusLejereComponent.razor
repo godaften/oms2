@@ -10,37 +10,37 @@
                 <th>Navn</th>
                 <th></th>
             </tr>
-    
+
         </thead>
         <tbody>
-            @foreach(var khusLejer in this.Kontorhus.KontorhusLejere)
+            @foreach (var khusLejer in this.Kontorhus.KontorhusLejere)
             {
                 <tr>
                     <td>
                         @khusLejer.Lejer?.Navn
                     </td>
                     <td>
-                        <button
-                            class="btn btn-link"
-                            type="button"
+                        <button class="btn btn-link"
+                        type="button"
                         @onclick="@(() => RemoveLejer(khusLejer))">
-                            Slet</button>
+                            Slet
+                        </button>
                     </td>
                 </tr>
             }
         </tbody>
     </table>
-   
+
 }
 
 @code {
 
-    [Parameter] // is passed from outside
+    [Parameter]
     public Kontorhus Kontorhus { get; set; } = new Kontorhus();
 
     private async void RemoveLejer(KontorhusLejer kontorhusLejer)
     {
-        bool confirmed = await JSRuntime.InvokeAsync<bool>("confirm", "Vil du fjerne lejeren?");
+        bool confirmed = await JSRuntime.InvokeAsync<bool>("confirm", "Vil du fjerne lejeren fra kontorhuset?");
         if (confirmed)
         {
             this.Kontorhus.KontorhusLejere.Remove(kontorhusLejer);
