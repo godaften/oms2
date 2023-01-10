@@ -1,9 +1,10 @@
 ﻿@page "/editlejer/{LejId:int}"
 
-@inject NavigationManager NavigationManager;
-@inject IViewLejerByIdUseCase ViewLejerByIdUseCase;
-@inject IEditLejerUseCase EditLejerUseCase;
-@inject IDeleteLejerUseCase DeleteLejerUseCase;
+@inject NavigationManager NavigationManager
+@inject IViewLejerByIdUseCase ViewLejerByIdUseCase
+@inject IEditLejerUseCase EditLejerUseCase
+@inject IDeleteLejerUseCase DeleteLejerUseCase
+@*@inject IViewKontorhusByIdUseCase ViewKontorhusByIdUseCase*@
 
 <div class="p-5">
     <h3>EditLejer</h3>
@@ -54,10 +55,16 @@
                        @bind-Value="lejer.Email"
                        class="form-control"></InputText>
         </div>
+        <div class="form-group">
+            <label for="kontorhuse">Kontorhus</label>
+            <LejersKontorhuseComponent Lejer="this.lejer"></LejersKontorhuseComponent>
+
+        </div>
         <br />
+        
         <button type="submit" class="btn btn-primary">Gem</button>
         <button type="button" class="btn btn-primary" @onclick="Cancel">Annuller</button>
-        <button type="button" class="btn btn-primary" @onclick="DeleteLejer">Delete</button>
+        <button type="button" class="btn btn-primary" @onclick="DeleteLejer">Slet</button>
 
     </EditForm>
 
@@ -66,15 +73,30 @@
 </div>
 @code {
 
+    private Lejer lejer = new Lejer();
+
+    //public List<Kontorhus> Kontorhuse = new List<Kontorhus>();
+
     [Parameter]
     public int LejId { get; set; }
 
-    private Lejer lejer = new Lejer();
+    //[Parameter]
+    //public int KhusId { get; set; }
+
+
+
+
+    
+    //protected override Task OnInitializedAsync()
+    //{
+    //    Kontorhus = (await ViewKontorhusByIdUseCase.ExcecuteAsync()).ToList();
+    //}
+
 
     protected override async Task OnParametersSetAsync()
     {
-
         this.lejer = await ViewLejerByIdUseCase.ExecuteAsync(this.LejId);
+       // Kontorhuse = (await ViewKontorhusByIdUseCase.ExecuteAsync()).ToList();
     }
 
     private async Task SaveLejer()

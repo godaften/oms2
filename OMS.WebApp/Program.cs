@@ -81,6 +81,7 @@ builder.Services.AddTransient<IViewKontorhusByNameUseCase, ViewKontorhusByNameUs
 builder.Services.AddTransient<IAddKontorhusUseCase, AddKontorhusUseCase>();
 builder.Services.AddTransient<IViewKontorhusByIdUseCase, ViewKontorhusByIdUseCase>();
 builder.Services.AddTransient<IEditKontorhusUseCase, EditKontorhusUseCase>();
+builder.Services.AddTransient<IDeleteKontorhusUseCase, DeleteKontorhusUseCase>();
 
 var app = builder.Build();
 

@@ -11,5 +11,6 @@ namespace OMS.UseCases.PluginInterfaces
         Task<Kontorhus?> GetKontorhusById(int kontorhusId);
 
         Task UpdateKontorhusAsync(Kontorhus kontorhus);
+        Task DeleteKontorhusAsync(Kontorhus kontorhus);
     }
 }

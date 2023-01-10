@@ -1,3 +1,18 @@
+/* _content/OMS.WebApp/Controls/Kontorhuse/SearchAndDisplayKontorhuseComponent.razor.rz.scp.css */
+.search-result[b-p9aafwaxco] {
+    overflow-y:auto;
+    height:300px;
+    border: 1px solid silver;
+    padding-top: 5px;
+}
+
+div ul[b-p9aafwaxco] {
+    list-style-type:none;  
+}
+
+div ul li[b-p9aafwaxco] {
+    cursor: pointer;
+}
 /* _content/OMS.WebApp/Controls/Lejere/SearchAndDisplayLejereComponent.razor.rz.scp.css */
 .search-result[b-nngtcfofii] {
     overflow-y:auto;

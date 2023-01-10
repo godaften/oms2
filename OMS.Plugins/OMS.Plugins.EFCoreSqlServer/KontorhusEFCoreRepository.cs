@@ -3,6 +3,7 @@ using OMS.CoreBusiness;
 using OMS.UseCases.PluginInterfaces;
 using System;
 using System.Collections.Generic;
+using System.Diagnostics.Metrics;
 using System.Linq;
 using System.Numerics;
 using System.Text;
@@ -37,19 +38,17 @@ public class KontorhusEFCoreRepository : IKontorhusRepository
             .Include(x => x.KontorhusLejere)
             .FirstOrDefaultAsync(x => x.KontorhusID == kontorhus.KontorhusID);
 
-        if (khus != null) {
+        if (khus != null)
+        {
             khus.KontorhusNavn = kontorhus.KontorhusNavn;
             khus.KontorhusEmail = kontorhus.KontorhusEmail;
             khus.KontorhusLejere = kontorhus.KontorhusLejere;
-                          
-      //  db.Kontorhuse.Update(kontorhus);
 
-        FlagLejereUnchanged(kontorhus, db);
+            FlagLejereUnchanged(kontorhus, db);
 
-        await db.SaveChangesAsync();
+            await db.SaveChangesAsync();
         }
     }
-
 
 
     public async Task<Kontorhus?> GetKontorhusById(int kontorhusId)
@@ -81,4 +80,19 @@ public class KontorhusEFCoreRepository : IKontorhusRepository
             }
         }
     }
+
+    public async Task DeleteKontorhusAsync(Kontorhus kontorhus)
+    {
+        using var db = this.contextFactory.CreateDbContext();
+        var khus = await db.Kontorhuse.FindAsync(kontorhus.KontorhusID);
+        if (khus != null)
+        {
+            db.Kontorhuse.Remove(khus);
+        }
+
+        await db.SaveChangesAsync();
+
+    }
+
+  
 }

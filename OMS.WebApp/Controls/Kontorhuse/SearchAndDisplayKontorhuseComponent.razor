@@ -1,0 +1,41 @@
+﻿@inject IViewKontorhusByNameUseCase ViewKontorhusByNameUseCase
+
+<SearchKontorhusComponent OnSearchKontorhus="OnSearchKontorhus"></SearchKontorhusComponent>
+
+@if (_kontorhuse.Count > 0)
+{
+    <div class="search-result">
+        <ul>
+            @foreach (var khus in _kontorhuse)
+            {
+                @* @key hjælper Blazor med at se forskelle, så den ikke renderer hele listen hver gang *@
+                <li @key="khus.KontorhusID"
+            @onclick="@(async () => { await OnSelectKontorhus(khus);} )">
+                    @khus.KontorhusNavn
+                </li>
+            }
+        </ul>
+    </div>
+}
+
+@code {
+    private List<Kontorhus> _kontorhuse = new List<Kontorhus>();
+
+    [Parameter]
+    public EventCallback<Kontorhus> OnKontorhusSelected { get; set; }
+
+
+    private async Task OnSearchKontorhus(string searchTerm)
+    {
+
+        _kontorhuse = (await ViewKontorhusByNameUseCase.ExecuteAsync(searchTerm)).ToList();
+
+    }
+
+
+    private async Task OnSelectKontorhus(Kontorhus kontorhus)
+    {
+        await OnKontorhusSelected.InvokeAsync(kontorhus);
+        _kontorhuse.Clear();
+    }
+}

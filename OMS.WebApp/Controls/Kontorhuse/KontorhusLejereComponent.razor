@@ -38,13 +38,6 @@
     [Parameter] // is passed from outside
     public Kontorhus Kontorhus { get; set; } = new Kontorhus();
 
-
-    //private void RemoveLejer(KontorhusLejer kontorhusLejer)
-    //{
-    //    this.Kontorhus.KontorhusLejere.Remove(kontorhusLejer);
-    //}
-
-
     private async void RemoveLejer(KontorhusLejer kontorhusLejer)
     {
         bool confirmed = await JSRuntime.InvokeAsync<bool>("confirm", "Vil du fjerne lejeren?");

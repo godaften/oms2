@@ -884,3 +884,4 @@ C:\Users\kaffe\Dropbox\Datamatiker\AFGANGSPROJEKT\OMS2\OMS.WebApp\obj\Debug\net7
 C:\Users\kaffe\Dropbox\Datamatiker\AFGANGSPROJEKT\OMS2\OMS.WebApp\obj\Debug\net7.0\OMS.WebApp.pdb
 C:\Users\kaffe\Dropbox\Datamatiker\AFGANGSPROJEKT\OMS2\OMS.WebApp\obj\Debug\net7.0\OMS.WebApp.genruntimeconfig.cache
 C:\Users\kaffe\Dropbox\Datamatiker\AFGANGSPROJEKT\OMS2\OMS.WebApp\obj\Debug\net7.0\ref\OMS.WebApp.dll
+C:\Users\kaffe\Dropbox\Datamatiker\AFGANGSPROJEKT\OMS2\OMS.WebApp\obj\Debug\net7.0\scopedcss\Controls\Kontorhuse\SearchAndDisplayKontorhuseComponent.razor.rz.scp.css

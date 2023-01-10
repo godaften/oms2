@@ -32,6 +32,10 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Q29udHJvbHNcS29udG9yaHVzZVxLb250b3JodXNMaXN0SXRlbUNvbXBvbmVudC5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Users/kaffe/Dropbox/Datamatiker/AFGANGSPROJEKT/OMS2/OMS.WebApp/Controls/Kontorhuse/LejersKontorhuseComponent.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29udHJvbHNcS29udG9yaHVzZVxMZWplcnNLb250b3JodXNlQ29tcG9uZW50LnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/kaffe/Dropbox/Datamatiker/AFGANGSPROJEKT/OMS2/OMS.WebApp/Controls/Kontorhuse/SearchKontorhusComponent.razor]
 build_metadata.AdditionalFiles.TargetPath = Q29udHJvbHNcS29udG9yaHVzZVxTZWFyY2hLb250b3JodXNDb21wb25lbnQucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
@@ -119,6 +123,10 @@ build_metadata.AdditionalFiles.CssScope =
 [C:/Users/kaffe/Dropbox/Datamatiker/AFGANGSPROJEKT/OMS2/OMS.WebApp/_Imports.razor]
 build_metadata.AdditionalFiles.TargetPath = X0ltcG9ydHMucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/kaffe/Dropbox/Datamatiker/AFGANGSPROJEKT/OMS2/OMS.WebApp/Controls/Kontorhuse/SearchAndDisplayKontorhuseComponent.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29udHJvbHNcS29udG9yaHVzZVxTZWFyY2hBbmREaXNwbGF5S29udG9yaHVzZUNvbXBvbmVudC5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = b-p9aafwaxco
 
 [C:/Users/kaffe/Dropbox/Datamatiker/AFGANGSPROJEKT/OMS2/OMS.WebApp/Controls/Lejere/SearchAndDisplayLejereComponent.razor]
 build_metadata.AdditionalFiles.TargetPath = Q29udHJvbHNcTGVqZXJlXFNlYXJjaEFuZERpc3BsYXlMZWplcmVDb21wb25lbnQucmF6b3I=

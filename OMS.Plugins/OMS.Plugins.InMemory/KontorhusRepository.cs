@@ -38,7 +38,7 @@ public class KontorhusRepository : IKontorhusRepository
 
     public Task AddKontorhusAsync(Kontorhus kontorhus)
     {
-   
+
         if (_kontorhuse.Any(x => x.KontorhusNavn.Equals(kontorhus.KontorhusNavn, StringComparison.OrdinalIgnoreCase)))
             return Task.CompletedTask;
 
@@ -49,6 +49,22 @@ public class KontorhusRepository : IKontorhusRepository
 
         return Task.CompletedTask;
     }
+
+
+    // LAV SENERE - SE LEJERREPO
+    public Task DeleteKontorhusAsync(Kontorhus kontorhus)
+    {
+        var khus = _kontorhuse.FirstOrDefault(x => x.KontorhusID == kontorhus.KontorhusID);
+
+        if (khus != null)
+        {
+            _kontorhuse.Remove(khus);
+        }
+
+        return Task.CompletedTask;
+    }
+
+
 
     public async Task<Kontorhus?> GetKontorhusById(int kontorhusId)
     {

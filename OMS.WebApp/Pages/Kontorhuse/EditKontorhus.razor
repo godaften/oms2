@@ -1,6 +1,7 @@
 ﻿@page "/redigerkontorhus/{id:int}"
 @inject IViewKontorhusByIdUseCase ViewKontorhusByIdUseCase
 @inject IEditKontorhusUseCase EditKontorhusUseCase
+@inject IDeleteKontorhusUseCase DeleteKontorhusUseCase
 @inject NavigationManager NavigationManager
 
 <div class="p-5">
@@ -40,6 +41,8 @@
         <br />
         <button type="submit" class="btn btn-primary">Gem</button>
         <button type="button" class="btn btn-primary" @onclick="Cancel">Annuller</button>
+            <button type="button" class="btn btn-danger" @onclick="DeleteKontorhus">Slet</button>
+
 
     </EditForm>
 }
@@ -67,6 +70,12 @@
 
     private void Cancel()
     {
+        NavigationManager.NavigateTo("/kontorhuse");
+    }
+
+    private async Task DeleteKontorhus()
+    {
+        await DeleteKontorhusUseCase.ExecuteAsync(this.kontorhus);
         NavigationManager.NavigateTo("/kontorhuse");
     }
 
