@@ -33,12 +33,24 @@ public class KontorhusEFCoreRepository : IKontorhusRepository
     public async Task UpdateKontorhusAsync(Kontorhus kontorhus)
     {
         using var db = this.contextFactory.CreateDbContext();
-        db.Kontorhuse.Update(kontorhus);
+        var khus = await db.Kontorhuse
+            .Include(x => x.KontorhusLejere)
+            .FirstOrDefaultAsync(x => x.KontorhusID == kontorhus.KontorhusID);
+
+        if (khus != null) {
+            khus.KontorhusNavn = kontorhus.KontorhusNavn;
+            khus.KontorhusEmail = kontorhus.KontorhusEmail;
+            khus.KontorhusLejere = kontorhus.KontorhusLejere;
+                          
+      //  db.Kontorhuse.Update(kontorhus);
 
         FlagLejereUnchanged(kontorhus, db);
 
         await db.SaveChangesAsync();
+        }
     }
+
+
 
     public async Task<Kontorhus?> GetKontorhusById(int kontorhusId)
     {

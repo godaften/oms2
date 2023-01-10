@@ -9,17 +9,20 @@ using System.Threading.Tasks;
 
 namespace OMS.UseCases.Lejere;
 
-public class EditLejerUseCase : IEditLejerUseCase
+public class DeleteLejerUseCase : IDeleteLejerUseCase
 {
     private readonly ILejerRepository lejerRepository;
 
-    public EditLejerUseCase(ILejerRepository lejerRepository)
+    public DeleteLejerUseCase(ILejerRepository lejerRepository)
     {
         this.lejerRepository = lejerRepository;
     }
-    public async Task ExecuteAsync(Lejer lejer)
-    {
-        await this.lejerRepository.UpdateLejerAsync(lejer);
 
+    public async Task ExecuteAsync (Lejer lejer)
+    {
+        await this.lejerRepository.DeleteLejerAsync(lejer);
     }
+
 }
+
+

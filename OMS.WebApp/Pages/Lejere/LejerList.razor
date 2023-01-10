@@ -1,9 +1,10 @@
 ﻿@page "/lejere"
 
+
 @inject NavigationManager NavigationManager
 
 
-@attribute [Authorize(Roles = "Admin, Superuser")]
+@attribute [Authorize(Policy = "Admin")]
 
 
 <div class="p-5">

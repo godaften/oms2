@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\kaffe\\Dropbox\\Datamatiker\\AFGANGSPROJEKT\\OMS\\OMS.CoreBusiness\\OMS.CoreBusiness.csproj": {}
+    "C:\\Users\\kaffe\\Dropbox\\Datamatiker\\AFGANGSPROJEKT\\OMS2\\OMS.CoreBusiness\\OMS.CoreBusiness.csproj": {}
   },
   "projects": {
-    "C:\\Users\\kaffe\\Dropbox\\Datamatiker\\AFGANGSPROJEKT\\OMS\\OMS.CoreBusiness\\OMS.CoreBusiness.csproj": {
+    "C:\\Users\\kaffe\\Dropbox\\Datamatiker\\AFGANGSPROJEKT\\OMS2\\OMS.CoreBusiness\\OMS.CoreBusiness.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\kaffe\\Dropbox\\Datamatiker\\AFGANGSPROJEKT\\OMS\\OMS.CoreBusiness\\OMS.CoreBusiness.csproj",
+        "projectUniqueName": "C:\\Users\\kaffe\\Dropbox\\Datamatiker\\AFGANGSPROJEKT\\OMS2\\OMS.CoreBusiness\\OMS.CoreBusiness.csproj",
         "projectName": "OMS.CoreBusiness",
-        "projectPath": "C:\\Users\\kaffe\\Dropbox\\Datamatiker\\AFGANGSPROJEKT\\OMS\\OMS.CoreBusiness\\OMS.CoreBusiness.csproj",
+        "projectPath": "C:\\Users\\kaffe\\Dropbox\\Datamatiker\\AFGANGSPROJEKT\\OMS2\\OMS.CoreBusiness\\OMS.CoreBusiness.csproj",
         "packagesPath": "C:\\Users\\kaffe\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\kaffe\\Dropbox\\Datamatiker\\AFGANGSPROJEKT\\OMS\\OMS.CoreBusiness\\obj\\",
+        "outputPath": "C:\\Users\\kaffe\\Dropbox\\Datamatiker\\AFGANGSPROJEKT\\OMS2\\OMS.CoreBusiness\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

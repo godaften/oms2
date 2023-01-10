@@ -1,4 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore.Internal;
 using OMS.CoreBusiness;
 using OMS.UseCases.PluginInterfaces;
 using System.Collections.Generic;
@@ -54,4 +55,17 @@ public class LejerEFCoreRepository : ILejerRepository
         await db.SaveChangesAsync();
     }
 
+
+    public async Task DeleteLejerAsync(Lejer lejer)
+    {
+        using var db = this.contextFactory.CreateDbContext();
+        var lej = await db.Lejere.FindAsync(lejer.LejerID);
+        if (lej != null)
+        {
+            db.Lejere.Remove(lej);
+        }
+      
+        await db.SaveChangesAsync();
+        
+    }
 }

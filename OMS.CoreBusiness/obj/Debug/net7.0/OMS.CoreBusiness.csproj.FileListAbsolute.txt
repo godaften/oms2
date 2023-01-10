@@ -22,3 +22,15 @@ C:\Users\kaffe\Dropbox\Datamatiker\AFGANGSPROJEKT\OMS\OMS.CoreBusiness\obj\Debug
 C:\Users\kaffe\Dropbox\Datamatiker\AFGANGSPROJEKT\OMS\OMS.CoreBusiness\obj\Debug\net7.0\refint\OMS.CoreBusiness.dll
 C:\Users\kaffe\Dropbox\Datamatiker\AFGANGSPROJEKT\OMS\OMS.CoreBusiness\obj\Debug\net7.0\OMS.CoreBusiness.pdb
 C:\Users\kaffe\Dropbox\Datamatiker\AFGANGSPROJEKT\OMS\OMS.CoreBusiness\obj\Debug\net7.0\ref\OMS.CoreBusiness.dll
+C:\Users\kaffe\Dropbox\Datamatiker\AFGANGSPROJEKT\OMS2\OMS.CoreBusiness\bin\Debug\net7.0\OMS.CoreBusiness.deps.json
+C:\Users\kaffe\Dropbox\Datamatiker\AFGANGSPROJEKT\OMS2\OMS.CoreBusiness\bin\Debug\net7.0\OMS.CoreBusiness.dll
+C:\Users\kaffe\Dropbox\Datamatiker\AFGANGSPROJEKT\OMS2\OMS.CoreBusiness\bin\Debug\net7.0\OMS.CoreBusiness.pdb
+C:\Users\kaffe\Dropbox\Datamatiker\AFGANGSPROJEKT\OMS2\OMS.CoreBusiness\obj\Debug\net7.0\OMS.CoreBusiness.csproj.AssemblyReference.cache
+C:\Users\kaffe\Dropbox\Datamatiker\AFGANGSPROJEKT\OMS2\OMS.CoreBusiness\obj\Debug\net7.0\OMS.CoreBusiness.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\kaffe\Dropbox\Datamatiker\AFGANGSPROJEKT\OMS2\OMS.CoreBusiness\obj\Debug\net7.0\OMS.CoreBusiness.AssemblyInfoInputs.cache
+C:\Users\kaffe\Dropbox\Datamatiker\AFGANGSPROJEKT\OMS2\OMS.CoreBusiness\obj\Debug\net7.0\OMS.CoreBusiness.AssemblyInfo.cs
+C:\Users\kaffe\Dropbox\Datamatiker\AFGANGSPROJEKT\OMS2\OMS.CoreBusiness\obj\Debug\net7.0\OMS.CoreBusiness.csproj.CoreCompileInputs.cache
+C:\Users\kaffe\Dropbox\Datamatiker\AFGANGSPROJEKT\OMS2\OMS.CoreBusiness\obj\Debug\net7.0\OMS.CoreBusiness.dll
+C:\Users\kaffe\Dropbox\Datamatiker\AFGANGSPROJEKT\OMS2\OMS.CoreBusiness\obj\Debug\net7.0\refint\OMS.CoreBusiness.dll
+C:\Users\kaffe\Dropbox\Datamatiker\AFGANGSPROJEKT\OMS2\OMS.CoreBusiness\obj\Debug\net7.0\OMS.CoreBusiness.pdb
+C:\Users\kaffe\Dropbox\Datamatiker\AFGANGSPROJEKT\OMS2\OMS.CoreBusiness\obj\Debug\net7.0\ref\OMS.CoreBusiness.dll

@@ -3,12 +3,13 @@
 @inject NavigationManager NavigationManager;
 @inject IViewLejerByIdUseCase ViewLejerByIdUseCase;
 @inject IEditLejerUseCase EditLejerUseCase;
+@inject IDeleteLejerUseCase DeleteLejerUseCase;
 
 <div class="p-5">
-<h3>EditLejer</h3>
-<br />
+    <h3>EditLejer</h3>
+    <br />
 
-<EditForm Model="lejer" OnValidSubmit="SaveLejer">
+    <EditForm Model="lejer" OnValidSubmit="SaveLejer">
         <DataAnnotationsValidator></DataAnnotationsValidator>
         <ValidationSummary></ValidationSummary>
 
@@ -56,6 +57,7 @@
         <br />
         <button type="submit" class="btn btn-primary">Gem</button>
         <button type="button" class="btn btn-primary" @onclick="Cancel">Annuller</button>
+        <button type="button" class="btn btn-primary" @onclick="DeleteLejer">Delete</button>
 
     </EditForm>
 
@@ -71,7 +73,7 @@
 
     protected override async Task OnParametersSetAsync()
     {
-        
+
         this.lejer = await ViewLejerByIdUseCase.ExecuteAsync(this.LejId);
     }
 
@@ -79,8 +81,14 @@
     {
         await EditLejerUseCase.ExecuteAsync(this.lejer);
         NavigationManager.NavigateTo("/lejere");
-
     }
+
+    private async Task DeleteLejer()
+    {
+        await DeleteLejerUseCase.ExecuteAsync(this.lejer);
+        NavigationManager.NavigateTo("/lejere");
+    }
+
 
     private void Cancel()
     {

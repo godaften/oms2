@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\kaffe\\Dropbox\\Datamatiker\\AFGANGSPROJEKT\\OMS\\OMS.WebApp\\OMS.WebApp.csproj": {}
+    "C:\\Users\\kaffe\\Dropbox\\Datamatiker\\AFGANGSPROJEKT\\OMS2\\OMS.WebApp\\OMS.WebApp.csproj": {}
   },
   "projects": {
-    "C:\\Users\\kaffe\\Dropbox\\Datamatiker\\AFGANGSPROJEKT\\OMS\\OMS.CoreBusiness\\OMS.CoreBusiness.csproj": {
+    "C:\\Users\\kaffe\\Dropbox\\Datamatiker\\AFGANGSPROJEKT\\OMS2\\OMS.CoreBusiness\\OMS.CoreBusiness.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\kaffe\\Dropbox\\Datamatiker\\AFGANGSPROJEKT\\OMS\\OMS.CoreBusiness\\OMS.CoreBusiness.csproj",
+        "projectUniqueName": "C:\\Users\\kaffe\\Dropbox\\Datamatiker\\AFGANGSPROJEKT\\OMS2\\OMS.CoreBusiness\\OMS.CoreBusiness.csproj",
         "projectName": "OMS.CoreBusiness",
-        "projectPath": "C:\\Users\\kaffe\\Dropbox\\Datamatiker\\AFGANGSPROJEKT\\OMS\\OMS.CoreBusiness\\OMS.CoreBusiness.csproj",
+        "projectPath": "C:\\Users\\kaffe\\Dropbox\\Datamatiker\\AFGANGSPROJEKT\\OMS2\\OMS.CoreBusiness\\OMS.CoreBusiness.csproj",
         "packagesPath": "C:\\Users\\kaffe\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\kaffe\\Dropbox\\Datamatiker\\AFGANGSPROJEKT\\OMS\\OMS.CoreBusiness\\obj\\",
+        "outputPath": "C:\\Users\\kaffe\\Dropbox\\Datamatiker\\AFGANGSPROJEKT\\OMS2\\OMS.CoreBusiness\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -64,14 +64,14 @@
         }
       }
     },
-    "C:\\Users\\kaffe\\Dropbox\\Datamatiker\\AFGANGSPROJEKT\\OMS\\OMS.Plugins\\OMS.Plugins.EFCoreSqlServer\\OMS.Plugins.EFCoreSqlServer.csproj": {
+    "C:\\Users\\kaffe\\Dropbox\\Datamatiker\\AFGANGSPROJEKT\\OMS2\\OMS.Plugins\\OMS.Plugins.EFCoreSqlServer\\OMS.Plugins.EFCoreSqlServer.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\kaffe\\Dropbox\\Datamatiker\\AFGANGSPROJEKT\\OMS\\OMS.Plugins\\OMS.Plugins.EFCoreSqlServer\\OMS.Plugins.EFCoreSqlServer.csproj",
+        "projectUniqueName": "C:\\Users\\kaffe\\Dropbox\\Datamatiker\\AFGANGSPROJEKT\\OMS2\\OMS.Plugins\\OMS.Plugins.EFCoreSqlServer\\OMS.Plugins.EFCoreSqlServer.csproj",
         "projectName": "OMS.Plugins.EFCoreSqlServer",
-        "projectPath": "C:\\Users\\kaffe\\Dropbox\\Datamatiker\\AFGANGSPROJEKT\\OMS\\OMS.Plugins\\OMS.Plugins.EFCoreSqlServer\\OMS.Plugins.EFCoreSqlServer.csproj",
+        "projectPath": "C:\\Users\\kaffe\\Dropbox\\Datamatiker\\AFGANGSPROJEKT\\OMS2\\OMS.Plugins\\OMS.Plugins.EFCoreSqlServer\\OMS.Plugins.EFCoreSqlServer.csproj",
         "packagesPath": "C:\\Users\\kaffe\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\kaffe\\Dropbox\\Datamatiker\\AFGANGSPROJEKT\\OMS\\OMS.Plugins\\OMS.Plugins.EFCoreSqlServer\\obj\\",
+        "outputPath": "C:\\Users\\kaffe\\Dropbox\\Datamatiker\\AFGANGSPROJEKT\\OMS2\\OMS.Plugins\\OMS.Plugins.EFCoreSqlServer\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -93,11 +93,11 @@
           "net7.0": {
             "targetAlias": "net7.0",
             "projectReferences": {
-              "C:\\Users\\kaffe\\Dropbox\\Datamatiker\\AFGANGSPROJEKT\\OMS\\OMS.CoreBusiness\\OMS.CoreBusiness.csproj": {
-                "projectPath": "C:\\Users\\kaffe\\Dropbox\\Datamatiker\\AFGANGSPROJEKT\\OMS\\OMS.CoreBusiness\\OMS.CoreBusiness.csproj"
+              "C:\\Users\\kaffe\\Dropbox\\Datamatiker\\AFGANGSPROJEKT\\OMS2\\OMS.CoreBusiness\\OMS.CoreBusiness.csproj": {
+                "projectPath": "C:\\Users\\kaffe\\Dropbox\\Datamatiker\\AFGANGSPROJEKT\\OMS2\\OMS.CoreBusiness\\OMS.CoreBusiness.csproj"
               },
-              "C:\\Users\\kaffe\\Dropbox\\Datamatiker\\AFGANGSPROJEKT\\OMS\\OMS.UseCases\\OMS.UseCases.csproj": {
-                "projectPath": "C:\\Users\\kaffe\\Dropbox\\Datamatiker\\AFGANGSPROJEKT\\OMS\\OMS.UseCases\\OMS.UseCases.csproj"
+              "C:\\Users\\kaffe\\Dropbox\\Datamatiker\\AFGANGSPROJEKT\\OMS2\\OMS.UseCases\\OMS.UseCases.csproj": {
+                "projectPath": "C:\\Users\\kaffe\\Dropbox\\Datamatiker\\AFGANGSPROJEKT\\OMS2\\OMS.UseCases\\OMS.UseCases.csproj"
               }
             }
           }
@@ -149,14 +149,14 @@
         }
       }
     },
-    "C:\\Users\\kaffe\\Dropbox\\Datamatiker\\AFGANGSPROJEKT\\OMS\\OMS.Plugins\\OMS.Plugins.InMemory\\OMS.Plugins.InMemory.csproj": {
+    "C:\\Users\\kaffe\\Dropbox\\Datamatiker\\AFGANGSPROJEKT\\OMS2\\OMS.Plugins\\OMS.Plugins.InMemory\\OMS.Plugins.InMemory.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\kaffe\\Dropbox\\Datamatiker\\AFGANGSPROJEKT\\OMS\\OMS.Plugins\\OMS.Plugins.InMemory\\OMS.Plugins.InMemory.csproj",
+        "projectUniqueName": "C:\\Users\\kaffe\\Dropbox\\Datamatiker\\AFGANGSPROJEKT\\OMS2\\OMS.Plugins\\OMS.Plugins.InMemory\\OMS.Plugins.InMemory.csproj",
         "projectName": "OMS.Plugins.InMemory",
-        "projectPath": "C:\\Users\\kaffe\\Dropbox\\Datamatiker\\AFGANGSPROJEKT\\OMS\\OMS.Plugins\\OMS.Plugins.InMemory\\OMS.Plugins.InMemory.csproj",
+        "projectPath": "C:\\Users\\kaffe\\Dropbox\\Datamatiker\\AFGANGSPROJEKT\\OMS2\\OMS.Plugins\\OMS.Plugins.InMemory\\OMS.Plugins.InMemory.csproj",
         "packagesPath": "C:\\Users\\kaffe\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\kaffe\\Dropbox\\Datamatiker\\AFGANGSPROJEKT\\OMS\\OMS.Plugins\\OMS.Plugins.InMemory\\obj\\",
+        "outputPath": "C:\\Users\\kaffe\\Dropbox\\Datamatiker\\AFGANGSPROJEKT\\OMS2\\OMS.Plugins\\OMS.Plugins.InMemory\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -178,8 +178,8 @@
           "net7.0": {
             "targetAlias": "net7.0",
             "projectReferences": {
-              "C:\\Users\\kaffe\\Dropbox\\Datamatiker\\AFGANGSPROJEKT\\OMS\\OMS.UseCases\\OMS.UseCases.csproj": {
-                "projectPath": "C:\\Users\\kaffe\\Dropbox\\Datamatiker\\AFGANGSPROJEKT\\OMS\\OMS.UseCases\\OMS.UseCases.csproj"
+              "C:\\Users\\kaffe\\Dropbox\\Datamatiker\\AFGANGSPROJEKT\\OMS2\\OMS.UseCases\\OMS.UseCases.csproj": {
+                "projectPath": "C:\\Users\\kaffe\\Dropbox\\Datamatiker\\AFGANGSPROJEKT\\OMS2\\OMS.UseCases\\OMS.UseCases.csproj"
               }
             }
           }
@@ -213,14 +213,14 @@
         }
       }
     },
-    "C:\\Users\\kaffe\\Dropbox\\Datamatiker\\AFGANGSPROJEKT\\OMS\\OMS.UseCases\\OMS.UseCases.csproj": {
+    "C:\\Users\\kaffe\\Dropbox\\Datamatiker\\AFGANGSPROJEKT\\OMS2\\OMS.UseCases\\OMS.UseCases.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\kaffe\\Dropbox\\Datamatiker\\AFGANGSPROJEKT\\OMS\\OMS.UseCases\\OMS.UseCases.csproj",
+        "projectUniqueName": "C:\\Users\\kaffe\\Dropbox\\Datamatiker\\AFGANGSPROJEKT\\OMS2\\OMS.UseCases\\OMS.UseCases.csproj",
         "projectName": "OMS.UseCases",
-        "projectPath": "C:\\Users\\kaffe\\Dropbox\\Datamatiker\\AFGANGSPROJEKT\\OMS\\OMS.UseCases\\OMS.UseCases.csproj",
+        "projectPath": "C:\\Users\\kaffe\\Dropbox\\Datamatiker\\AFGANGSPROJEKT\\OMS2\\OMS.UseCases\\OMS.UseCases.csproj",
         "packagesPath": "C:\\Users\\kaffe\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\kaffe\\Dropbox\\Datamatiker\\AFGANGSPROJEKT\\OMS\\OMS.UseCases\\obj\\",
+        "outputPath": "C:\\Users\\kaffe\\Dropbox\\Datamatiker\\AFGANGSPROJEKT\\OMS2\\OMS.UseCases\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -242,8 +242,8 @@
           "net7.0": {
             "targetAlias": "net7.0",
             "projectReferences": {
-              "C:\\Users\\kaffe\\Dropbox\\Datamatiker\\AFGANGSPROJEKT\\OMS\\OMS.CoreBusiness\\OMS.CoreBusiness.csproj": {
-                "projectPath": "C:\\Users\\kaffe\\Dropbox\\Datamatiker\\AFGANGSPROJEKT\\OMS\\OMS.CoreBusiness\\OMS.CoreBusiness.csproj"
+              "C:\\Users\\kaffe\\Dropbox\\Datamatiker\\AFGANGSPROJEKT\\OMS2\\OMS.CoreBusiness\\OMS.CoreBusiness.csproj": {
+                "projectPath": "C:\\Users\\kaffe\\Dropbox\\Datamatiker\\AFGANGSPROJEKT\\OMS2\\OMS.CoreBusiness\\OMS.CoreBusiness.csproj"
               }
             }
           }
@@ -277,14 +277,14 @@
         }
       }
     },
-    "C:\\Users\\kaffe\\Dropbox\\Datamatiker\\AFGANGSPROJEKT\\OMS\\OMS.WebApp\\OMS.WebApp.csproj": {
+    "C:\\Users\\kaffe\\Dropbox\\Datamatiker\\AFGANGSPROJEKT\\OMS2\\OMS.WebApp\\OMS.WebApp.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\kaffe\\Dropbox\\Datamatiker\\AFGANGSPROJEKT\\OMS\\OMS.WebApp\\OMS.WebApp.csproj",
+        "projectUniqueName": "C:\\Users\\kaffe\\Dropbox\\Datamatiker\\AFGANGSPROJEKT\\OMS2\\OMS.WebApp\\OMS.WebApp.csproj",
         "projectName": "OMS.WebApp",
-        "projectPath": "C:\\Users\\kaffe\\Dropbox\\Datamatiker\\AFGANGSPROJEKT\\OMS\\OMS.WebApp\\OMS.WebApp.csproj",
+        "projectPath": "C:\\Users\\kaffe\\Dropbox\\Datamatiker\\AFGANGSPROJEKT\\OMS2\\OMS.WebApp\\OMS.WebApp.csproj",
         "packagesPath": "C:\\Users\\kaffe\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\kaffe\\Dropbox\\Datamatiker\\AFGANGSPROJEKT\\OMS\\OMS.WebApp\\obj\\",
+        "outputPath": "C:\\Users\\kaffe\\Dropbox\\Datamatiker\\AFGANGSPROJEKT\\OMS2\\OMS.WebApp\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -306,11 +306,11 @@
           "net7.0": {
             "targetAlias": "net7.0",
             "projectReferences": {
-              "C:\\Users\\kaffe\\Dropbox\\Datamatiker\\AFGANGSPROJEKT\\OMS\\OMS.Plugins\\OMS.Plugins.EFCoreSqlServer\\OMS.Plugins.EFCoreSqlServer.csproj": {
-                "projectPath": "C:\\Users\\kaffe\\Dropbox\\Datamatiker\\AFGANGSPROJEKT\\OMS\\OMS.Plugins\\OMS.Plugins.EFCoreSqlServer\\OMS.Plugins.EFCoreSqlServer.csproj"
+              "C:\\Users\\kaffe\\Dropbox\\Datamatiker\\AFGANGSPROJEKT\\OMS2\\OMS.Plugins\\OMS.Plugins.EFCoreSqlServer\\OMS.Plugins.EFCoreSqlServer.csproj": {
+                "projectPath": "C:\\Users\\kaffe\\Dropbox\\Datamatiker\\AFGANGSPROJEKT\\OMS2\\OMS.Plugins\\OMS.Plugins.EFCoreSqlServer\\OMS.Plugins.EFCoreSqlServer.csproj"
               },
-              "C:\\Users\\kaffe\\Dropbox\\Datamatiker\\AFGANGSPROJEKT\\OMS\\OMS.Plugins\\OMS.Plugins.InMemory\\OMS.Plugins.InMemory.csproj": {
-                "projectPath": "C:\\Users\\kaffe\\Dropbox\\Datamatiker\\AFGANGSPROJEKT\\OMS\\OMS.Plugins\\OMS.Plugins.InMemory\\OMS.Plugins.InMemory.csproj"
+              "C:\\Users\\kaffe\\Dropbox\\Datamatiker\\AFGANGSPROJEKT\\OMS2\\OMS.Plugins\\OMS.Plugins.InMemory\\OMS.Plugins.InMemory.csproj": {
+                "projectPath": "C:\\Users\\kaffe\\Dropbox\\Datamatiker\\AFGANGSPROJEKT\\OMS2\\OMS.Plugins\\OMS.Plugins.InMemory\\OMS.Plugins.InMemory.csproj"
               }
             }
           }

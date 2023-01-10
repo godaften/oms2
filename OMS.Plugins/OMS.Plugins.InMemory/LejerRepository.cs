@@ -36,6 +36,23 @@ public class LejerRepository : ILejerRepository
         return Task.CompletedTask;
     }
 
+    public Task DeleteLejerAsync(Lejer lejer)
+    {
+        var lej = _lejere.FirstOrDefault(x => x.LejerID == lejer.LejerID);
+
+       // using var db = this.contextFactory.CreateDbContext();
+        //var lej = await db.Lejere.FindAsync(lejer.LejerID);
+       
+        if (lej != null)
+        {
+            _lejere.Remove(lej);
+        }
+
+
+         return Task.CompletedTask;
+
+    }
+
     public async Task<Lejer> GetLejerByIdAsync(int lejerId)
     {
 
