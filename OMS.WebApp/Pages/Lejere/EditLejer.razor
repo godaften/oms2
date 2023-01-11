@@ -6,7 +6,7 @@
 @inject IDeleteLejerUseCase DeleteLejerUseCase
 
 <div class="p-5">
-    <h3>EditLejer</h3>
+    <h3>Rediger oplysninger for @lejer.Navn</h3>
     <br />
 
     <EditForm Model="lejer" OnValidSubmit="SaveLejer">
@@ -63,42 +63,23 @@
         
         <button type="submit" class="btn btn-primary">Gem</button>
         <button type="button" class="btn btn-primary" @onclick="Cancel">Annuller</button>
-        <button type="button" class="btn btn-danger" @onclick="DeleteLejer">Slet</button>
+        <button type="button" class="btn btn-danger" @onclick="DeleteLejer">Slet lejer</button>
 
     </EditForm>
 
-
-
 </div>
+
 @code {
 
-    private Lejer? lejer = new Lejer();
-
-    //public List<Kontorhus> Kontorhuse = new List<Kontorhus>();
+    private Lejer lejer = new Lejer();
 
     [Parameter]
     public int LejId { get; set; }
-
-
-    //[Parameter]
-    //public int KhusId { get; set; }
-    
-    //protected override Task OnInitializedAsync()
-    //{
-    //    Kontorhus = (await ViewKontorhusByIdUseCase.ExcecuteAsync()).ToList();
-    //}
 
     protected override async Task OnInitializedAsync()
     {
         this.lejer = await ViewLejerByIdUseCase.ExecuteAsync(this.LejId);
     }
-
-
-    //protected override async Task OnParametersSetAsync()
-    //{
-    //    this.lejer = await ViewLejerByIdUseCase.ExecuteAsync(this.LejId);
-    //   // Kontorhuse = (await ViewKontorhusByIdUseCase.ExecuteAsync()).ToList();
-    //}
 
     private async Task SaveLejer()
     {

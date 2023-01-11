@@ -6,7 +6,7 @@
 
 @inject NavigationManager NavigationManager;
 @inject IViewLejerByIdUseCase ViewLejerByIdUseCase;
-@inject IEditLejerUseCase EditLejerUseCase;
+
 
 <div class="p-5">
 
@@ -21,14 +21,25 @@
                     <p>
                         Hvis du skal besøge @lejer.Navn, skal du blot klikke for at melde din ankomst.
                     </p>
+                    <p>
+                        Du er velkommen til at skrive dit fornavn.
+                    </p>
+
+                    @* <label class="mb-4" for="Fornavn">Skriv evt. dit fornavn her</label>*@
+                    <InputText id="Fornavn"
+                               @bind-Value="Fornavn"
+                               class="form-control border-3"
+                               placeholder="Skriv dit fornavn"></InputText>
                 </div>
 
-                <button class="btn btn-success p-3 w-75" @onclick="@(() => SendSms())">Klik for at melde din ankomst</button>
+                <button class="btn btn-success mt-2 p-3 w-75" @onclick="@(() => SendSms())">Klik for at melde din ankomst</button>
             </div>
             <div class="mt-3">
                 <button type="button" class="btn btn-primary p-3 w-75" @onclick="Cancel">Annuller</button>
             </div>
         </div>
+
+
 
     </div>
     <div class="container w-25 p-2 border-2">
@@ -51,6 +62,8 @@
 
 
 @code {
+    [Parameter]
+    public string? Fornavn { get; set; }
 
     [Parameter]
     public int LejId { get; set; }
@@ -90,9 +103,8 @@
 
         // Send the text message
         var message = MessageResource.Create(
-            body: "Du har gæster, der venter i cafeen.",
+            body: $"Din gæst {@Fornavn} er ankommet.",
             from: new Twilio.Types.PhoneNumber("+19852978015"),
-
             to: new Twilio.Types.PhoneNumber($"{lejer.Telefon}")
         );
 
