@@ -4,7 +4,6 @@ using System.Collections.Generic;
 
 namespace OMS.Plugins.InMemory;
 
-
 public class LejerRepository : ILejerRepository
 {
     private List<Lejer> _lejere;
@@ -35,6 +34,7 @@ public class LejerRepository : ILejerRepository
 
         return Task.CompletedTask;
     }
+
 
     public Task DeleteLejerAsync(Lejer lejer)
     {

@@ -64,4 +64,32 @@ public class MedarbejderRepository : IMedarbejderRepository
 
         return _medarbejdere.Where(x => x.Navn.Contains(name, StringComparison.OrdinalIgnoreCase));
     }
+
+
+    //public async Task<Medarbejder> GetMedarbejderByIdAsync(int medarbejderId)
+    //{
+    //    using var db = this.contextFactory.CreateDbContext();
+
+    //    return await db.Medarbejdere
+    //   .Include(x => x.Lejer)
+    //   .FirstOrDefaultAsync(x => x.MedarbejderID == medarbejderId);
+    //}
+
+    public async Task<Medarbejder> GetMedarbejderByIdAsync(int medarbejderId)
+    {
+
+        // Because of InMemory a new object of Lejer is made to prevent changes to the object before hitting "Gem" button
+        var med = _medarbejdere.First(x => x.MedarbejderID == medarbejderId);
+
+        var newMed = new Medarbejder
+
+        {
+            MedarbejderID = med.MedarbejderID,
+            Navn = med.Navn,
+
+        };
+
+        return await Task.FromResult(newMed);
+
+    }
 }

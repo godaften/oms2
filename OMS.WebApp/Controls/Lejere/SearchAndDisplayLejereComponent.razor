@@ -26,11 +26,8 @@
 
     private async Task OnSearchLejer(string searchTerm)
     {
-
         _lejere = (await ViewLejereByNameUseCase.ExecuteAsync(searchTerm)).ToList();
-
     }
-
 
     private async Task OnSelectLejer(Lejer lejer)
     {
@@ -38,3 +35,4 @@
         _lejere.Clear();
     }
 }
+   

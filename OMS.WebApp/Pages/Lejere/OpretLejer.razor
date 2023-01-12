@@ -51,6 +51,12 @@
                        @bind-Value="lejer.Email"
                        class="form-control"></InputText>
         </div>
+
+        <div class="form-group">
+            <label for="kontorhuse">Kontorhus</label>
+            <LejersKontorhuseComponent Lejer="this.lejer"></LejersKontorhuseComponent>
+        </div>
+
         <br />
         <button type="submit" class="btn btn-primary">Gem</button>
         <button type="button" class="btn btn-primary" @onclick="Cancel">Annuller</button>

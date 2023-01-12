@@ -35,4 +35,14 @@ public class MedarbejderEFCoreRepository : IMedarbejderRepository
         return await db.Medarbejdere.Where(
             x => x.Navn.ToLower().IndexOf(name.ToLower()) >= 0).ToListAsync();
     }
+
+
+   public async Task<Medarbejder> GetMedarbejderByIdAsync(int medarbejderId)
+    {
+        using var db = this.contextFactory.CreateDbContext();
+
+             return await db.Medarbejdere
+            .Include(x => x.Lejer)
+            .FirstOrDefaultAsync(x => x.MedarbejderID == medarbejderId);
+    }
 }

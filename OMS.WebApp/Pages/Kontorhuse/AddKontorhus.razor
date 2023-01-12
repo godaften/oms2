@@ -1,8 +1,10 @@
 ﻿@page "/opretkontorhus"
+
 @inject NavigationManager NavigationManager
 @inject IAddKontorhusUseCase AddKontorhusUseCase
 
 @attribute [Authorize(Policy = "Admin")]
+
 <div class="p-5">
     <h3>Nyt kontorhus</h3>
     <br />
@@ -43,6 +45,7 @@
 
 @code {
     private Kontorhus kontorhus = new Kontorhus();
+
 
     private async Task SaveKontorhus()
     {

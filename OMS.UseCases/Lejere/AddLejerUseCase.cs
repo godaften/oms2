@@ -20,6 +20,8 @@ public class AddLejerUseCase : IAddLejerUseCase
 
     public async Task ExecuteAsync(Lejer lejer)
     {
+        if (lejer == null) return;
+
         await this.lejerRepository.AddLejerAsync(lejer);
     }
 

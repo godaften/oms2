@@ -8,4 +8,6 @@ public interface IMedarbejderRepository
     public Task<IEnumerable<Medarbejder>> GetMedarbejdereByNameAsync(string name);
 
     Task AddMedarbejderAsync(Medarbejder medarbejder);
+
+    Task<Medarbejder> GetMedarbejderByIdAsync(int medarbejderId);
 }

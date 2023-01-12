@@ -11,11 +11,12 @@ public class Lejer
     [StringLength(100)]
     public string Navn { get; set; } = string.Empty;
 
-    [StringLength(15)]
+  
+    [MinLength(8, ErrorMessage = "Minimum 8 tal")]
     public string Telefon { get; set; } = string.Empty;
 
     [Required]
-    [StringLength(15)]
+    [MinLength(8, ErrorMessage = "Minimum 8 tal")]
     public string SMSTelefon { get; set; } = string.Empty;
 
     public string Adresse { get; set; } = string.Empty;

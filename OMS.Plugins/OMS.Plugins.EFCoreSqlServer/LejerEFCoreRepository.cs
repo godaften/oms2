@@ -23,7 +23,24 @@ public class LejerEFCoreRepository : ILejerRepository
         using var db = this.contextFactory.CreateDbContext();
 
         db.Lejere.Add(lejer);
+
+        FlagKontorhuseUnchanged(lejer, db);
+
         await db.SaveChangesAsync();
+    }
+
+    private void FlagKontorhuseUnchanged(Lejer lejer, OMSContext db)
+    {
+        if (lejer?.KontorhusLejere != null &&
+                    lejer.KontorhusLejere.Count > 0)
+        {
+            foreach (var khusLej in lejer.KontorhusLejere)
+            {
+                if (khusLej.Lejer != null)
+                    db.Entry(khusLej.Lejer).State = EntityState.Unchanged;
+
+            }
+        }
     }
 
 
@@ -77,6 +94,8 @@ public class LejerEFCoreRepository : ILejerRepository
             lej.KontorhusLejere = lejer.KontorhusLejere;
 
         }
+
+        FlagKontorhuseUnchanged(lejer, db);
 
         await db.SaveChangesAsync();
     }

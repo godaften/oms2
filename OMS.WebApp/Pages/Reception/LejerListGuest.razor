@@ -18,6 +18,8 @@
 </div>
 
 
+
+
 <div class="container mt-4">
     @foreach (var lejer in Lejere)
     {
@@ -33,6 +35,33 @@
     <br />
 
 </div>
+
+@if (Lejere == null)
+{
+    <div class="spinner"></div>
+}
+else
+{
+
+<div class="card-deck">
+    @foreach (var lejer in Lejere)
+    {
+            <div class="card m-3" @onclick="@(() => SeLejer(lejer.LejerID))" style="min-width: 18rem; max-width:30.5%; cursor:pointer;">
+            <div class="card-header">
+                <h3>@lejer.Navn</h3>
+            </div>
+            @*     <img class="card-img-top imageThumbnail" src="@employee.PhotoPath" />*@
+@*            <div class="card-footer text-center">
+                <a href="#" class="btn btn-primary m-1">View</a>
+
+                <a href="#" class="btn btn-primary m-1">Edit</a>
+
+                <a href="#" class="btn btn-danger m-1">Delete</a>
+            </div>*@
+        </div>
+    }
+</div>
+}
 
 @code {
 
