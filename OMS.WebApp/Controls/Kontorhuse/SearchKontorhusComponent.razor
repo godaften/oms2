@@ -1,17 +1,22 @@
-﻿<div class="input-group">
-    <input type="text"
-           class="form-control"
-           placeholder="Skriv søgeord her"
-           @bind-value="kontorhusNameToSearch" />
-    <button type="button"
-            class="btn-success input-group-text"
-            @onclick="OnSearch">
-        Søg
-    </button>
-</div>
+﻿<div class="col-8">
+    <div class="input-group">
+        <input type="text"
+               class="form-control"
+               placeholder="Skriv søgeord her (searchKontorhusComponent)"
+               @bind-value="kontorhusNameToSearch" />
+        <button type="button"
+                class="btn-success input-group-text"
+                @onclick="OnSearch">
+            Søg
+        </button>
+    </div>
+    </div>
 
 
 @code {
+    // SearchKontorhusComponent
+    // KOMPONENTEN BRUGES I KontorhusList
+    // KOMPONENTEN BRUGES I SearchAndDisplayLejereComponent
 
     private string kontorhusNameToSearch = string.Empty;
 

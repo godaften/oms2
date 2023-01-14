@@ -1,6 +1,7 @@
 ﻿@inject IViewKontorhusByNameUseCase ViewKontorhusByNameUseCase
 
-<table class="table">
+
+    <table class="table">
     <thead>
         <tr>
             <th>Navn</th>
@@ -15,14 +16,18 @@
 </table>
 
 @code {
+    // KontorhusListComponent
+    // KOMPONENTEN BRUGES I kontorhusList.razor
+    
+
     private List<Kontorhus> listKontorhuse = new List<Kontorhus>();
 
     [Parameter]
     public string SearchTerm { get; set; } = string.Empty;
 
+
     protected override async Task OnParametersSetAsync()
     {
-        // returnerer en IEnumerable, derfor skal den være ToList
         listKontorhuse = (await ViewKontorhusByNameUseCase.ExecuteAsync(this.SearchTerm)).ToList();
     }
 

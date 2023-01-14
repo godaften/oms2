@@ -21,6 +21,20 @@ public class KontorhusEFCoreRepository : IKontorhusRepository
         this.contextFactory = contextFactory;
     }
 
+    private void FlagLejereUnchanged(Kontorhus kontorhus, OMSContext db)
+    {
+        if (kontorhus?.KontorhusLejere != null &&
+                    kontorhus.KontorhusLejere.Count > 0)
+        {
+            foreach (var khusLej in kontorhus.KontorhusLejere)
+            {
+                if (khusLej.Lejer != null)
+                    db.Entry(khusLej.Lejer).State = EntityState.Unchanged;
+
+            }
+        }
+    }
+
     public async Task AddKontorhusAsync(Kontorhus kontorhus)
     {
         using var db = this.contextFactory.CreateDbContext();
@@ -64,21 +78,6 @@ public class KontorhusEFCoreRepository : IKontorhusRepository
     {
         using var db = this.contextFactory.CreateDbContext();
         return await db.Kontorhuse.Where(x => x.KontorhusNavn.ToLower().IndexOf(name) >= 0).ToListAsync();
-    }
-
-
-    private void FlagLejereUnchanged(Kontorhus kontorhus, OMSContext db)
-    {
-        if (kontorhus?.KontorhusLejere != null &&
-                    kontorhus.KontorhusLejere.Count > 0)
-        {
-            foreach (var khusLej in kontorhus.KontorhusLejere)
-            {
-                if (khusLej.Lejer != null)
-                    db.Entry(khusLej.Lejer).State = EntityState.Unchanged;
-
-            }
-        }
     }
 
 

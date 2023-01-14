@@ -1,6 +1,4 @@
 ﻿@inject NavigationManager NavigationManager
-@*@inject IJSRuntime IJSRuntime
-*@
 
 @if (Lejere != null && Lejere.Count > 0)
 {
@@ -25,6 +23,8 @@
 }
 
 @code {
+    // LejerListItemComponent
+    // Bruges i LejerListComponent
 
     [Parameter]
     public List<Lejer> Lejere { get; set; } = new List<Lejer>();
